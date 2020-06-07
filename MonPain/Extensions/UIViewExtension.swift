@@ -17,7 +17,6 @@ extension UIView {
         nibView.translatesAutoresizingMaskIntoConstraints = false
 
         targetView.addSubview(nibView)
-        nibView.backgroundColor = UIColor.red
         
         NSLayoutConstraint.activate([
             nibView.topAnchor.constraint(equalTo: targetView.topAnchor),

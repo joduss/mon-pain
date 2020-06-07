@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
             <connections>
+                <outlet property="infoButton" destination="QA3-aH-87m" id="55U-Lc-2cJ"/>
                 <outlet property="leftLabel" destination="8PO-CG-tH2" id="ESJ-so-6ya"/>
                 <outlet property="rightLabel" destination="QTB-gz-c3e" id="lr9-kH-AFF"/>
                 <outlet property="textfield" destination="91N-nu-fL3" id="K7w-Ee-qBS"/>
@@ -16,41 +17,58 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Rdj-Cv-DC3">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <rect key="frame" x="0.0" y="0.0" width="317" height="163"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-CG-tH2">
-                    <rect key="frame" x="20" y="10" width="42" height="81"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-CG-tH2">
+                    <rect key="frame" x="20" y="10" width="42" height="143"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTB-gz-c3e">
-                    <rect key="frame" x="352" y="40" width="32" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTB-gz-c3e">
+                    <rect key="frame" x="262" y="71" width="25" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="Jjf-wL-WYo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Levain in grams" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91N-nu-fL3">
-                    <rect key="frame" x="241.5" y="41.5" width="100.5" height="18.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="something here" placeholder="Levain in grams" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91N-nu-fL3">
+                    <rect key="frame" x="124" y="39" width="123" height="85"/>
+                    <color key="textColor" red="0.84573063380281688" green="0.47568146317605636" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="textfieldValueChanged:" destination="-1" eventType="valueChanged" id="eeX-gc-2xK"/>
+                    </connections>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA3-aH-87m">
+                    <rect key="frame" x="70" y="69.5" width="25" height="24"/>
+                    <connections>
+                        <action selector="infoButtonClicked:" destination="-1" eventType="touchUpInside" id="Ic3-Te-Ftv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="8PO-CG-tH2" firstAttribute="top" secondItem="Rdj-Cv-DC3" secondAttribute="top" constant="10" id="9OX-4K-Yjg"/>
+                <constraint firstItem="91N-nu-fL3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8PO-CG-tH2" secondAttribute="trailing" constant="20" id="HCa-lt-miZ"/>
                 <constraint firstItem="QTB-gz-c3e" firstAttribute="centerY" secondItem="91N-nu-fL3" secondAttribute="centerY" id="UFs-o9-eAI"/>
+                <constraint firstItem="QA3-aH-87m" firstAttribute="leading" secondItem="8PO-CG-tH2" secondAttribute="trailing" constant="8" id="Xwv-zJ-rG5"/>
+                <constraint firstItem="91N-nu-fL3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QA3-aH-87m" secondAttribute="trailing" priority="999" constant="20" id="bpE-ga-mHb"/>
                 <constraint firstItem="xpH-2S-hP0" firstAttribute="bottom" secondItem="8PO-CG-tH2" secondAttribute="bottom" constant="10" id="f4T-ll-EL6"/>
                 <constraint firstItem="91N-nu-fL3" firstAttribute="centerY" secondItem="8PO-CG-tH2" secondAttribute="centerY" id="fML-rA-oaL"/>
-                <constraint firstItem="QTB-gz-c3e" firstAttribute="leading" secondItem="91N-nu-fL3" secondAttribute="trailing" constant="10" id="kmr-3q-eup"/>
-                <constraint firstItem="91N-nu-fL3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8PO-CG-tH2" secondAttribute="trailing" constant="20" id="lSB-89-cWK"/>
+                <constraint firstItem="xpH-2S-hP0" firstAttribute="top" secondItem="91N-nu-fL3" secondAttribute="top" constant="5" id="fg6-IK-DLC"/>
+                <constraint firstItem="QTB-gz-c3e" firstAttribute="leading" secondItem="91N-nu-fL3" secondAttribute="trailing" constant="15" id="kmr-3q-eup"/>
                 <constraint firstItem="8PO-CG-tH2" firstAttribute="leading" secondItem="xpH-2S-hP0" secondAttribute="leading" constant="20" id="t3D-Sr-b5b"/>
                 <constraint firstItem="xpH-2S-hP0" firstAttribute="trailing" secondItem="QTB-gz-c3e" secondAttribute="trailing" constant="30" id="vQt-Fg-tDf"/>
+                <constraint firstItem="QA3-aH-87m" firstAttribute="centerY" secondItem="8PO-CG-tH2" secondAttribute="centerY" id="wDW-eN-XeF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="xpH-2S-hP0"/>
-            <point key="canvasLocation" x="-175.36231884057972" y="153.68303571428569"/>
+            <point key="canvasLocation" x="-245.6521739130435" y="173.77232142857142"/>
         </view>
     </objects>
 </document>

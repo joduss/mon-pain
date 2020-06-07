@@ -10,11 +10,7 @@ import Foundation
 
 extension NumberFormatter {
     
-    func string(from value: Int) -> String? {
-        return string(from: NSNumber(value: value))
-    }
-    
-    func string(from value: Float) -> String? {
+    func string(from value: Double) -> String? {
         return string(from: NSNumber(value: value))
     }
 }

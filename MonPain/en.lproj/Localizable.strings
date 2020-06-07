@@ -1,0 +1,20 @@
+/* 
+  localizable.strings
+  MonPain
+
+  Created by Jonathan Duss on 05.06.20.
+  Copyright © 2020 ZaJo. All rights reserved.
+*/
+
+"screen.flour-and-water.title" = "Flour and Water";
+"screen.levain-and-water.title" = "Levain and Water";
+
+"levain.hydratation" = "Levain hydration";
+"levain.ratio" = "Proportion of levain";
+"bread.hydratation" = "Bread hydratation level";
+"ingredient.flour" = "Flour";
+"ingredient.water" = "Water";
+"ingredient.dough" = "Dought";
+"ingredient.levain" = "Levain";
+
+"levain.ratio.info" = "This is the proportion of the quantity of levain compared to the quantity of flour. 100g of levain and 400g of flour represents a proportion of levain of 25%.";

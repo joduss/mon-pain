@@ -8,8 +8,9 @@
 
 import UIKit
 
-protocol InputCellDelegate {
-    func textDidChange(text: String)
+protocol NumberInputCellDelegate: class {
+    func textDidChange()
+    func displayInfo(controller: UIViewController)
 }
 
 @IBDesignable
@@ -18,40 +19,49 @@ class NumberInputCell: UIView {
     @IBOutlet private weak var leftLabel: UILabel!
     @IBOutlet private weak var textfield: UITextField!
     @IBOutlet private weak var rightLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
     
     private let formatter = NumberFormatter()
     
-    @IBInspectable
-    public var leftLabelTitle: String {
-        get {
-            return leftLabel?.text ?? ""
-        }
-        set {
-            leftLabel?.text = newValue
-        }
-    }
-    
-    public var number: Int {
-        return formatter.number(from: textfield?.text ?? "0")?.intValue ?? 0
-    }
+    public weak var delegate: NumberInputCellDelegate?
     
     @IBInspectable
-    public var placeholder: String {
-        get {
-            return textfield.placeholder ?? ""
-        }
-        set {
-            textfield.placeholder = newValue
+    public var ingredientTitleKey: String = "" {
+        didSet {
+            leftLabel?.text = ingredientTitleKey.localized
         }
     }
     
     @IBInspectable
-    public var rightLabelTitle: String {
+    public var unitTitleKey: String = "" {
+        didSet {
+            rightLabel?.text = unitTitleKey
+        }
+    }
+    
+    @IBInspectable
+    public var value: Double {
         get {
-            return rightLabel?.text ?? ""
+            return formatter.number(from: textfield?.text ?? "0")?.doubleValue ?? 0
         }
         set {
-            rightLabel?.text = newValue
+            textfield.text = formatter.string(from: newValue)
+        }
+    }
+    
+    @IBInspectable
+    public var minAllowedValue: Int = 0
+    
+    @IBInspectable
+    public var maxAllowedValue: Int = Int.max
+    
+    @IBInspectable
+    public var showInfoButton: Bool {
+        get {
+            return infoButton.isHidden
+        }
+        set {
+            infoButton.isHidden = !newValue
         }
     }
     
@@ -73,12 +83,54 @@ class NumberInputCell: UIView {
         super.awakeFromNib()
         // Initialization code
         formatter.maximumFractionDigits = 0
-    }
+        textfield.delegate = self
+        textfield.addTarget(self, action: #selector(textfieldValueChanged(_:)), for: .editingChanged)
+        textfield.addTarget(self, action: #selector(textfieldEditingBegin), for: .editingDidBegin)
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+        let done = UIBarButtonItem(title: "Ok", style: .done, target: self, action: #selector(closeKeyboard(button:)))
+        let group = UIBarButtonItemGroup(barButtonItems: [], representativeItem: done)
+        textfield.inputAssistantItem.leadingBarButtonGroups = [group]
+    }
     
+    @objc
+    private func textfieldValueChanged(_ textfield: UITextField) {
+        delegate?.textDidChange()
+    }
+    
+    @objc
+    private func textfieldEditingBegin(_ textfield: UITextField) {
+        DispatchQueue.main.async {
+            textfield.selectAll(nil)
+        }
+    }
+    
+    @objc private func closeKeyboard(button: UIBarButtonItem) {
+        textfield.resignFirstResponder()
+    }
+    
+    @IBAction func infoButtonClicked(_ sender: Any) {
+        let popup = UIAlertController(title: leftLabel.text,
+                                      message: "\(ingredientTitleKey).info".localized,
+                                      preferredStyle: .alert)
+        popup.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
+        delegate?.displayInfo(controller: popup)
+    }
+}
+
+extension NumberInputCell: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+                
+        guard let current = textField.text else {
+            return false
+        }
+        
+        let next = (current as NSString).replacingCharacters(in: range, with: string)
+        
+        guard let number = formatter.number(from: next)?.intValue else {
+            return false
+        }
+        
+        return number >= minAllowedValue
+            && number <= maxAllowedValue
+    }
 }

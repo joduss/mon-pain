@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */; };
 		6B40F5B32485725C00FA4A40 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */; };
+		6B4C580A248598BE000BA9B0 /* NumberDisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B62201C248589F90087D511 /* NumberDisplayCell.xib */; };
+		6B4C580C2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */; };
+		6B62201E248589F90087D511 /* NumberDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62201D248589F90087D511 /* NumberDisplayCell.swift */; };
+		6B62202024858D740087D511 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62201F24858D740087D511 /* StringExtension.swift */; };
+		6B628A9B248ACC0D006ABACA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B628A9D248ACC0D006ABACA /* Localizable.strings */; };
+		6B628A9F248C139F006ABACA /* LevainAndWaterCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */; };
+		6B628AA1248C1626006ABACA /* LevainAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */; };
+		6B628AA3248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */; };
 		6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */; };
 		6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */; };
 		6BB2D9472483EEB40006DAE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9462483EEB40006DAE2 /* SceneDelegate.swift */; };
@@ -15,8 +24,7 @@
 		6BB2D94C2483EEB40006DAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94A2483EEB40006DAE2 /* Main.storyboard */; };
 		6BB2D94E2483EEB50006DAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */; };
 		6BB2D9512483EEB50006DAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94F2483EEB50006DAE2 /* LaunchScreen.storyboard */; };
-		6BB2D95C2483EEB50006DAE2 /* MonPainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D95B2483EEB50006DAE2 /* MonPainTests.swift */; };
-		6BB2D967248438970006DAE2 /* FlourAndWaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D966248438970006DAE2 /* FlourAndWaterVC.swift */; };
+		6BB2D95C2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D95B2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift */; };
 		6BB2D9A3248569720006DAE2 /* NumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */; };
 		6BB2D9A7248569970006DAE2 /* NumberInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */; };
 /* End PBXBuildFile section */
@@ -32,7 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculator.swift; sourceTree = "<group>"; };
 		6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculatorVC.swift; sourceTree = "<group>"; };
+		6B62201C248589F90087D511 /* NumberDisplayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberDisplayCell.xib; sourceTree = "<group>"; };
+		6B62201D248589F90087D511 /* NumberDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDisplayCell.swift; sourceTree = "<group>"; };
+		6B62201F24858D740087D511 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		6B62202224858E9B0087D511 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6B62202424858EC60087D511 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		6B628A9C248ACC0D006ABACA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndWaterCalculatorVC.swift; sourceTree = "<group>"; };
+		6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndWaterCalculator.swift; sourceTree = "<group>"; };
+		6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndwaterCalculatorTests.swift; sourceTree = "<group>"; };
 		6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
 		6BB2D9412483EEB40006DAE2 /* MonPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +62,8 @@
 		6BB2D9502483EEB50006DAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BB2D9522483EEB50006DAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB2D9572483EEB50006DAE2 /* MonPainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonPainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB2D95B2483EEB50006DAE2 /* MonPainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonPainTests.swift; sourceTree = "<group>"; };
+		6BB2D95B2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlourAndwaterCalculatorTests.swift; sourceTree = "<group>"; };
 		6BB2D95D2483EEB50006DAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BB2D966248438970006DAE2 /* FlourAndWaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlourAndWaterVC.swift; sourceTree = "<group>"; };
 		6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputCell.swift; sourceTree = "<group>"; };
 		6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberInputCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,11 +86,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B39A8882486C1D600E9A6C5 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */,
+				6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		6BA02DA124856F20005B2CB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */,
 				6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */,
+				6B62201F24858D740087D511 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -98,6 +126,7 @@
 		6BB2D9432483EEB40006DAE2 /* MonPain */ = {
 			isa = PBXGroup;
 			children = (
+				6B39A8882486C1D600E9A6C5 /* Logic */,
 				6BA02DA124856F20005B2CB2 /* Extensions */,
 				6BB2D9A4248569790006DAE2 /* UI */,
 				6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */,
@@ -107,7 +136,7 @@
 				6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */,
 				6BB2D94F2483EEB50006DAE2 /* LaunchScreen.storyboard */,
 				6BB2D9522483EEB50006DAE2 /* Info.plist */,
-				6BB2D966248438970006DAE2 /* FlourAndWaterVC.swift */,
+				6B628A9D248ACC0D006ABACA /* Localizable.strings */,
 			);
 			path = MonPain;
 			sourceTree = "<group>";
@@ -115,7 +144,8 @@
 		6BB2D95A2483EEB50006DAE2 /* MonPainTests */ = {
 			isa = PBXGroup;
 			children = (
-				6BB2D95B2483EEB50006DAE2 /* MonPainTests.swift */,
+				6BB2D95B2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift */,
+				6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */,
 				6BB2D95D2483EEB50006DAE2 /* Info.plist */,
 			);
 			path = MonPainTests;
@@ -125,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				6BB2D9A5248569850006DAE2 /* UI Elements */,
+				6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */,
+				6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -132,6 +164,8 @@
 		6BB2D9A5248569850006DAE2 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				6B62201D248589F90087D511 /* NumberDisplayCell.swift */,
+				6B62201C248589F90087D511 /* NumberDisplayCell.xib */,
 				6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */,
 				6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */,
 			);
@@ -202,6 +236,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 6BB2D9382483EEB40006DAE2;
 			productRefGroup = 6BB2D9422483EEB40006DAE2 /* Products */;
@@ -220,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB2D9512483EEB50006DAE2 /* LaunchScreen.storyboard in Resources */,
+				6B4C580A248598BE000BA9B0 /* NumberDisplayCell.xib in Resources */,
 				6BB2D94E2483EEB50006DAE2 /* Assets.xcassets in Resources */,
+				6B628A9B248ACC0D006ABACA /* Localizable.strings in Resources */,
 				6BB2D9A7248569970006DAE2 /* NumberInputCell.xib in Resources */,
 				6BB2D94C2483EEB40006DAE2 /* Main.storyboard in Resources */,
 			);
@@ -241,12 +278,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB2D9A3248569720006DAE2 /* NumberInputCell.swift in Sources */,
+				6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */,
+				6B62201E248589F90087D511 /* NumberDisplayCell.swift in Sources */,
 				6BB2D9492483EEB40006DAE2 /* ViewController.swift in Sources */,
+				6B628AA1248C1626006ABACA /* LevainAndWaterCalculator.swift in Sources */,
 				6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */,
 				6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */,
+				6B62202024858D740087D511 /* StringExtension.swift in Sources */,
 				6B40F5B32485725C00FA4A40 /* UIViewExtension.swift in Sources */,
 				6BB2D9472483EEB40006DAE2 /* SceneDelegate.swift in Sources */,
-				6BB2D967248438970006DAE2 /* FlourAndWaterVC.swift in Sources */,
+				6B628A9F248C139F006ABACA /* LevainAndWaterCalculatorVC.swift in Sources */,
+				6B4C580C2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB2D95C2483EEB50006DAE2 /* MonPainTests.swift in Sources */,
+				6B628AA3248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift in Sources */,
+				6BB2D95C2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +312,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6B628A9D248ACC0D006ABACA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B628A9C248ACC0D006ABACA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		6BB2D94A2483EEB40006DAE2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D94B2483EEB40006DAE2 /* Base */,
+				6B62202424858EC60087D511 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -281,6 +333,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D9502483EEB50006DAE2 /* Base */,
+				6B62202224858E9B0087D511 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -292,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -352,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -409,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB56D8K42E;
 				INFOPLIST_FILE = MonPain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB56D8K42E;
 				INFOPLIST_FILE = MonPain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

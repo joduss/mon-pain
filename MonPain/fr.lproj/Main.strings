@@ -1,0 +1,12 @@
+
+/* Class = "UITableViewSection"; headerTitle = "You get in total"; ObjectID = "cST-Wf-JNu"; */
+"cST-Wf-JNu.headerTitle" = "Vous avez au total";
+
+/* Class = "UITableViewSection"; headerTitle = "You must add"; ObjectID = "fnJ-hZ-vQj"; */
+"fnJ-hZ-vQj.headerTitle" = "Vous devez ajouter";
+
+/* Class = "UITableViewSection"; headerTitle = "I want in my bread"; ObjectID = "ieJ-ke-1Mx"; */
+"ieJ-ke-1Mx.headerTitle" = "Ce que je veux dans mon pain";
+
+/* Class = "UITableViewSection"; headerTitle = "My Dear Levain"; ObjectID = "jJP-p2-7Cd"; */
+"jJP-p2-7Cd.headerTitle" = "Mon cher levain";
