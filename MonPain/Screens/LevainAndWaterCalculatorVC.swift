@@ -8,48 +8,49 @@
 
 import UIKit
 
-class FlourAndWaterCalculatorVC: UITableViewController {
-
+class LevainAndWaterCalculatorVC: CalculatorBaseVC {
     
     @IBOutlet weak var levainHydratationCell: NumberInputCell!
-    @IBOutlet weak var desiredLevainCell: NumberInputCell!
-    @IBOutlet weak var levainDesiredRatioCell: NumberInputCell!
+    @IBOutlet weak var desiredFlourCell: NumberInputCell!
+    @IBOutlet weak var desiredLevainRatioCell: NumberInputCell!
     @IBOutlet weak var desiredBreadHydratationCell: NumberInputCell!
     
-    @IBOutlet weak var waterToAddCell: NumberDisplayCell!
-    @IBOutlet weak var flourToAddCell: NumberDisplayCell!
-    @IBOutlet weak var levainToAddCell: NumberDisplayCell!
+    @IBOutlet weak var ingredientWaterToAddCell: NumberDisplayCell!
+    @IBOutlet weak var ingredientFlourToAddCell: NumberDisplayCell!
+    @IBOutlet weak var ingredientLevainToAddCell: NumberDisplayCell!
 
     @IBOutlet weak var totalFlourCell: NumberDisplayCell!
     @IBOutlet weak var totalWaterCell: NumberDisplayCell!
     @IBOutlet weak var totalDoughCell: NumberDisplayCell!
     
-    private let calculator = FlourAndWaterCalculator()
+    private let calculator = LevainAndWaterCalculator()
+        
+    override func awakeFromNib() {
+        title = "screen.levain-and-water.title".localized
+        self.calculatorType = .LevainAndWater
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "screen.flour-and-water.title".localized
-        
-        let allCells = [levainHydratationCell, desiredLevainCell, levainDesiredRatioCell, desiredBreadHydratationCell]
+        let allCells = [levainHydratationCell, desiredLevainRatioCell, desiredFlourCell, desiredBreadHydratationCell]
         allCells.forEach({$0?.delegate = self})
         
         textDidChange()
     }
-    
 }
 
-extension FlourAndWaterCalculatorVC : NumberInputCellDelegate {
+extension LevainAndWaterCalculatorVC : NumberInputCellDelegate {
     
     func textDidChange() {
         calculator.updateWith(levainHydratationPercent: levainHydratationCell.value,
-                              levainQty: desiredLevainCell.value,
-                              levainToFlourRatioPercent: levainDesiredRatioCell.value,
+                              flour: desiredFlourCell.value,
+                              levainToFlourRatioPercent: desiredLevainRatioCell.value,
                               breadHydratationPercent: desiredBreadHydratationCell.value)
         
-        waterToAddCell.value = calculator.waterToAdd
-        flourToAddCell.value = calculator.flourToAdd
-        levainToAddCell.value = calculator.levain
+        ingredientWaterToAddCell.value = calculator.waterToAdd
+        ingredientFlourToAddCell.value = calculator.flour
+        ingredientLevainToAddCell.value = calculator.levainToAdd
         
         totalFlourCell.value = calculator.totalFlour
         totalDoughCell.value = calculator.totalDough

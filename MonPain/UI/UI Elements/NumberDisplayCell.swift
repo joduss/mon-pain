@@ -12,39 +12,53 @@ import UIKit
 @IBDesignable
 class NumberDisplayCell: UIView {
 
-    @IBOutlet private weak var leftLabel: UILabel!
-    @IBOutlet private weak var centerLabel: UILabel!
-    @IBOutlet private weak var rightLabel: UILabel!
+    @IBOutlet private weak var ingredientLabel: UILabel!
+    @IBOutlet private weak var quantityLabel: UILabel!
+    @IBOutlet private weak var unitLabel: UILabel!
     
     private let formatter = NumberFormatter()
     
     @IBInspectable
     public var ingredientTitleKey: String {
         get {
-            return leftLabel?.text ?? ""
+            return ingredientLabel?.text ?? ""
         }
         set {
-            leftLabel?.text = newValue.localized
+            ingredientLabel?.text = newValue.localized
+        }
+    }
+    
+    @IBInspectable
+    public var isComputed: Bool = false {
+        didSet {
+            if isComputed {
+                ingredientLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+                quantityLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+            }
+            else {
+                ingredientLabel.font = UIFont.systemFont(ofSize: 17)
+                quantityLabel.font = UIFont.systemFont(ofSize: 17)
+            }
         }
     }
 
     @IBInspectable
     public var value: Double {
         get {
-            return formatter.number(from: centerLabel.text ?? "0")?.doubleValue ?? 0
+            return formatter.number(from: quantityLabel.text ?? "0")?.doubleValue ?? 0
         }
         set {
-            centerLabel?.text = formatter.string(from: newValue)
+            quantityLabel?.text = formatter.string(from: newValue)
         }
     }
 
     @IBInspectable
     public var UnitTitleKey: String {
         get {
-            return rightLabel?.text ?? ""
+            return unitLabel?.text ?? ""
         }
         set {
-            rightLabel?.text = newValue
+            unitLabel?.text = newValue
         }
     }
     

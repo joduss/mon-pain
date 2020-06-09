@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0F6AFF2490148500553E84 /* CalculatorBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */; };
 		6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */; };
 		6B40F5B32485725C00FA4A40 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */; };
 		6B4C580A248598BE000BA9B0 /* NumberDisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B62201C248589F90087D511 /* NumberDisplayCell.xib */; };
@@ -17,16 +18,20 @@
 		6B628A9F248C139F006ABACA /* LevainAndWaterCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */; };
 		6B628AA1248C1626006ABACA /* LevainAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */; };
 		6B628AA3248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */; };
+		6B628AB0248D60A2006ABACA /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AAF248D60A2006ABACA /* InfoVC.swift */; };
+		6B7D92EA248D6D7B00F35D75 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */; };
+		6B7D92EC248D6EF300F35D75 /* CalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */; };
+		6B7D92EE248D731A00F35D75 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92ED248D731A00F35D75 /* TopIconButton.swift */; };
 		6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */; };
 		6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */; };
 		6BB2D9472483EEB40006DAE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9462483EEB40006DAE2 /* SceneDelegate.swift */; };
-		6BB2D9492483EEB40006DAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9482483EEB40006DAE2 /* ViewController.swift */; };
 		6BB2D94C2483EEB40006DAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94A2483EEB40006DAE2 /* Main.storyboard */; };
 		6BB2D94E2483EEB50006DAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */; };
 		6BB2D9512483EEB50006DAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94F2483EEB50006DAE2 /* LaunchScreen.storyboard */; };
 		6BB2D95C2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D95B2483EEB50006DAE2 /* FlourAndwaterCalculatorTests.swift */; };
 		6BB2D9A3248569720006DAE2 /* NumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */; };
 		6BB2D9A7248569970006DAE2 /* NumberInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */; };
+		6BCD525E248ED2B100A03B0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD525D248ED2B100A03B0D /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,23 +45,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBaseVC.swift; sourceTree = "<group>"; };
 		6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculator.swift; sourceTree = "<group>"; };
 		6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculatorVC.swift; sourceTree = "<group>"; };
 		6B62201C248589F90087D511 /* NumberDisplayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberDisplayCell.xib; sourceTree = "<group>"; };
 		6B62201D248589F90087D511 /* NumberDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberDisplayCell.swift; sourceTree = "<group>"; };
 		6B62201F24858D740087D511 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		6B62202224858E9B0087D511 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6B62202424858EC60087D511 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		6B628A9C248ACC0D006ABACA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndWaterCalculatorVC.swift; sourceTree = "<group>"; };
 		6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndWaterCalculator.swift; sourceTree = "<group>"; };
 		6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndwaterCalculatorTests.swift; sourceTree = "<group>"; };
+		6B628AAD248D4692006ABACA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		6B628AAE248D469D006ABACA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B628AAF248D60A2006ABACA /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorType.swift; sourceTree = "<group>"; };
+		6B7D92ED248D731A00F35D75 /* TopIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
 		6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
 		6BB2D9412483EEB40006DAE2 /* MonPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BB2D9462483EEB40006DAE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BB2D9482483EEB40006DAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BB2D94B2483EEB40006DAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BB2D9502483EEB50006DAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +75,7 @@
 		6BB2D95D2483EEB50006DAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputCell.swift; sourceTree = "<group>"; };
 		6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberInputCell.xib; sourceTree = "<group>"; };
+		6BCD525D248ED2B100A03B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0F6AFD249013D900553E84 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6B0F6B002490148900553E84 /* Bases */,
+				6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */,
+				6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */,
+				6B628AAF248D60A2006ABACA /* InfoVC.swift */,
+				6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */,
+				6BCD525D248ED2B100A03B0D /* TabBarController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6B0F6B002490148900553E84 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
 		6B39A8882486C1D600E9A6C5 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */,
 				6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */,
 				6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */,
 			);
@@ -129,9 +161,9 @@
 				6B39A8882486C1D600E9A6C5 /* Logic */,
 				6BA02DA124856F20005B2CB2 /* Extensions */,
 				6BB2D9A4248569790006DAE2 /* UI */,
+				6B0F6AFD249013D900553E84 /* Screens */,
 				6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */,
 				6BB2D9462483EEB40006DAE2 /* SceneDelegate.swift */,
-				6BB2D9482483EEB40006DAE2 /* ViewController.swift */,
 				6BB2D94A2483EEB40006DAE2 /* Main.storyboard */,
 				6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */,
 				6BB2D94F2483EEB50006DAE2 /* LaunchScreen.storyboard */,
@@ -155,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				6BB2D9A5248569850006DAE2 /* UI Elements */,
-				6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */,
-				6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -168,6 +198,7 @@
 				6B62201C248589F90087D511 /* NumberDisplayCell.xib */,
 				6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */,
 				6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */,
+				6B7D92ED248D731A00F35D75 /* TopIconButton.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -230,7 +261,7 @@
 				};
 			};
 			buildConfigurationList = 6BB2D93C2483EEB40006DAE2 /* Build configuration list for PBXProject "MonPain" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -277,17 +308,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7D92EE248D731A00F35D75 /* TopIconButton.swift in Sources */,
+				6BCD525E248ED2B100A03B0D /* TabBarController.swift in Sources */,
 				6BB2D9A3248569720006DAE2 /* NumberInputCell.swift in Sources */,
 				6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */,
 				6B62201E248589F90087D511 /* NumberDisplayCell.swift in Sources */,
-				6BB2D9492483EEB40006DAE2 /* ViewController.swift in Sources */,
 				6B628AA1248C1626006ABACA /* LevainAndWaterCalculator.swift in Sources */,
+				6B7D92EA248D6D7B00F35D75 /* HomeVC.swift in Sources */,
 				6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */,
 				6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */,
 				6B62202024858D740087D511 /* StringExtension.swift in Sources */,
+				6B0F6AFF2490148500553E84 /* CalculatorBaseVC.swift in Sources */,
 				6B40F5B32485725C00FA4A40 /* UIViewExtension.swift in Sources */,
 				6BB2D9472483EEB40006DAE2 /* SceneDelegate.swift in Sources */,
+				6B7D92EC248D6EF300F35D75 /* CalculatorType.swift in Sources */,
 				6B628A9F248C139F006ABACA /* LevainAndWaterCalculatorVC.swift in Sources */,
+				6B628AB0248D60A2006ABACA /* InfoVC.swift in Sources */,
 				6B4C580C2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +352,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B628A9C248ACC0D006ABACA /* en */,
+				6B628AAE248D469D006ABACA /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -324,7 +361,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D94B2483EEB40006DAE2 /* Base */,
-				6B62202424858EC60087D511 /* fr */,
+				6B628AAD248D4692006ABACA /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -333,7 +370,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D9502483EEB50006DAE2 /* Base */,
-				6B62202224858E9B0087D511 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lIX-NX-kad">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qbD-3e-Pr2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="FlourAndWater" id="yKe-lT-dej"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqn-c8-EKl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -30,21 +31,21 @@
             <objects>
                 <tableViewController id="3Ob-1m-PRZ" customClass="FlourAndWaterCalculatorVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="J9t-Tm-i0Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="My Dear Levain" id="jJP-p2-7Cd">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43" id="5Ca-V0-1mc">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ca-V0-1mc" id="xiW-5a-cFR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-Dm-jlM" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.hydratation"/>
@@ -58,7 +59,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxAllowedValue">
                                                             <integer key="value" value="200"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -75,14 +76,14 @@
                             <tableViewSection headerTitle="In my bread, I want" id="ieJ-ke-1Mx">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="LK4-6E-sIq">
-                                        <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="154.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LK4-6E-sIq" id="Q6F-b3-AyK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPs-bz-Yd6" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.levain"/>
@@ -106,14 +107,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="QyS-dm-kS7">
-                                        <rect key="frame" x="0.0" y="198.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="198.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QyS-dm-kS7" id="JEB-E9-ctr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-eD-r5x" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.ratio"/>
@@ -139,14 +140,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="9em-y8-rb8">
-                                        <rect key="frame" x="0.0" y="242.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="242.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9em-y8-rb8" id="udu-7K-dow">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-2G-2gY" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="bread.hydratation"/>
@@ -157,7 +158,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -174,18 +175,19 @@
                             <tableViewSection headerTitle="You must add" id="fnJ-hZ-vQj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="FMn-lO-hho">
-                                        <rect key="frame" x="0.0" y="342.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="342.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FMn-lO-hho" id="IlV-eZ-mag">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JnA-vD-sSu" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -197,15 +199,40 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="xzu-6a-wZT">
+                                        <rect key="frame" x="0.0" y="386.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzu-6a-wZT" id="CDa-rS-B26">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6c-9X-BVR" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q6c-9X-BVR" firstAttribute="top" secondItem="CDa-rS-B26" secondAttribute="top" id="6ih-PF-XvS"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q6c-9X-BVR" secondAttribute="bottom" id="7XF-KD-EAd"/>
+                                                <constraint firstItem="Q6c-9X-BVR" firstAttribute="leading" secondItem="CDa-rS-B26" secondAttribute="leading" id="erA-3x-Ss4"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q6c-9X-BVR" secondAttribute="trailing" id="vca-oz-Su1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="EqM-gR-YmY">
-                                        <rect key="frame" x="0.0" y="386.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="430.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EqM-gR-YmY" id="qX8-cK-xQH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qno-Mv-Ghx" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.levain"/>
@@ -221,43 +248,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="xzu-6a-wZT">
-                                        <rect key="frame" x="0.0" y="430.5" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzu-6a-wZT" id="CDa-rS-B26">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6c-9X-BVR" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Q6c-9X-BVR" firstAttribute="top" secondItem="CDa-rS-B26" secondAttribute="top" id="6ih-PF-XvS"/>
-                                                <constraint firstAttribute="bottom" secondItem="Q6c-9X-BVR" secondAttribute="bottom" id="7XF-KD-EAd"/>
-                                                <constraint firstItem="Q6c-9X-BVR" firstAttribute="leading" secondItem="CDa-rS-B26" secondAttribute="leading" id="erA-3x-Ss4"/>
-                                                <constraint firstAttribute="trailing" secondItem="Q6c-9X-BVR" secondAttribute="trailing" id="vca-oz-Su1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="In total, you get" id="cST-Wf-JNu">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="QlB-BJ-Une">
-                                        <rect key="frame" x="0.0" y="530.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="530.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QlB-BJ-Une" id="OHR-2e-cbU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31P-J0-UlE" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
@@ -274,14 +277,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="zJP-kn-0qd">
-                                        <rect key="frame" x="0.0" y="574.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="574.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zJP-kn-0qd" id="qRB-Aa-QtK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-YF-rQj" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
@@ -298,14 +301,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="udi-c4-EyW">
-                                        <rect key="frame" x="0.0" y="618.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="618.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="udi-c4-EyW" id="XFW-hJ-mkj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-95-5r6" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.dough"/>
@@ -329,7 +332,13 @@
                             <outlet property="delegate" destination="3Ob-1m-PRZ" id="gOn-fa-Bap"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="title" id="vOL-jx-fzf"/>
+                    <navigationItem key="navigationItem" title="title" id="vOL-jx-fzf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="0b5-EG-7Bi">
+                            <connections>
+                                <segue destination="Y2j-dj-wgd" kind="show" id="C1J-ys-QxU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="desiredBreadHydratationCell" destination="ocC-2G-2gY" id="tsH-yf-iZQ"/>
                         <outlet property="desiredLevainCell" destination="VPs-bz-Yd6" id="2xw-Ws-y0b"/>
@@ -350,7 +359,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="WQS-TW-q6v">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lIX-NX-kad" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lIX-NX-kad" customClass="TabBarController" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mGZ-Ni-d4G">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -371,27 +380,27 @@
             <objects>
                 <tableViewController id="peW-u4-EHk" customClass="LevainAndWaterCalculatorVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WPJ-MS-jBG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="My Dear Levain" id="p0L-br-V0J">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43" id="V4G-op-nqD">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4G-op-nqD" id="zvh-YO-QKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw7-IF-TGR" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.hydratation"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="%"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <integer key="value" value="35"/>
+                                                            <real key="value" value="100"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
                                                             <integer key="value" value="1"/>
@@ -399,7 +408,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxAllowedValue">
                                                             <integer key="value" value="200"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -416,19 +425,19 @@
                             <tableViewSection headerTitle="In my bread, I want" id="W94-Ul-DiN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="ZN9-sV-I9F">
-                                        <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="154.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZN9-sV-I9F" id="Xr1-Ks-os7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U6-CR-rF9" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <integer key="value" value="150"/>
+                                                            <real key="value" value="500"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="g"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
@@ -447,19 +456,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="axh-zi-Eug">
-                                        <rect key="frame" x="0.0" y="198.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="198.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axh-zi-Eug" id="fHi-b2-m6r">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URC-xK-Lyq" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.ratio"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <integer key="value" value="35"/>
+                                                            <real key="value" value="30"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="%"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
@@ -480,14 +489,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="SFV-Nl-Xnk">
-                                        <rect key="frame" x="0.0" y="242.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="242.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SFV-Nl-Xnk" id="53Q-ZX-YL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvh-ct-cIu" customClass="NumberInputCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="bread.hydratation"/>
@@ -498,7 +507,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -515,18 +524,19 @@
                             <tableViewSection headerTitle="You must add" id="OSd-L6-R98">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="9so-F8-amx">
-                                        <rect key="frame" x="0.0" y="342.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="342.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9so-F8-amx" id="qYA-Ye-1Zd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wos-1S-EQx" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -539,18 +549,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="gK8-LY-bbO">
-                                        <rect key="frame" x="0.0" y="386.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="386.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gK8-LY-bbO" id="Or2-M4-1eI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzl-FG-FDU" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.levain"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -563,14 +574,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="nOl-Ve-ROT">
-                                        <rect key="frame" x="0.0" y="430.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="430.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nOl-Ve-ROT" id="AmF-OH-24U">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrO-ni-Th6" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
@@ -591,14 +602,14 @@
                             <tableViewSection headerTitle="In total, you get" id="Rb4-wE-AuP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="ST1-RC-nAa">
-                                        <rect key="frame" x="0.0" y="530.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="530.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ST1-RC-nAa" id="cS7-jS-Okl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmj-3E-Kbq" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
@@ -615,14 +626,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Dlf-S2-3BW">
-                                        <rect key="frame" x="0.0" y="574.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="574.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dlf-S2-3BW" id="eLg-Su-hLd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-n0-SaV" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
@@ -639,14 +650,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="249-9q-x6K">
-                                        <rect key="frame" x="0.0" y="618.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="618.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="249-9q-x6K" id="qb7-ee-9cK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPN-3s-tKm" customClass="NumberDisplayCell" customModule="MonPain" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.dough"/>
@@ -670,7 +681,13 @@
                             <outlet property="delegate" destination="peW-u4-EHk" id="y1L-dg-W43"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="title" id="yZX-NK-64k"/>
+                    <navigationItem key="navigationItem" title="title" id="yZX-NK-64k">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="kmu-V2-9vG">
+                            <connections>
+                                <segue destination="Y2j-dj-wgd" kind="show" id="b6n-ir-Bnc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="desiredBreadHydratationCell" destination="Jvh-ct-cIu" id="CrW-7L-svg"/>
                         <outlet property="desiredFlourCell" destination="8U6-CR-rF9" id="sNH-t1-zyQ"/>
@@ -695,7 +712,7 @@
                     <tabBarItem key="tabBarItem" image="LevainAndWater" id="k4U-5R-bN7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWE-Qg-jYp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -707,9 +724,168 @@
             </objects>
             <point key="canvasLocation" x="1048" y="798"/>
         </scene>
+        <!--Info-->
+        <scene sceneID="Xqv-Rd-o7s">
+            <objects>
+                <viewController id="Y2j-dj-wgd" customClass="InfoVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dVi-1H-Wvn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjF-yy-3mv">
+                                <rect key="frame" x="20" y="61" width="335" height="95.5"/>
+                                <string key="text">If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-3V-bb7">
+                                <rect key="frame" x="126.5" y="176.5" width="122" height="30"/>
+                                <state key="normal" title="Contact per email"/>
+                                <connections>
+                                    <action selector="clickContactPerEmail:" destination="Y2j-dj-wgd" eventType="touchUpInside" id="1Zk-Gz-7lX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dtN-3V-bb7" firstAttribute="top" secondItem="NjF-yy-3mv" secondAttribute="bottom" constant="20" id="47v-oF-6hH"/>
+                            <constraint firstItem="8yO-TN-Dpd" firstAttribute="trailing" secondItem="NjF-yy-3mv" secondAttribute="trailing" constant="20" id="R8x-EI-BP2"/>
+                            <constraint firstItem="NjF-yy-3mv" firstAttribute="top" secondItem="8yO-TN-Dpd" secondAttribute="top" constant="17" id="ZDc-0e-34q"/>
+                            <constraint firstItem="NjF-yy-3mv" firstAttribute="leading" secondItem="8yO-TN-Dpd" secondAttribute="leading" constant="20" id="hip-rO-Cm8"/>
+                            <constraint firstItem="dtN-3V-bb7" firstAttribute="centerX" secondItem="8yO-TN-Dpd" secondAttribute="centerX" id="vwT-px-Vzw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8yO-TN-Dpd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="cc8-to-dZx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1d-bS-XHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3540.579710144928" y="420.53571428571428"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="ZyN-uy-6A1">
+            <objects>
+                <viewController id="qbD-3e-Pr2" customClass="HomeVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbg-bj-71d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIconTransparent512" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-kC-alj">
+                                <rect key="frame" x="87" y="30" width="201" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Urv-q6-chg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you need me to compute for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56z-6v-MSG">
+                                <rect key="frame" x="20" y="100" width="335" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have some levain and you want to know how much water and flour you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-4j-lB3">
+                                <rect key="frame" x="20" y="327" width="335" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You know how much flour you want to add, but you don't know how much levain and water you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-YY-QZt">
+                                <rect key="frame" x="20" y="535.5" width="335" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPain" customModuleProvider="target">
+                                <rect key="frame" x="112" y="405.5" width="151" height="110"/>
+                                <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Levain &amp; Water" image="LevainAndWaterHome"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickedLevainAndWater:" destination="qbD-3e-Pr2" eventType="touchUpInside" id="2WB-wr-oTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPain" customModuleProvider="target">
+                                <rect key="frame" x="118" y="197" width="139" height="110"/>
+                                <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="etq-Hp-aeu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Flour &amp; Water" image="FlourAndWaterHome"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickedFlourAndWater:" destination="qbD-3e-Pr2" eventType="touchUpInside" id="O35-hm-ZT2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63563972710000005" green="0.85822182889999998" blue="0.93397182229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dwa-4j-lB3" firstAttribute="top" secondItem="htD-lu-vMy" secondAttribute="bottom" constant="20" id="30D-P0-7Sq"/>
+                            <constraint firstItem="56z-6v-MSG" firstAttribute="leading" secondItem="5kM-sr-yUs" secondAttribute="leading" constant="20" id="AmM-Xa-YyW"/>
+                            <constraint firstItem="UjV-YY-QZt" firstAttribute="width" secondItem="dwa-4j-lB3" secondAttribute="width" id="Cvi-e4-4cc"/>
+                            <constraint firstItem="QeT-kC-alj" firstAttribute="top" secondItem="5kM-sr-yUs" secondAttribute="top" constant="30" id="J3c-ub-Pv3"/>
+                            <constraint firstItem="dwa-4j-lB3" firstAttribute="leading" secondItem="5kM-sr-yUs" secondAttribute="leading" constant="20" id="Mz1-rS-LHR"/>
+                            <constraint firstItem="dwa-4j-lB3" firstAttribute="centerX" secondItem="5kM-sr-yUs" secondAttribute="centerX" id="NqE-YA-w9i"/>
+                            <constraint firstItem="UjV-YY-QZt" firstAttribute="centerX" secondItem="5kM-sr-yUs" secondAttribute="centerX" id="Swy-WS-rSQ"/>
+                            <constraint firstItem="5kM-sr-yUs" firstAttribute="trailing" secondItem="56z-6v-MSG" secondAttribute="trailing" constant="20" id="TI6-Lm-qaw"/>
+                            <constraint firstItem="QeT-kC-alj" firstAttribute="leading" secondItem="5kM-sr-yUs" secondAttribute="leading" constant="87" id="W9c-Y8-Eb6"/>
+                            <constraint firstItem="jgL-jO-FVu" firstAttribute="height" secondItem="htD-lu-vMy" secondAttribute="height" id="YI7-ik-DFq"/>
+                            <constraint firstItem="htD-lu-vMy" firstAttribute="top" secondItem="56z-6v-MSG" secondAttribute="bottom" constant="30" id="cfp-Hh-e7f"/>
+                            <constraint firstItem="5kM-sr-yUs" firstAttribute="trailing" secondItem="QeT-kC-alj" secondAttribute="trailing" constant="87" id="clv-4g-xcw"/>
+                            <constraint firstItem="56z-6v-MSG" firstAttribute="top" secondItem="QeT-kC-alj" secondAttribute="bottom" constant="20" id="e0n-By-MgA"/>
+                            <constraint firstItem="jgL-jO-FVu" firstAttribute="top" secondItem="dwa-4j-lB3" secondAttribute="bottom" constant="40" id="eNu-ra-JGC"/>
+                            <constraint firstItem="5kM-sr-yUs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UjV-YY-QZt" secondAttribute="bottom" constant="20" id="gfe-a5-ex1"/>
+                            <constraint firstItem="htD-lu-vMy" firstAttribute="centerX" secondItem="5kM-sr-yUs" secondAttribute="centerX" id="jpv-TD-3qv"/>
+                            <constraint firstItem="jgL-jO-FVu" firstAttribute="centerX" secondItem="5kM-sr-yUs" secondAttribute="centerX" id="pmY-eV-9Cp"/>
+                            <constraint firstItem="UjV-YY-QZt" firstAttribute="top" secondItem="jgL-jO-FVu" secondAttribute="bottom" constant="20" id="wYh-Lb-B9i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5kM-sr-yUs"/>
+                    </view>
+                    <connections>
+                        <segue destination="lIX-NX-kad" kind="presentation" identifier="ToBarBarController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="eX9-bk-JPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wET-8g-nqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-990" y="565"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="C1J-ys-QxU"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="AppIconTransparent512" width="512" height="204.5"/>
         <image name="FlourAndWater" width="25" height="25"/>
+        <image name="FlourAndWaterHome" width="60" height="60"/>
         <image name="LevainAndWater" width="25" height="25"/>
+        <image name="LevainAndWaterHome" width="60" height="60"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
