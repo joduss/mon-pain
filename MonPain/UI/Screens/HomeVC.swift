@@ -9,29 +9,29 @@
 import UIKit
 import GoogleMobileAds
 
-class HomeVC: UIViewController, GADBannerViewDelegate {
+class HomeVC: UIViewController {
     
-    @IBOutlet weak var adview: GADBannerView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var flourAndWaterButton: TopIconButton!
+    @IBOutlet weak var flourAndWaterSubtitle: UILabel!
+    @IBOutlet weak var levainAndWaterButton: TopIconButton!
+    @IBOutlet weak var levainAndWaterSubtitle: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        titleLabel.text = "home.title".localized
+        flourAndWaterButton.setTitle("home.flourWaterButton.title".localized, for: .normal)
+        flourAndWaterSubtitle.text = "home.flourWaterButton.subtitle".localized
+        levainAndWaterButton.setTitle("home.levainWaterButton.title".localized, for: .normal)
+        levainAndWaterSubtitle.text = "home.levainWaterButton.subtitle".localized
+    }
+    
     private var selectedCalculator: CalculatorType = .FlourAndWater
     
     @IBAction func clickedFlourAndWater(_ sender: Any) {
         selectedCalculator = .FlourAndWater
         self.performSegue(withIdentifier: "ToBarBarController", sender: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        adview.delegate = self
-        adview.rootViewController = self
-        
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Failed")
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {        print("OK")
     }
     
     @IBAction func clickedLevainAndWater(_ sender: Any) {

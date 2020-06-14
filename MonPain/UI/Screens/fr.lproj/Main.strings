@@ -1,63 +1,23 @@
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "0b5-EG-7Bi"; */
-"0b5-EG-7Bi.title" = "Item";
-
-/* Class = "UILabel"; text = "What do you need me to compute for you?"; ObjectID = "56z-6v-MSG"; */
-"56z-6v-MSG.text" = "What do you need me to compute for you?";
-
-/* Class = "UILabel"; text = "If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!"; ObjectID = "NjF-yy-3mv"; */
-"NjF-yy-3mv.text" = "If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!";
-
 /* Class = "UITableViewSection"; headerTitle = "You must add"; ObjectID = "OSd-L6-R98"; */
-"OSd-L6-R98.headerTitle" = "You must add";
+"OSd-L6-R98.headerTitle" = "Vous devez ajouter";
 
 /* Class = "UITableViewSection"; headerTitle = "In total, you get"; ObjectID = "Rb4-wE-AuP"; */
-"Rb4-wE-AuP.headerTitle" = "In total, you get";
-
-/* Class = "UILabel"; text = "You know how much flour you want to add, but you don't know how much levain and water you need to add."; ObjectID = "UjV-YY-QZt"; */
-"UjV-YY-QZt.text" = "You know how much flour you want to add, but you don't know how much levain and water you need to add.";
+"Rb4-wE-AuP.headerTitle" = "In total, vous aurez";
 
 /* Class = "UITableViewSection"; headerTitle = "In my bread, I want"; ObjectID = "W94-Ul-DiN"; */
-"W94-Ul-DiN.headerTitle" = "In my bread, I want";
+"W94-Ul-DiN.headerTitle" = "Dans mon pain, je veux";
 
 /* Class = "UITableViewSection"; headerTitle = "In total, you get"; ObjectID = "cST-Wf-JNu"; */
-"cST-Wf-JNu.headerTitle" = "In total, you get";
-
-/* Class = "UINavigationItem"; title = "Info"; ObjectID = "cc8-to-dZx"; */
-"cc8-to-dZx.title" = "Info";
-
-/* Class = "UIButton"; normalTitle = "Contact per email"; ObjectID = "dtN-3V-bb7"; */
-"dtN-3V-bb7.normalTitle" = "Contact per email";
-
-/* Class = "UILabel"; text = "You have some levain and you want to know how much water and flour you need to add."; ObjectID = "dwa-4j-lB3"; */
-"dwa-4j-lB3.text" = "You have some levain and you want to know how much water and flour you need to add.";
+"cST-Wf-JNu.headerTitle" = "In total, vous aurez";
 
 /* Class = "UITableViewSection"; headerTitle = "You must add"; ObjectID = "fnJ-hZ-vQj"; */
-"fnJ-hZ-vQj.headerTitle" = "You must add";
-
-/* Class = "UIButton"; normalTitle = "Flour & Water"; ObjectID = "htD-lu-vMy"; */
-"htD-lu-vMy.normalTitle" = "Flour & Water";
+"fnJ-hZ-vQj.headerTitle" = "Vous devez ajouter";
 
 /* Class = "UITableViewSection"; headerTitle = "In my bread, I want"; ObjectID = "ieJ-ke-1Mx"; */
-"ieJ-ke-1Mx.headerTitle" = "In my bread, I want";
+"ieJ-ke-1Mx.headerTitle" = "Dans mon pain, je veux";
 
 /* Class = "UITableViewSection"; headerTitle = "My Dear Levain"; ObjectID = "jJP-p2-7Cd"; */
-"jJP-p2-7Cd.headerTitle" = "My Dear Levain";
-
-/* Class = "UIButton"; normalTitle = "Levain & Water"; ObjectID = "jgL-jO-FVu"; */
-"jgL-jO-FVu.normalTitle" = "Levain & Water";
-
-/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "kmu-V2-9vG"; */
-"kmu-V2-9vG.title" = "Item";
+"jJP-p2-7Cd.headerTitle" = "Mon cher levain";
 
 /* Class = "UITableViewSection"; headerTitle = "My Dear Levain"; ObjectID = "p0L-br-V0J"; */
-"p0L-br-V0J.headerTitle" = "My Dear Levain";
-
-/* Class = "UINavigationItem"; title = "title"; ObjectID = "vOL-jx-fzf"; */
-"vOL-jx-fzf.title" = "title";
-
-/* Class = "UITabBarItem"; title = "Item"; ObjectID = "yKe-lT-dej"; */
-"yKe-lT-dej.title" = "Item";
-
-/* Class = "UINavigationItem"; title = "title"; ObjectID = "yZX-NK-64k"; */
-"yZX-NK-64k.title" = "title";
+"p0L-br-V0J.headerTitle" = "Mon cher levain";

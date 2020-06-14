@@ -6,4 +6,14 @@
 //  Copyright © 2020 ZaJo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class LocalizedButton: UIButton {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setTitle(title(for: .normal)?.localized, for: .normal)
+    }
+    
+}

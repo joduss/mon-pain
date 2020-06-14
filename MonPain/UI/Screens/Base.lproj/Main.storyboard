@@ -724,7 +724,7 @@
             </objects>
             <point key="canvasLocation" x="1048" y="798"/>
         </scene>
-        <!--Info-->
+        <!--info.screen-title-->
         <scene sceneID="Xqv-Rd-o7s">
             <objects>
                 <viewController id="Y2j-dj-wgd" customClass="InfoVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
@@ -732,16 +732,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjF-yy-3mv">
-                                <rect key="frame" x="20" y="61" width="335" height="95.5"/>
-                                <string key="text">If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info.content" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjF-yy-3mv" customClass="LocalizedLabel" customModule="MonPain" customModuleProvider="target">
+                                <rect key="frame" x="20" y="61" width="335" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleKey" value="info.content"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-3V-bb7">
-                                <rect key="frame" x="126.5" y="176.5" width="122" height="30"/>
-                                <state key="normal" title="Contact per email"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-3V-bb7" customClass="LocalizedButton" customModule="MonPain" customModuleProvider="target">
+                                <rect key="frame" x="106" y="105" width="163" height="30"/>
+                                <state key="normal" title="info.contact-button.title"/>
                                 <connections>
                                     <action selector="clickContactPerEmail:" destination="Y2j-dj-wgd" eventType="touchUpInside" id="1Zk-Gz-7lX"/>
                                 </connections>
@@ -757,7 +759,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8yO-TN-Dpd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Info" id="cc8-to-dZx"/>
+                    <navigationItem key="navigationItem" title="info.screen-title" id="cc8-to-dZx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1d-bS-XHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -777,32 +779,32 @@
                                     <constraint firstAttribute="height" priority="600" constant="50" id="Urv-q6-chg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="What do you need me to compute for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56z-6v-MSG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[loc] What do you need me to compute for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56z-6v-MSG">
                                 <rect key="frame" x="20" y="100" width="335" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have some levain and you want to know how much water and flour you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-4j-lB3">
-                                <rect key="frame" x="20" y="324.5" width="335" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[loc] You have some levain and you want to know how much water and flour you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-4j-lB3">
+                                <rect key="frame" x="20" y="324.5" width="335" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You know how much flour you want to add, but you don't know how much levain and water you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-YY-QZt">
-                                <rect key="frame" x="20" y="533" width="335" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[loc] You know how much flour you want to add, but you don't know how much levain and water you need to add." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-YY-QZt">
+                                <rect key="frame" x="20" y="552" width="335" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPain" customModuleProvider="target">
-                                <rect key="frame" x="112" y="403" width="151" height="110"/>
+                                <rect key="frame" x="89.5" y="422" width="196" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Levain &amp; Water" image="LevainAndWaterHome"/>
+                                <state key="normal" title="[loc] Levain &amp; Water" image="LevainAndWaterHome"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -819,7 +821,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPain" customModuleProvider="target">
-                                <rect key="frame" x="118" y="194.5" width="139" height="110"/>
+                                <rect key="frame" x="95.5" y="194.5" width="184" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="251" constant="110" id="743-5w-ixM"/>
@@ -829,7 +831,7 @@
                                 <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Flour &amp; Water" image="FlourAndWaterHome"/>
+                                <state key="normal" title="[loc] Flour &amp; Water" image="FlourAndWaterHome"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -875,6 +877,11 @@
                         <viewLayoutGuide key="safeArea" id="5kM-sr-yUs"/>
                     </view>
                     <connections>
+                        <outlet property="flourAndWaterButton" destination="htD-lu-vMy" id="hSw-X5-DoX"/>
+                        <outlet property="flourAndWaterSubtitle" destination="dwa-4j-lB3" id="39q-D7-vMu"/>
+                        <outlet property="levainAndWaterButton" destination="jgL-jO-FVu" id="Kwh-A1-a1l"/>
+                        <outlet property="levainAndWaterSubtitle" destination="UjV-YY-QZt" id="HOr-IR-3HK"/>
+                        <outlet property="titleLabel" destination="56z-6v-MSG" id="rZE-Gc-5fd"/>
                         <segue destination="lIX-NX-kad" kind="presentation" identifier="ToBarBarController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="eX9-bk-JPV"/>
                     </connections>
                 </viewController>
@@ -884,7 +891,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C1J-ys-QxU"/>
+        <segue reference="b6n-ir-Bnc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AppIconTransparent512" width="512" height="204.5"/>

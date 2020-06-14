@@ -6,4 +6,12 @@
 //  Copyright © 2020 ZaJo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class LocalizedLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        text = text?.localized
+    }
+}

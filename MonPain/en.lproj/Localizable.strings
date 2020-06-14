@@ -7,6 +7,16 @@
 */
 
 
+// Home Screen
+// ===========
+
+"home.title" = "What do you need me to compute for you?";
+"home.flourWaterButton.title" = "Flour & Water";
+"home.flourWaterButton.subtitle" = "You know how much levain you want to use, but you don't how much water and flour you need to add.";
+"home.levainWaterButton.title" = "Levain & Water";
+"home.levainWaterButton.subtitle" = "You know how much flour you want to add, but you don't know how much levain and water you need to add.";
+
+
 // Calculator screens
 // ==================
 "screen.flour-and-water.title" = "Flour and Water";
@@ -28,3 +38,7 @@
 // ===========
 "contact.error.title" = "Error";
 "contact.error.message" = "You don't have Apple mail configured. You can open your favorite email app and send an email to 'zajoapp@bluewin.ch'.";
+
+"info.screen-title" = "About";
+"info.content" = "If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!";
+"info.contact-button.title" = "Contact per email";

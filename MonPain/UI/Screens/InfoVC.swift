@@ -11,6 +11,11 @@ import MessageUI
 
 class InfoVC: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = title?.localized
+    }
+    
     @IBAction func clickContactPerEmail(_ sender: Any) {
         
         guard (MFMailComposeViewController.canSendMail()) else {

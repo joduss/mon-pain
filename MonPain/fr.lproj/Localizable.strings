@@ -6,11 +6,22 @@
   Copyright © 2020 ZaJo. All rights reserved.
 */
 
-// Calculator VC screen titles
+// Home Screen
+// ===========
+
+"home.title" = "Que dois-je calculer pour vous?";
+"home.flourWaterButton.title" = "Farine & Eau";
+"home.flourWaterButton.subtitle" = "Vous voulez utiliser une quantité définie de levain, mais vous ne savez pas quelle quantité d'eau et de farine ajouter.";
+"home.levainWaterButton.title" = "Levain & Eau";
+"home.levainWaterButton.subtitle" = "Vous voulez utiliser une quantité définie de farine, mais vous ne savez pas quelle quantité de levain et d'eau ajouter.";
+
+
+// Calculator screens
+// ==================
+
 "screen.flour-and-water.title" = "Farine et eau";
 "screen.levain-and-water.title" = "Levain et eau";
 
-// Calculator VCs cell titles
 "levain.hydratation" = "Hydratation du levain";
 "levain.ratio" = "Proportion de levain";
 "bread.hydratation" = "Hydratation du pain";
@@ -19,14 +30,16 @@
 "ingredient.dough" = "Pâte";
 "ingredient.levain" = "Levain";
 
-// Calculator VCs info popup.
-
 "levain.ratio.info" = "C'est la proportion de levain par rapport à la farine. \n\nPar exemple, pour une pâte dans laquelle on a ajouté 100g de levain et 400g de farine, la proportion de levain est de 25%. (100/400*100)";
 
 "bread.hydratation.info" = "Le taux d'hydratation de la pâte à pain est la proportion d'eau dans la pâte par rapport à la farine.\n\nPar exemple, si l'on ajoute 100g de levain, composé de 50g d'eau et 50g de farine, ainsi que 300g de farine et 200g d'eau, on a au total 250g d'eau et 350g de farine. On a alors un taux d'hydratation de 71.4% (250/350 * 100).";
-"levain.hydratation.info" = "Le taux d'hydratation du levain est la proportion son l'eau par rapport à sa farine.\n\nPar exemple, un levain composé de 60g d'eau pour 100g de farine a un taux d'hydratation de 60%.";
+"levain.hydratation.info" = "Le taux d'hydratation du levain est la proportion de son l'eau par rapport à sa farine.\n\nPar exemple, un levain composé de 60g d'eau pour 100g de farine a un taux d'hydratation de 60%.";
 
 // Info screen
-
+// ===========
 "contact.error.title" = "Erreur";
-"contact.error.message" = "You n'avez pas configuré Apple Mail. Vous pouvez utiliser votre application mail préférée et envoyer un email à l'adresse 'zajoapp@bluewin.ch'.";
+"contact.error.message" = "Vous n'avez pas configuré Apple Mail. Vous pouvez utiliser votre application mail préférée et envoyer un email à l'adresse 'zajoapp@bluewin.ch'.";
+
+"info.screentitle" = "A propos";
+"info.content" = "Contactez-moi par email si vous recontrez un bug. N'hésitez pas non plus à vous plaindre, proposer des idées d'amélioration ou quoi que ce soit!";
+"info.contact-button.title" = "Contact par email";
