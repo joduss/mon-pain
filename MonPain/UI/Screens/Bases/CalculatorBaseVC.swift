@@ -31,39 +31,35 @@ public class CalculatorBaseVC: UITableViewController {
                         
         adManager = TableViewAdManager(controller: self, tableView: self.tableView)
         
+        
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topOutsideTextfield(sender:))))
         
-        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown) {
-            PACConsentInformation.sharedInstance.requestConsentInfoUpdate(forPublisherIdentifiers: [AdsConfiguration.publisherId]) {
-                (_ error: Error?) -> Void in
-                if error != nil {
-                    // Consent info update failed.
-                    self.adType = .none
-                } else {
-                    // Consent info update succeeded. The shared PACConsentInformation
-                    // instance has been updated.
-                    let status = PACConsentInformation.sharedInstance.consentStatus
-                    
-                    if (status == .personalized) {
-                        self.adType = .personalized
-                        self.adManager.personalized = true
-                    }
-                    else {
-                        self.adType = .nonPersonalized
-                        self.adManager.personalized = false
-                    }
+        PACConsentInformation.sharedInstance.requestConsentInfoUpdate(forPublisherIdentifiers: [AdsConfiguration.publisherId]) {
+            (_ error: Error?) -> Void in
+            if error != nil {
+                // Consent info update failed.
+                self.adType = .none
+            } else {
+                // Consent info update succeeded. The shared PACConsentInformation
+                // instance has been updated.
+                let status = PACConsentInformation.sharedInstance.consentStatus
+                
+                if (status == .personalized) {
+                    self.adType = .personalized
+                    self.adManager.personalized = true
+                }
+                else {
+                    self.adType = .nonPersonalized
+                    self.adManager.personalized = false
                 }
             }
-        }
-        else {
-            self.adManager.personalized = true
         }
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && self.adType == .none) {
+        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && PACConsentInformation.sharedInstance.consentStatus == .unknown) {
             requestConsent()
         }
         else {
@@ -83,7 +79,7 @@ public class CalculatorBaseVC: UITableViewController {
     
     private func requestConsent() {
         // TODO: Replace with your app's privacy policy url.
-        guard let privacyUrl = URL(string: "https://www.your.com/privacyurl"),
+        guard let privacyUrl = URL(string: "http://theuselessapp.epizy.com/"),
             let form = PACConsentForm(applicationPrivacyPolicyURL: privacyUrl) else {
                 print("incorrect privacy URL.")
                 return
