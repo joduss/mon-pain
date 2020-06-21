@@ -354,7 +354,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgG-HA-lGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="138"/>
+            <point key="canvasLocation" x="2026" y="-187"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WQS-TW-q6v">
@@ -727,7 +727,7 @@
         <!--info.screen-title-->
         <scene sceneID="Xqv-Rd-o7s">
             <objects>
-                <viewController id="Y2j-dj-wgd" customClass="InfoVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="info.screen-title" id="Y2j-dj-wgd" customClass="InfoVC" customModule="MonPain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVi-1H-Wvn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -737,9 +737,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="titleKey" value="info.content"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-3V-bb7" customClass="LocalizedButton" customModule="MonPain" customModuleProvider="target">
                                 <rect key="frame" x="106" y="105" width="163" height="30"/>
