@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleMobileAds
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         #if DEBUG
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2"]
+            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2"]
         #endif
         
         return true
