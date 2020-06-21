@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6BB2D9402483EEB40006DAE2"
-               BuildableName = "MonPain.app"
+               BuildableName = "Mon Pain.app"
                BlueprintName = "MonPain"
                ReferencedContainer = "container:MonPain.xcodeproj">
             </BuildableReference>
@@ -44,19 +44,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "fr"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
+      allowLocationSimulation = "NO">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BB2D9402483EEB40006DAE2"
-            BuildableName = "MonPain.app"
+            BuildableName = "Mon Pain.app"
             BlueprintName = "MonPain"
             ReferencedContainer = "container:MonPain.xcodeproj">
          </BuildableReference>
@@ -83,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BB2D9402483EEB40006DAE2"
-            BuildableName = "MonPain.app"
+            BuildableName = "Mon Pain.app"
             BlueprintName = "MonPain"
             ReferencedContainer = "container:MonPain.xcodeproj">
          </BuildableReference>

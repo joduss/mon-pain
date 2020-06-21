@@ -32,7 +32,7 @@
 
 "levain.ratio.info" = "C'est la proportion de levain par rapport à la farine. \n\nPar exemple, pour une pâte dans laquelle on a ajouté 100g de levain et 400g de farine, la proportion de levain est de 25%. (100/400*100)";
 
-"bread.hydratation.info" = "Le taux d'hydratation de la pâte à pain est la proportion d'eau dans la pâte par rapport à la farine.\n\nPar exemple, si l'on ajoute 100g de levain, composé de 50g d'eau et 50g de farine, ainsi que 300g de farine et 200g d'eau, on a au total 250g d'eau et 350g de farine. On a alors un taux d'hydratation de 71.4% (250/350 * 100).";
+"bread.hydratation.info" = "Le taux d'hydratation de la pâte à pain est la proportion d'eau dans la pâte par rapport à la farine.\n\nPar exemple, si l'on ajoute 100g de levain, composé de 50g d'eau et 50g de farine, ainsi que 300g de farine et 200g d'eau, on a au total 250g d'eau et 350g de farine. On a alors un taux d'hydratation de 71.4% (250/350 * 100%).";
 "levain.hydratation.info" = "Le taux d'hydratation du levain est la proportion de son l'eau par rapport à sa farine.\n\nPar exemple, un levain composé de 60g d'eau pour 100g de farine a un taux d'hydratation de 60%.";
 
 // Info screen

@@ -22,22 +22,22 @@
 "screen.flour-and-water.title" = "Flour and Water";
 "screen.levain-and-water.title" = "Levain and Water";
 
-"levain.hydratation" = "Levain hydratation";
+"levain.hydratation" = "Levain hydration";
 "levain.ratio" = "Percentage of levain";
-"bread.hydratation" = "Bread hydratation level";
+"bread.hydratation" = "Bread hydration level";
 "ingredient.flour" = "Flour";
 "ingredient.water" = "Water";
 "ingredient.dough" = "Dough";
 "ingredient.levain" = "Levain";
 
 "levain.ratio.info" = "This is the percentage of levain in relation to the quantity of flour.\n\nFor example, if we added 100g of levain and 400g of flour, then we have a ratio of 25%";
-"bread.hydratation.info" = "The bread hydratation level is the weight of liquids relative to the weight of flour.\n\nFor example, if we have a dough in which we added 100g of levain, composed of 50g of water and 50g of flour, 300g of flour and 200g of water, we have an hydratation level of 71.4% (250g of water / 350 of flour * 100).";
-"levain.hydratation.info" = "The levain hydratation level is the weight of water relative to the weight of flour.\n\nFor example, a levain containing 60g of water for 100g of flour has a hydratation level of 60%.";
+"bread.hydratation.info" = "The bread hydration level is the weight of liquids relative to the weight of flour.\n\nFor example, if we have a dough in which we added 100g of levain, composed of 50g of water and 50g of flour, 300g of flour and 200g of water, we have an hydration level of 71.4% (250g of water / 350g of flour * 100%).";
+"levain.hydratation.info" = "The levain hydration level is the weight of water relative to the weight of flour.\n\nFor example, a levain containing 60g of water for 100g of flour has a hydration level of 60%.";
 
 // Info screen
 // ===========
 "contact.error.title" = "Error";
-"contact.error.message" = "You don't have Apple mail configured. You can open your favorite email app and send an email to 'zajoapp@bluewin.ch'.";
+"contact.error.message" = "You didn't configure the default iOS Mail app. You can instead open your favorite email app and send an email to 'zajoapp@bluewin.ch'.";
 
 "info.screen-title" = "About";
 "info.content" = "If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!";

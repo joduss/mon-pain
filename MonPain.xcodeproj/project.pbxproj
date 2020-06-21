@@ -23,6 +23,7 @@
 		6B2E59ED249633FE0098960F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2E59EC249633FE0098960F /* GoogleMobileAds.framework */; };
 		6B2E59F02496351B0098960F /* AdsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E59EF2496351A0098960F /* AdsConfiguration.swift */; };
 		6B2E59F2249635E00098960F /* TableViewAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E59F1249635E00098960F /* TableViewAdManager.swift */; };
+		6B38D17B249F7CCB00882119 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B38D177249F7B5B00882119 /* InfoPlist.strings */; };
 		6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */; };
 		6B40F5B32485725C00FA4A40 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */; };
 		6B4C580A248598BE000BA9B0 /* NumberDisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B62201C248589F90087D511 /* NumberDisplayCell.xib */; };
@@ -95,6 +96,9 @@
 		6B2E59EC249633FE0098960F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../../../../Downloads/Firebase/Google-Mobile-Ads-SDK/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		6B2E59EF2496351A0098960F /* AdsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsConfiguration.swift; sourceTree = "<group>"; };
 		6B2E59F1249635E00098960F /* TableViewAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdManager.swift; sourceTree = "<group>"; };
+		6B38D178249F7B6000882119 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B38D179249F7B6500882119 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B38D17A249F7B8000882119 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B39A8862486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculator.swift; sourceTree = "<group>"; };
 		6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6B4C580B2485B7B5000BA9B0 /* FlourAndWaterCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlourAndWaterCalculatorVC.swift; sourceTree = "<group>"; };
@@ -111,7 +115,7 @@
 		6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorType.swift; sourceTree = "<group>"; };
 		6B7D92ED248D731A00F35D75 /* TopIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
 		6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
-		6BB2D9412483EEB40006DAE2 /* MonPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB2D9412483EEB40006DAE2 /* Mon Pain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mon Pain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BB2D9462483EEB40006DAE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6BB2D94B2483EEB40006DAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,7 +268,7 @@
 		6BB2D9422483EEB40006DAE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BB2D9412483EEB40006DAE2 /* MonPain.app */,
+				6BB2D9412483EEB40006DAE2 /* Mon Pain.app */,
 				6BB2D9572483EEB50006DAE2 /* MonPainTests.xctest */,
 			);
 			name = Products;
@@ -283,6 +287,7 @@
 				6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */,
 				6BB2D94F2483EEB50006DAE2 /* LaunchScreen.storyboard */,
 				6BB2D9522483EEB50006DAE2 /* Info.plist */,
+				6B38D177249F7B5B00882119 /* InfoPlist.strings */,
 				6B2E59CC24956B7A0098960F /* GoogleService-Info.plist */,
 				6B628A9D248ACC0D006ABACA /* Localizable.strings */,
 			);
@@ -349,7 +354,7 @@
 			);
 			name = MonPain;
 			productName = MonPain;
-			productReference = 6BB2D9412483EEB40006DAE2 /* MonPain.app */;
+			productReference = 6BB2D9412483EEB40006DAE2 /* Mon Pain.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6BB2D9562483EEB50006DAE2 /* MonPainTests */ = {
@@ -438,6 +443,7 @@
 				6B628A9B248ACC0D006ABACA /* Localizable.strings in Resources */,
 				6BB2D9A7248569970006DAE2 /* NumberInputCell.xib in Resources */,
 				6BB2D94C2483EEB40006DAE2 /* Main.storyboard in Resources */,
+				6B38D17B249F7CCB00882119 /* InfoPlist.strings in Resources */,
 				6B2E59CD24956B7A0098960F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +511,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6B38D177249F7B5B00882119 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B38D178249F7B6000882119 /* fr */,
+				6B38D179249F7B6500882119 /* pl */,
+				6B38D17A249F7B8000882119 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		6B628A9D248ACC0D006ABACA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -657,6 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200621.1333;
 				DEVELOPMENT_TEAM = SB56D8K42E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,7 +688,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mon Pain";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
@@ -683,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200621.1333;
 				DEVELOPMENT_TEAM = SB56D8K42E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,7 +715,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mon Pain";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
