@@ -59,12 +59,12 @@ public class CalculatorBaseVC: UITableViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && PACConsentInformation.sharedInstance.consentStatus == .unknown) {
-            requestConsent()
-        }
-        else {
-            self.adManager.didAppear()
-        }
+//        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && PACConsentInformation.sharedInstance.consentStatus == .unknown) {
+//            requestConsent()
+//        }
+//        else {
+//            self.adManager.didAppear()
+//        }
     }
     
     public override func viewDidDisappear(_ animated: Bool) {

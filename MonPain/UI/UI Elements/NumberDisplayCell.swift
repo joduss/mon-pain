@@ -34,6 +34,7 @@ class NumberDisplayCell: UIView {
             if isComputed {
                 ingredientLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
                 quantityLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+                quantityLabel.textColor = UIColor.systemOrange
             }
             else {
                 ingredientLabel.font = UIFont.systemFont(ofSize: 17)
