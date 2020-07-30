@@ -44,8 +44,9 @@
                         <action selector="textfieldValueChanged:" destination="-1" eventType="valueChanged" id="eeX-gc-2xK"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA3-aH-87m">
-                    <rect key="frame" x="70" y="39" width="25" height="24"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QA3-aH-87m">
+                    <rect key="frame" x="70" y="38.5" width="25" height="25"/>
+                    <state key="normal" image="Info"/>
                     <connections>
                         <action selector="infoButtonClicked:" destination="-1" eventType="touchUpInside" id="Ic3-Te-Ftv"/>
                     </connections>

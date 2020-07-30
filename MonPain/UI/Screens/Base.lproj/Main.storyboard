@@ -334,7 +334,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="title" id="vOL-jx-fzf">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="0b5-EG-7Bi">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Info" id="0b5-EG-7Bi">
                             <connections>
                                 <segue destination="Y2j-dj-wgd" kind="show" id="C1J-ys-QxU"/>
                             </connections>
@@ -895,8 +895,8 @@
         <image name="AppIconTransparent512" width="512" height="204.5"/>
         <image name="FlourAndWater" width="25" height="25"/>
         <image name="FlourAndWaterHome" width="60" height="60"/>
+        <image name="Info" width="25" height="25"/>
         <image name="LevainAndWater" width="25" height="25"/>
         <image name="LevainAndWaterHome" width="60" height="60"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
