@@ -7,9 +7,11 @@
 //
 
 import UIKit
+
+#if LITE
 import Firebase
 import GoogleMobileAds
-
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Configuring Firebase and Google Admob
-        FirebaseApp.configure()
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
-        #if DEBUG
-            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2"]
+        #if LITE
+            // Configuring Firebase and Google Admob
+            FirebaseApp.configure()
+            GADMobileAds.sharedInstance().start(completionHandler: nil)
+            #if DEBUG
+                GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2"]
+            #endif
         #endif
         
         return true

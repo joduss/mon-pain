@@ -127,6 +127,8 @@
 		6BB2D95D2483EEB50006DAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputCell.swift; sourceTree = "<group>"; };
 		6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberInputCell.xib; sourceTree = "<group>"; };
+		6BC03B7824D077AB006E3053 /* MonPain +.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MonPain +.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC03B7924D077AB006E3053 /* MonPain copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MonPain copy-Info.plist"; path = "/Users/jonathanduss/jo_dev/MonPain/MonPain/MonPain copy-Info.plist"; sourceTree = "<absolute>"; };
 		6BCD525D248ED2B100A03B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6BFA480D2496637800202798 /* PersonalizedAdConsent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PersonalizedAdConsent.xcodeproj; path = "MonPain/Frameworks/Google EU Consent/PersonalizedAdConsent.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		6BFA4815249663D300202798 /* PersonalizedAdConsent.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PersonalizedAdConsent.bundle; path = "MonPain/Frameworks/Google EU Consent/PersonalizedAdConsent/PersonalizedAdConsent.bundle"; sourceTree = SOURCE_ROOT; };
@@ -262,6 +264,7 @@
 				6BB2D9432483EEB40006DAE2 /* MonPain */,
 				6BB2D95A2483EEB50006DAE2 /* MonPainTests */,
 				6BB2D9422483EEB40006DAE2 /* Products */,
+				6BC03B7924D077AB006E3053 /* MonPain copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +273,7 @@
 			children = (
 				6BB2D9412483EEB40006DAE2 /* Mon Pain.app */,
 				6BB2D9572483EEB50006DAE2 /* MonPainTests.xctest */,
+				6BC03B7824D077AB006E3053 /* MonPain +.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +379,24 @@
 			productReference = 6BB2D9572483EEB50006DAE2 /* MonPainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6BC03B4524D077AB006E3053 /* MonPain + */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC03B7524D077AB006E3053 /* Build configuration list for PBXNativeTarget "MonPain +" */;
+			buildPhases = (
+				6BC03B4824D077AB006E3053 /* Sources */,
+				6BC03B5E24D077AB006E3053 /* Frameworks */,
+				6BC03B6B24D077AB006E3053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BC03B4624D077AB006E3053 /* PBXTargetDependency */,
+			);
+			name = "MonPain +";
+			productName = MonPain;
+			productReference = 6BC03B7824D077AB006E3053 /* MonPain +.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -417,6 +439,7 @@
 			targets = (
 				6BB2D9402483EEB40006DAE2 /* MonPain */,
 				6BB2D9562483EEB50006DAE2 /* MonPainTests */,
+				6BC03B4524D077AB006E3053 /* MonPain + */,
 			);
 		};
 /* End PBXProject section */
@@ -685,9 +708,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain;
 				PRODUCT_NAME = "Mon Pain";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LITE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
@@ -711,9 +736,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain;
 				PRODUCT_NAME = "Mon Pain";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LITE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
@@ -764,6 +791,62 @@
 			};
 			name = Release;
 		};
+		6BC03B7624D077AB006E3053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200621.1410;
+				DEVELOPMENT_TEAM = SB56D8K42E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MonPain/Frameworks",
+					"$(PROJECT_DIR)/MonPain/Frameworks/Firebase",
+				);
+				INFOPLIST_FILE = "MonPain copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain.plus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PLUS";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
+			};
+			name = Debug;
+		};
+		6BC03B7724D077AB006E3053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200621.1410;
+				DEVELOPMENT_TEAM = SB56D8K42E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MonPain/Frameworks",
+					"$(PROJECT_DIR)/MonPain/Frameworks/Firebase",
+				);
+				INFOPLIST_FILE = "MonPain copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.zajo.MonPain.plus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PLUS;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MonPain/Frameworks/Firebase/FirebaseHeader";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -790,6 +873,15 @@
 			buildConfigurations = (
 				6BB2D9642483EEB50006DAE2 /* Debug */,
 				6BB2D9652483EEB50006DAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC03B7524D077AB006E3053 /* Build configuration list for PBXNativeTarget "MonPain +" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC03B7624D077AB006E3053 /* Debug */,
+				6BC03B7724D077AB006E3053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
