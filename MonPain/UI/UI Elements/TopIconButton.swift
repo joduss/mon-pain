@@ -28,20 +28,19 @@ class TopIconButton: UIButton {
         let imageViewHeight = height - (titleLabel?.bounds.height ?? 0) - padding - 20
         let imageViewWidth = width
         
-        if let imageView = self.imageView, let image = imageView.image {
+        if let imageView = self.imageView {
+            imageView.contentMode = .scaleAspectFit
             imageView.frame.origin.x = 0
             imageView.frame.origin.y = padding
             imageView.frame.size = CGSize(width: imageViewWidth, height: imageViewHeight)
         }
-        
-        imageView?.contentMode = .scaleAspectFit
         
     }
     
     @IBInspectable
     var borderColor: UIColor {
         get {
-            return UIColor(cgColor: layer.borderColor ?? CGColor(genericGrayGamma2_2Gray: 0, alpha: 0))
+            return UIColor(cgColor: layer.borderColor ?? UIColor.black.cgColor)
         }
         set {
             layer.borderColor = newValue.cgColor

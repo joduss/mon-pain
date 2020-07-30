@@ -29,6 +29,7 @@
 "ingredient.water" = "Eau";
 "ingredient.dough" = "Pâte";
 "ingredient.levain" = "Levain";
+"ingredient.salt" = "sel";
 
 "levain.ratio.info" = "C'est la proportion de levain par rapport à la farine. \n\nPar exemple, pour une pâte dans laquelle on a ajouté 100g de levain et 400g de farine, la proportion de levain est de 25%. (100/400*100)";
 

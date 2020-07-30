@@ -40,20 +40,28 @@ class NumberInputCell: UIView {
     }
     
     @IBInspectable
-    public var value: Double {
-        get {
-            return formatter.number(from: textfield?.text ?? "0")?.doubleValue ?? 0
-        }
-        set {
-            textfield.text = formatter.string(from: newValue)
+    public var value: Double = 0 {
+        didSet {
+            if textfield.isEditing { return }
+            textfield.text = formatter.string(from: value)
         }
     }
     
     @IBInspectable
-    public var minAllowedValue: Int = 0
+    public var decimal: Bool = false {
+        didSet {
+            formatter.maximumFractionDigits = decimal ? 1 : 0
+            textfield.text = formatter.string(from: value)
+            
+            textfield.keyboardType = decimal ? .decimalPad : .numberPad
+        }
+    }
     
     @IBInspectable
-    public var maxAllowedValue: Int = Int.max
+    public var minAllowedValue = 1.0
+    
+    @IBInspectable
+    public var maxAllowedValue = Double.greatestFiniteMagnitude
     
     @IBInspectable
     public var showInfoButton: Bool {
@@ -75,25 +83,48 @@ class NumberInputCell: UIView {
         loadNib(targetView: self)
     }
     
+    
+    init(ingredientTitleKey: String, unitTitleKey: String) {
+        super.init(frame: CGRect.zero)
+        loadNib(targetView: self)
+
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        defer {
+            self.ingredientTitleKey = ingredientTitleKey
+            self.unitTitleKey = unitTitleKey
+        }
+        
+        configure()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configure()
+    }
+    
+    func configure() {
         formatter.maximumFractionDigits = 0
         textfield.delegate = self
         textfield.addTarget(self, action: #selector(textfieldValueChanged(_:)), for: .editingChanged)
         textfield.addTarget(self, action: #selector(textfieldEditingBegin), for: .editingDidBegin)
 
-        let done = UIBarButtonItem(title: "Ok", style: .done, target: self, action: #selector(closeKeyboard(button:)))
+        let done = UIBarButtonItem(title: "Ok",
+                                   style: .done,
+                                   target: self,
+                                   action: #selector(closeKeyboard(button:)))
         let group = UIBarButtonItemGroup(barButtonItems: [], representativeItem: done)
         textfield.inputAssistantItem.leadingBarButtonGroups = [group]
     }
     
     @objc
     private func textfieldValueChanged(_ textfield: UITextField) {
+        value = doubleValueOf(s: textfield.text ?? "1") ?? 1
+        valueChanged()
         delegate?.textDidChange()
     }
     
@@ -108,12 +139,40 @@ class NumberInputCell: UIView {
         textfield.resignFirstResponder()
     }
     
+    @objc
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (textField.text == "") {
+            value = 0
+        }
+    }
+    
     @IBAction func infoButtonClicked(_ sender: Any) {
         let popup = UIAlertController(title: leftLabel.text,
                                       message: "\(ingredientTitleKey).info".localized,
                                       preferredStyle: .alert)
         popup.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
         delegate?.displayInfo(controller: popup)
+    }
+    
+    /// Called when the value changed. Useful when subclassing.
+    func valueChanged() { }
+    
+    
+    fileprivate func doubleValueOf(s: String) -> Double? {
+        
+        // Support of "." and ","
+        let cleanedS = s.replacingOccurrences(of: ",", with: formatter.decimalSeparator)
+            .replacingOccurrences(of: ".", with: formatter.decimalSeparator)
+        
+        if let value = formatter.number(from: cleanedS)?.doubleValue {
+            return value
+        }
+        
+        if let value = formatter.number(from: "\(cleanedS)0")?.doubleValue {
+            return value
+        }
+        
+        return nil
     }
 }
 
@@ -126,7 +185,7 @@ extension NumberInputCell: UITextFieldDelegate {
         
         let next = (current as NSString).replacingCharacters(in: range, with: string)
         
-        guard let number = formatter.number(from: next)?.intValue else {
+        guard let number = doubleValueOf(s: next) else {
             return false
         }
         

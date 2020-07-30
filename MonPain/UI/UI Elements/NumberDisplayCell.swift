@@ -52,9 +52,16 @@ class NumberDisplayCell: UIView {
             quantityLabel?.text = formatter.string(from: newValue)
         }
     }
+    
+    public var decimals: Bool = false {
+        didSet {
+            formatter.maximumFractionDigits = decimals ? 1 : 0
+            quantityLabel?.text = formatter.string(from: value)
+        }
+    }
 
     @IBInspectable
-    public var UnitTitleKey: String {
+    public var unitTitleKey: String {
         get {
             return unitLabel?.text ?? ""
         }
@@ -62,6 +69,7 @@ class NumberDisplayCell: UIView {
             unitLabel?.text = newValue
         }
     }
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -73,13 +81,15 @@ class NumberDisplayCell: UIView {
         loadNib(targetView: self)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-//        formatter.maximumFractionDigits = 0
+    init(ingredientTitleKey: String, unitTitleKey: String) {
+        super.init(frame: CGRect.zero)
+        loadNib(targetView: self)
+
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        defer {
+            self.ingredientTitleKey = ingredientTitleKey
+            self.unitTitleKey = unitTitleKey
+        }
     }
 }

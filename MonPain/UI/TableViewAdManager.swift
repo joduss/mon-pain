@@ -6,6 +6,7 @@
 //  Copyright © 2020 ZaJo. All rights reserved.
 //
 
+#if LITE
 import UIKit
 import GoogleMobileAds
 
@@ -96,3 +97,4 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
         tableView.endUpdates()
     }
 }
+#endif

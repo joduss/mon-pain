@@ -29,6 +29,8 @@
 "ingredient.water" = "Water";
 "ingredient.dough" = "Dough";
 "ingredient.levain" = "Levain";
+"ingredient.salt" = "salt";
+
 
 "levain.ratio.info" = "This is the percentage of levain in relation to the quantity of flour.\n\nFor example, if we added 100g of levain and 400g of flour, then we have a ratio of 25%";
 "bread.hydratation.info" = "The bread hydration level is the weight of liquids relative to the weight of flour.\n\nFor example, if we have a dough in which we added 100g of levain, composed of 50g of water and 50g of flour, 300g of flour and 200g of water, we have an hydration level of 71.4% (250g of water / 350g of flour * 100%).";

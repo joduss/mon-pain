@@ -9,7 +9,8 @@
 import Foundation
 import Combine
 
-class FlourAndWaterCalculator {
+class FlourAndWaterCalculator: Calculator {
+            
     
     // Requirements
     public private(set) var levainHydratation = 1.0
@@ -30,6 +31,7 @@ class FlourAndWaterCalculator {
     public private(set) var totalFlour = 0.0
     public private(set) var totalDough = 0.0
     
+    public var formulas: [IngredientRatioFormula] = []
     
     init() {
         updateAddedValues()
@@ -63,6 +65,17 @@ class FlourAndWaterCalculator {
         
         totalWater = qtyWaterToAdd + waterInLevain
         totalFlour = qtyFlourToAdd + flourInLevain
-        totalDough = qtyWaterToAdd + waterInLevain + qtyFlourToAdd + flourInLevain
+        
+        formulas.forEach({$0.update()})
+        
+        let addedByFormulas: Double = formulas.reduce(0.0, {$0 + $1.value})
+
+        
+        totalDough = qtyWaterToAdd + waterInLevain + qtyFlourToAdd + flourInLevain + addedByFormulas
     }
+    
+    public func addFormula(_ formula: IngredientRatioFormula) {
+        formulas.append(formula)
+    }
+
 }

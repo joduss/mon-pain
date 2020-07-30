@@ -7,7 +7,10 @@
 //
 
 import UIKit
+
+#if LITE
 import PersonalizedAdConsent
+#endif
 
 private enum AdType {
     case personalized
@@ -17,8 +20,10 @@ private enum AdType {
 
 public class CalculatorBaseVC: UITableViewController {
     
+    #if LITE
     private var adManager: TableViewAdManager!
     private var adType = AdType.none
+    #endif
     
     public internal(set) var calculatorType: CalculatorType = .FlourAndWater
     
@@ -29,47 +34,56 @@ public class CalculatorBaseVC: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
                         
-        adManager = TableViewAdManager(controller: self, tableView: self.tableView)
-        
-        
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topOutsideTextfield(sender:))))
         
-        PACConsentInformation.sharedInstance.requestConsentInfoUpdate(forPublisherIdentifiers: [AdsConfiguration.publisherId]) {
-            (_ error: Error?) -> Void in
-            if error != nil {
-                // Consent info update failed.
-                self.adType = .none
-            } else {
-                // Consent info update succeeded. The shared PACConsentInformation
-                // instance has been updated.
-                let status = PACConsentInformation.sharedInstance.consentStatus
-                
-                if (status == .personalized) {
-                    self.adType = .personalized
-                    self.adManager.personalized = true
-                }
-                else {
-                    self.adType = .nonPersonalized
-                    self.adManager.personalized = false
+        #if DEBUG
+//        PACConsentInformation.sharedInstance.debugGeography = .EEA;
+        #endif
+        
+        #if LITE
+            adManager = TableViewAdManager(controller: self, tableView: self.tableView)
+            
+            PACConsentInformation.sharedInstance.requestConsentInfoUpdate(forPublisherIdentifiers: [AdsConfiguration.publisherId]) {
+                (_ error: Error?) -> Void in
+                if error != nil {
+                    // Consent info update failed.
+                    self.adType = .none
+                } else {
+                    // Consent info update succeeded. The shared PACConsentInformation
+                    // instance has been updated.
+                    let status = PACConsentInformation.sharedInstance.consentStatus
+                    
+                    if (status == .personalized) {
+                        self.adType = .personalized
+                        self.adManager.personalized = true
+                    }
+                    else {
+                        self.adType = .nonPersonalized
+                        self.adManager.personalized = false
+                    }
                 }
             }
-        }
+        #endif
     }
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && PACConsentInformation.sharedInstance.consentStatus == .unknown) {
-//            requestConsent()
-//        }
-//        else {
-//            self.adManager.didAppear()
-//        }
+        #if LITE
+        if (PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown && PACConsentInformation.sharedInstance.consentStatus == .unknown) {
+            requestConsent()
+        }
+        else {
+            self.adManager.didAppear()
+        }
+        #endif
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        #if LITE
         self.adManager.didDisappear()
+        #endif
     }
     
     @objc
@@ -77,8 +91,8 @@ public class CalculatorBaseVC: UITableViewController {
         self.view.endEditing(true)
     }
     
+    #if LITE
     private func requestConsent() {
-        // TODO: Replace with your app's privacy policy url.
         guard let privacyUrl = URL(string: "http://theuselessapp.epizy.com/"),
             let form = PACConsentForm(applicationPrivacyPolicyURL: privacyUrl) else {
                 print("incorrect privacy URL.")
@@ -119,4 +133,5 @@ public class CalculatorBaseVC: UITableViewController {
             }
         }
     }
+    #endif
 }
