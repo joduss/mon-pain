@@ -86,303 +86,21 @@
         <scene sceneID="k9C-qi-gfY">
             <objects>
                 <tableViewController id="peW-u4-EHk" customClass="LevainAndWaterCalculatorVC" customModule="MonPain__" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WPJ-MS-jBG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="WPJ-MS-jBG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="My Dear Levain" id="p0L-br-V0J">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43" id="V4G-op-nqD">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4G-op-nqD" id="zvh-YO-QKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw7-IF-TGR" customClass="NumberInputCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.hydratation"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="%"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <real key="value" value="100"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxAllowedValue">
-                                                            <integer key="value" value="200"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Aw7-IF-TGR" secondAttribute="trailing" id="Emd-1U-aWb"/>
-                                                <constraint firstItem="Aw7-IF-TGR" firstAttribute="leading" secondItem="zvh-YO-QKK" secondAttribute="leading" id="HRg-Mp-Rrw"/>
-                                                <constraint firstItem="Aw7-IF-TGR" firstAttribute="top" secondItem="zvh-YO-QKK" secondAttribute="top" id="Xqb-k3-jPv"/>
-                                                <constraint firstAttribute="bottom" secondItem="Aw7-IF-TGR" secondAttribute="bottom" id="xvN-9h-bYr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="In my bread, I want" id="W94-Ul-DiN">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="ZN9-sV-I9F">
-                                        <rect key="frame" x="0.0" y="154.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZN9-sV-I9F" id="Xr1-Ks-os7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U6-CR-rF9" customClass="NumberInputCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <real key="value" value="500"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="g"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="NO"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8U6-CR-rF9" firstAttribute="leading" secondItem="Xr1-Ks-os7" secondAttribute="leading" id="GsQ-zD-P0B"/>
-                                                <constraint firstAttribute="bottom" secondItem="8U6-CR-rF9" secondAttribute="bottom" id="LS7-hk-QPi"/>
-                                                <constraint firstItem="8U6-CR-rF9" firstAttribute="top" secondItem="Xr1-Ks-os7" secondAttribute="top" id="YTb-n0-oL5"/>
-                                                <constraint firstAttribute="trailing" secondItem="8U6-CR-rF9" secondAttribute="trailing" id="fMT-cI-ZXg"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="axh-zi-Eug">
-                                        <rect key="frame" x="0.0" y="198.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axh-zi-Eug" id="fHi-b2-m6r">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URC-xK-Lyq" customClass="NumberInputCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="levain.ratio"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <real key="value" value="30"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="%"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxAllowedValue">
-                                                            <integer key="value" value="500"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="URC-xK-Lyq" secondAttribute="bottom" id="4fj-eW-4vX"/>
-                                                <constraint firstAttribute="trailing" secondItem="URC-xK-Lyq" secondAttribute="trailing" id="SOn-Ws-7ug"/>
-                                                <constraint firstItem="URC-xK-Lyq" firstAttribute="top" secondItem="fHi-b2-m6r" secondAttribute="top" id="XHb-o2-5CH"/>
-                                                <constraint firstItem="URC-xK-Lyq" firstAttribute="leading" secondItem="fHi-b2-m6r" secondAttribute="leading" id="nMq-JW-3p7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="SFV-Nl-Xnk">
-                                        <rect key="frame" x="0.0" y="242.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SFV-Nl-Xnk" id="53Q-ZX-YL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvh-ct-cIu" customClass="NumberInputCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="bread.hydratation"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                            <integer key="value" value="60"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="unitTitleKey" value="%"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="minAllowedValue">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showInfoButton" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Jvh-ct-cIu" secondAttribute="trailing" id="9DJ-Pg-VH6"/>
-                                                <constraint firstItem="Jvh-ct-cIu" firstAttribute="top" secondItem="53Q-ZX-YL5" secondAttribute="top" id="BSf-CA-Eyc"/>
-                                                <constraint firstItem="Jvh-ct-cIu" firstAttribute="leading" secondItem="53Q-ZX-YL5" secondAttribute="leading" id="Pej-Is-Lxr"/>
-                                                <constraint firstAttribute="bottom" secondItem="Jvh-ct-cIu" secondAttribute="bottom" id="STe-1k-gCA"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="You must add" id="OSd-L6-R98">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="9so-F8-amx">
-                                        <rect key="frame" x="0.0" y="342.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9so-F8-amx" id="qYA-Ye-1Zd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wos-1S-EQx" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Wos-1S-EQx" firstAttribute="top" secondItem="qYA-Ye-1Zd" secondAttribute="top" id="GgA-x1-zRN"/>
-                                                <constraint firstItem="Wos-1S-EQx" firstAttribute="leading" secondItem="qYA-Ye-1Zd" secondAttribute="leading" id="MZC-Lu-8u6"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wos-1S-EQx" secondAttribute="trailing" id="Ms8-Y7-oM9"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wos-1S-EQx" secondAttribute="bottom" id="cHy-Du-f96"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="gK8-LY-bbO">
-                                        <rect key="frame" x="0.0" y="386.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gK8-LY-bbO" id="Or2-M4-1eI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzl-FG-FDU" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.levain"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isComputed" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Vzl-FG-FDU" firstAttribute="top" secondItem="Or2-M4-1eI" secondAttribute="top" id="2KK-w8-2du"/>
-                                                <constraint firstItem="Vzl-FG-FDU" firstAttribute="leading" secondItem="Or2-M4-1eI" secondAttribute="leading" id="9Jd-hU-N5L"/>
-                                                <constraint firstAttribute="bottom" secondItem="Vzl-FG-FDU" secondAttribute="bottom" id="tAM-jd-GVG"/>
-                                                <constraint firstAttribute="trailing" secondItem="Vzl-FG-FDU" secondAttribute="trailing" id="zsh-du-6fh"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="nOl-Ve-ROT">
-                                        <rect key="frame" x="0.0" y="430.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nOl-Ve-ROT" id="AmF-OH-24U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrO-ni-Th6" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="mrO-ni-Th6" firstAttribute="leading" secondItem="AmF-OH-24U" secondAttribute="leading" id="7Mm-WW-RG9"/>
-                                                <constraint firstItem="mrO-ni-Th6" firstAttribute="top" secondItem="AmF-OH-24U" secondAttribute="top" id="LT6-6b-n6m"/>
-                                                <constraint firstAttribute="bottom" secondItem="mrO-ni-Th6" secondAttribute="bottom" id="Tdi-yw-nbD"/>
-                                                <constraint firstAttribute="trailing" secondItem="mrO-ni-Th6" secondAttribute="trailing" id="acm-7q-CaI"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="In total, you get" id="Rb4-wE-AuP">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="ST1-RC-nAa">
-                                        <rect key="frame" x="0.0" y="530.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ST1-RC-nAa" id="cS7-jS-Okl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmj-3E-Kbq" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.flour"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Wmj-3E-Kbq" secondAttribute="trailing" id="6Vx-pI-3LX"/>
-                                                <constraint firstItem="Wmj-3E-Kbq" firstAttribute="leading" secondItem="cS7-jS-Okl" secondAttribute="leading" id="9uc-Ye-03V"/>
-                                                <constraint firstItem="Wmj-3E-Kbq" firstAttribute="top" secondItem="cS7-jS-Okl" secondAttribute="top" id="ijX-vM-OM0"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wmj-3E-Kbq" secondAttribute="bottom" id="wrg-xo-VHw"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Dlf-S2-3BW">
-                                        <rect key="frame" x="0.0" y="574.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dlf-S2-3BW" id="eLg-Su-hLd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-n0-SaV" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.water"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="aa0-n0-SaV" firstAttribute="top" secondItem="eLg-Su-hLd" secondAttribute="top" id="A3t-O3-XSO"/>
-                                                <constraint firstAttribute="trailing" secondItem="aa0-n0-SaV" secondAttribute="trailing" id="Nrj-qj-ixc"/>
-                                                <constraint firstItem="aa0-n0-SaV" firstAttribute="leading" secondItem="eLg-Su-hLd" secondAttribute="leading" id="WAk-qD-Wzv"/>
-                                                <constraint firstAttribute="bottom" secondItem="aa0-n0-SaV" secondAttribute="bottom" id="pxl-pX-Zxx"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="249-9q-x6K">
-                                        <rect key="frame" x="0.0" y="618.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="249-9q-x6K" id="qb7-ee-9cK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPN-3s-tKm" customClass="NumberDisplayCell" customModule="MonPain__" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="ingredientTitleKey" value="ingredient.dough"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="UnitTitleKey" value="g"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="iPN-3s-tKm" secondAttribute="bottom" id="OJO-8W-dox"/>
-                                                <constraint firstAttribute="trailing" secondItem="iPN-3s-tKm" secondAttribute="trailing" id="YxP-w3-yfE"/>
-                                                <constraint firstItem="iPN-3s-tKm" firstAttribute="top" secondItem="qb7-ee-9cK" secondAttribute="top" id="c3R-Kh-4jh"/>
-                                                <constraint firstItem="iPN-3s-tKm" firstAttribute="leading" secondItem="qb7-ee-9cK" secondAttribute="leading" id="gZJ-OP-FBr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="43" id="V4G-op-nqD">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4G-op-nqD" id="zvh-YO-QKK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="peW-u4-EHk" id="bm9-nu-78j"/>
                             <outlet property="delegate" destination="peW-u4-EHk" id="y1L-dg-W43"/>
@@ -395,18 +113,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="desiredBreadHydratationCell" destination="Jvh-ct-cIu" id="CrW-7L-svg"/>
-                        <outlet property="desiredFlourCell" destination="8U6-CR-rF9" id="sNH-t1-zyQ"/>
-                        <outlet property="desiredLevainRatioCell" destination="URC-xK-Lyq" id="1gp-EY-3Ba"/>
-                        <outlet property="ingredientFlourToAddCell" destination="Wos-1S-EQx" id="gHG-So-t3Q"/>
-                        <outlet property="ingredientLevainToAddCell" destination="Vzl-FG-FDU" id="PTt-0M-fcV"/>
-                        <outlet property="ingredientWaterToAddCell" destination="mrO-ni-Th6" id="1zM-LX-JMd"/>
-                        <outlet property="levainHydratationCell" destination="Aw7-IF-TGR" id="hOU-dq-l19"/>
-                        <outlet property="totalDoughCell" destination="iPN-3s-tKm" id="zz8-dt-HnQ"/>
-                        <outlet property="totalFlourCell" destination="Wmj-3E-Kbq" id="S2G-IX-5tN"/>
-                        <outlet property="totalWaterCell" destination="aa0-n0-SaV" id="fiS-eu-vFF"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCg-bd-oF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,7 +301,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C1J-ys-QxU"/>
+        <segue reference="b6n-ir-Bnc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AppIconTransparent512" width="512" height="204.5"/>

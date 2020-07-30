@@ -67,7 +67,6 @@ class FlourAndWaterCalculator: Calculator {
         totalFlour = qtyFlourToAdd + flourInLevain
         
         formulas.forEach({$0.update()})
-        
         let addedByFormulas: Double = formulas.reduce(0.0, {$0 + $1.value})
 
         

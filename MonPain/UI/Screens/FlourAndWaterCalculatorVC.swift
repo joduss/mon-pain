@@ -10,38 +10,46 @@ import UIKit
 
 class FlourAndWaterCalculatorVC: CalculatorBaseVC {
     
-    var levainHydratationCell: NumberInputCell!
-    var desiredLevainCell: NumberInputCell!
-    var levainDesiredRatioCell: NumberInputCell!
-    var desiredBreadHydratationCell: NumberInputCell!
-    var desiredSaltCell: NumberInputCell!
+    private var levainHydratationCell: NumberInputCell!
+    private var desiredLevainCell: NumberInputCell!
+    private var levainDesiredRatioCell: NumberInputCell!
+    private var desiredBreadHydratationCell: NumberInputCell!
+    private var desiredSaltCell: NumberInputCell!
 
-    var waterToAddCell: NumberDisplayCell!
-    var flourToAddCell: NumberDisplayCell!
-    var levainToAddCell: NumberDisplayCell!
-    var saltToAddCell: NumberDisplayCell!
+    private var waterToAddCell: NumberDisplayCell!
+    private var flourToAddCell: NumberDisplayCell!
+    private var levainToAddCell: NumberDisplayCell!
+    private var saltToAddCell: NumberDisplayCell!
 
-    var totalFlourCell: NumberDisplayCell!
-    var totalWaterCell: NumberDisplayCell!
-    var totalDoughCell: NumberDisplayCell!
-    
-    private let calculator = FlourAndWaterCalculator()
+    private var totalFlourCell: NumberDisplayCell!
+    private var totalWaterCell: NumberDisplayCell!
+    private var totalDoughCell: NumberDisplayCell!
     
     private var cells: [[UIView]] = [[]]
+
+    private let calculator = FlourAndWaterCalculator()
+    private var saltFormula: IngredientRatioFormula!
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         title = "screen.flour-and-water.title".localized
     }
-    
-    //TODO: Dynamic TVC with cells definedd programmatically!
-    
-    private var saltFormula: IngredientRatioFormula!
+        
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        saltFormula = IngredientRatioFormula(ingredientName: "ingredient.salt", ingredient: .addedWater, calculator: self.calculator)
+    
+        createCells()
+        textDidChange()
+    }
+    
+    private func createCells() {
+        saltFormula = IngredientRatioFormula(ingredientName: "ingredient.salt",
+                                             ingredientRatioTitleKey: "salt.ratio",
+                                             ingredient: .addedWater,
+                                             calculator: self.calculator)
         saltFormula.decimals = 1
         
         levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%")
@@ -118,8 +126,6 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
                 cell.delegate = self
             }
         }
-
-        textDidChange()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

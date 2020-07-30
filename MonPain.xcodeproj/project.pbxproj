@@ -179,8 +179,6 @@
 		6BCD525D248ED2B100A03B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6BFA480D2496637800202798 /* PersonalizedAdConsent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PersonalizedAdConsent.xcodeproj; path = "MonPain/Frameworks/Google EU Consent/PersonalizedAdConsent.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		6BFA4815249663D300202798 /* PersonalizedAdConsent.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PersonalizedAdConsent.bundle; path = "MonPain/Frameworks/Google EU Consent/PersonalizedAdConsent/PersonalizedAdConsent.bundle"; sourceTree = SOURCE_ROOT; };
-		6BFA48182496709E00202798 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		6BFA48192496750600202798 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		6BFA481B2496750600202798 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6BFA481C249675E700202798 /* LocalizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedLabel.swift; sourceTree = "<group>"; };
 		6BFA481E2496777100202798 /* LocalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedButton.swift; sourceTree = "<group>"; };
@@ -671,8 +669,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D94B2483EEB40006DAE2 /* Base */,
-				6BFA48182496709E00202798 /* fr */,
-				6BFA48192496750600202798 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

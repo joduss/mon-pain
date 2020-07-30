@@ -18,6 +18,7 @@ public class IngredientRatioFormula {
     private var calculator: Calculator
     public private(set)var ingredient: Ingredient
     public var ingredientName: String
+    public var ingredientRatioTitleKey: String = ""
     public var decimals = 0
     public var ratio: Double = 0 { didSet { update() }}
     
@@ -28,6 +29,17 @@ public class IngredientRatioFormula {
     init(ingredientName: String, ingredient: Ingredient, calculator: Calculator) {
         self.ingredient = ingredient
         self.ingredientName = ingredientName
+        self.ingredientRatioTitleKey = ingredientName
+        self.calculator = calculator
+        calculator.addFormula(self)
+        
+        update()
+    }
+    
+    init(ingredientName: String, ingredientRatioTitleKey: String, ingredient: Ingredient, calculator: Calculator) {
+        self.ingredient = ingredient
+        self.ingredientName = ingredientName
+        self.ingredientRatioTitleKey = ingredientRatioTitleKey
         self.calculator = calculator
         calculator.addFormula(self)
         
