@@ -75,6 +75,7 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         desiredSaltCell.decimal = true
         desiredSaltCell.minAllowedValue = 0
         desiredSaltCell.maxAllowedValue = 100
+        desiredSaltCell.value = 2.5
         desiredSaltCell.showInfoButton = true
         
         // Section 3
@@ -128,7 +129,7 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return cells.count
     }
     
@@ -157,7 +158,7 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "header.my_dear_levain".localized

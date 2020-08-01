@@ -18,14 +18,21 @@ private enum AdType {
     case none
 }
 
-public class CalculatorBaseVC: UITableViewController {
+public class CalculatorBaseVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
     
     #if LITE
     private var adManager: TableViewAdManager!
     private var adType = AdType.none
     #endif
     
+    @IBOutlet public var adContainerView: UIView?
+
+    
     public internal(set) var calculatorType: CalculatorType = .FlourAndWater
+    
+    @IBOutlet var tableView: UITableView!
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,6 +40,9 @@ public class CalculatorBaseVC: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
                         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topOutsideTextfield(sender:))))
         
@@ -41,7 +51,7 @@ public class CalculatorBaseVC: UITableViewController {
         #endif
         
         #if LITE
-            adManager = TableViewAdManager(controller: self, tableView: self.tableView)
+        adManager = TableViewAdManager(controller: self, tableView: self.tableView, adContainerView: self.adContainerView!)
             
             PACConsentInformation.sharedInstance.requestConsentInfoUpdate(forPublisherIdentifiers: [AdsConfiguration.publisherId]) {
                 (_ error: Error?) -> Void in
@@ -134,4 +144,12 @@ public class CalculatorBaseVC: UITableViewController {
         }
     }
     #endif
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

@@ -39,4 +39,13 @@ extension UIView {
             nibView.trailingAnchor.constraint(equalTo: targetView.trailingAnchor)
         ])
     }
+    
+    func fitIn(view: UIView) {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: view.topAnchor),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        ])
+    }
 }

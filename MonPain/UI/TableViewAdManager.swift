@@ -15,23 +15,28 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
     private let controller: UIViewController
     private let tableView: UITableView
     private var adview: GADBannerView!
-    private let view = UIView()
+    private let view: UIView
+    private var heightConstraints: NSLayoutConstraint!
+    private var originalInsets: UIEdgeInsets
     
     private var adSize = CGSize.zero
     private var loadedAd = false
     
     public var personalized = false
     
-    init(controller: UIViewController, tableView: UITableView) {
+    
+    init(controller: UIViewController, tableView: UITableView, adContainerView: UIView) {
         self.controller = controller
         self.tableView = tableView
+        view = adContainerView
+        originalInsets = tableView.contentInset
         super.init()
         prepareView()
     }
     
     private func prepareView() {
-        tableView.tableHeaderView = view
         view.clipsToBounds = true
+        view.backgroundColor = UIColor.clear
         
         adview = GADBannerView()
         adview.adUnitID = AdsConfiguration.bannerViewUnitId
@@ -56,14 +61,10 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
         NSLayoutConstraint.activate([
             adview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             adview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            adview.topAnchor.constraint(equalTo: view.topAnchor)
+            adview.topAnchor.constraint(equalTo: view.topAnchor),
+            adview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-        if (!loadedAd) {
-            tableView.beginUpdates()
-            view.frame.size = CGSize.zero
-            tableView.endUpdates()
-        }
+
         
         if self.personalized {
             adview.load(GADRequest())
@@ -81,20 +82,25 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
         print("adViewDidReceiveAd")
         
         loadedAd = true
-
-        tableView.beginUpdates()
-        view.frame.size = adSize
-        tableView.endUpdates()
+        
+        var insets = originalInsets
+        insets.top += adSize.height
+        tableView.contentInset = insets
+        
+        var offset = tableView.contentOffset
+        offset.y -= adSize.height
+        tableView.setContentOffset(offset, animated: true)
     }
-    
+        
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("adView failed to receive ad with error: \(error)")
             
         loadedAd = false
         
-        tableView.beginUpdates()
-        view.frame.size = CGSize.zero
-        tableView.endUpdates()
+        tableView.contentInset = originalInsets
+        var offset = tableView.contentOffset
+        offset.y += adSize.height
+        tableView.setContentOffset(offset, animated: true)
     }
 }
 #endif

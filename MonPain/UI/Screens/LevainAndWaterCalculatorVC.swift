@@ -39,9 +39,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let allCells = [levainHydratationCell, desiredLevainRatioCell, desiredFlourCell, desiredBreadHydratationCell]
-        allCells.forEach({$0?.delegate = self})
-        
+        createCells()
         textDidChange()
     }
     
@@ -75,6 +73,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         desiredSaltCell.decimal = true
         desiredSaltCell.minAllowedValue = 0
         desiredSaltCell.maxAllowedValue = 100
+        desiredSaltCell.value = 2.5
         desiredSaltCell.showInfoButton = true
         
         // Section 3
@@ -128,33 +127,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         }
     }
 
-}
-
-extension LevainAndWaterCalculatorVC : NumberInputCellDelegate {
-    
-    func textDidChange() {
-        calculator.updateWith(levainHydratationPercent: levainHydratationCell.value,
-                              flour: desiredFlourCell.value,
-                              levainToFlourRatioPercent: desiredLevainRatioCell.value,
-                              breadHydratationPercent: desiredBreadHydratationCell.value)
-        
-        ingredientWaterToAddCell.value = calculator.waterToAdd
-        ingredientFlourToAddCell.value = calculator.flour
-        ingredientLevainToAddCell.value = calculator.levainToAdd
-        
-        totalFlourCell.value = calculator.totalFlour
-        totalDoughCell.value = calculator.totalDough
-        totalWaterCell.value = calculator.totalWater
-    }
-    
-    func displayInfo(controller: UIViewController) {
-        self.present(controller, animated: true, completion: nil)
-    }
-    
-}
-
-extension LevainAndWaterCalculatorVC {
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return cells.count
     }
     
@@ -181,6 +154,43 @@ extension LevainAndWaterCalculatorVC {
         ])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "header.my_dear_levain".localized
+        case 1:
+            return "header.i_want".localized
+        case 2:
+            return "header.must_add".localized
+        case 3:
+            return "header.total".localized
+        default:
+            return ""
+        }
+    }
+}
+
+extension LevainAndWaterCalculatorVC : NumberInputCellDelegate {
+    
+    func textDidChange() {
+        calculator.updateWith(levainHydratationPercent: levainHydratationCell.value,
+                              flour: desiredFlourCell.value,
+                              levainToFlourRatioPercent: desiredLevainRatioCell.value,
+                              breadHydratationPercent: desiredBreadHydratationCell.value)
+        
+        ingredientWaterToAddCell.value = calculator.waterToAdd
+        ingredientFlourToAddCell.value = calculator.flour
+        ingredientLevainToAddCell.value = calculator.levainToAdd
+        
+        totalFlourCell.value = calculator.totalFlour
+        totalDoughCell.value = calculator.totalDough
+        totalWaterCell.value = calculator.totalWater
+    }
+    
+    func displayInfo(controller: UIViewController) {
+        self.present(controller, animated: true, completion: nil)
     }
 }
 
