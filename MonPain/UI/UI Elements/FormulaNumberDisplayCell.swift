@@ -18,12 +18,21 @@ class FormulaNumberDisplayCell: NumberDisplayCell {
         super.init(ingredientTitleKey: formula.ingredientName, unitTitleKey: "g")
         
         formula.onUpdate = { [unowned self] in
-            self.value = formula.value
-            self.decimals = formula.decimals != 0
+            self.update()
         }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        update()
+    }
+    
+    private func update() {
+        self.value = formula.value
+        self.decimals = formula.decimals != 0
     }
 }

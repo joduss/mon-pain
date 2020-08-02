@@ -20,9 +20,12 @@ public class IngredientRatioFormula {
     public var ingredientName: String
     public var ingredientRatioTitleKey: String = ""
     public var decimals = 0
+    
+    /// Desired ratio of the ingredient.
     public var ratio: Double = 0 { didSet { update() }}
     
-    public var value: Double = 0
+    /// Quantity of the ingredient to add.
+    public private(set) var value: Double = 0
     
     public var onUpdate: (() -> ())?
     

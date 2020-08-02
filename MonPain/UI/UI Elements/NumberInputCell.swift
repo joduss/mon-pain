@@ -42,6 +42,7 @@ class NumberInputCell: UIView {
     @IBInspectable
     public var value: Double = 0 {
         didSet {
+            valueChanged()
             if textfield.isEditing { return }
             textfield.text = formatter.string(from: value)
         }
@@ -124,7 +125,6 @@ class NumberInputCell: UIView {
     @objc
     private func textfieldValueChanged(_ textfield: UITextField) {
         value = doubleValueOf(s: textfield.text ?? "1") ?? 1
-        valueChanged()
         delegate?.textDidChange()
     }
     
