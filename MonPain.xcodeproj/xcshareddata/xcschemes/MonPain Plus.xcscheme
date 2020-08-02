@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6BC03B4524D077AB006E3053"
-               BuildableName = "MonPain +.app"
-               BlueprintName = "MonPain +"
+               BuildableName = "MonPainPlus.app"
+               BlueprintName = "MonPainPlus"
                ReferencedContainer = "container:MonPain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BC03B4524D077AB006E3053"
-            BuildableName = "MonPain +.app"
-            BlueprintName = "MonPain +"
+            BuildableName = "MonPainPlus.app"
+            BlueprintName = "MonPainPlus"
             ReferencedContainer = "container:MonPain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BC03B4524D077AB006E3053"
-            BuildableName = "MonPain +.app"
-            BlueprintName = "MonPain +"
+            BuildableName = "MonPainPlus.app"
+            BlueprintName = "MonPainPlus"
             ReferencedContainer = "container:MonPain.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

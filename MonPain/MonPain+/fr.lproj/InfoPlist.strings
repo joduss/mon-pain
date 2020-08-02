@@ -1,0 +1,10 @@
+/* 
+  InfoPlist-MonPainPlus.strings
+  MonPain
+
+  Created by Jonathan Duss on 01.08.20.
+  Copyright © 2020 ZaJo. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Mon Pain +";
+"CFBundleName" = "Mon Pain +";
