@@ -17,9 +17,11 @@ extension UIView {
     func loadNib(targetView: UIView) {
         
         let uiviewMirror = String(describing: UIView.self)
-        
+        let uicontrolMirror = String(describing: UIControl.self)
+
         var m = Mirror(reflecting: self)
-        while(String(describing: m.superclassMirror!.subjectType) != uiviewMirror) {
+        while(String(describing: m.superclassMirror!.subjectType) != uiviewMirror
+            && String(describing: m.superclassMirror!.subjectType) != uicontrolMirror) {
             m = m.superclassMirror!
         }
         

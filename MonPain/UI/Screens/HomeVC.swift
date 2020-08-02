@@ -21,9 +21,9 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         titleLabel.text = "home.title".localized
-        flourAndWaterButton.setTitle("home.flourWaterButton.title".localized, for: .normal)
+        flourAndWaterButton.label.text = "home.flourWaterButton.title".localized
         flourAndWaterSubtitle.text = "home.flourWaterButton.subtitle".localized
-        levainAndWaterButton.setTitle("home.levainWaterButton.title".localized, for: .normal)
+        levainAndWaterButton.label.text = "home.levainWaterButton.title".localized
         levainAndWaterSubtitle.text = "home.levainWaterButton.subtitle".localized
     }
     
@@ -38,7 +38,7 @@ class HomeVC: UIViewController {
         selectedCalculator = .LevainAndWater
                 self.performSegue(withIdentifier: "ToBarBarController", sender: nil)
     }
-    
+
     private func transitionTo() {
         guard let tabbarController = UIStoryboard.init(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: String.init(describing: TabBarController.self)) as? TabBarController

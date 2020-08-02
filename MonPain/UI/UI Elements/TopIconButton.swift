@@ -9,33 +9,33 @@
 import UIKit
 
 @IBDesignable
-class TopIconButton: UIButton {
+class TopIconButton: UIControl {
     
-    override func layoutSubviews() {
-        titleLabel?.sizeToFit()
-        super.layoutSubviews()
+    @IBOutlet var label: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    
+    public var onTap: (() -> ())?
         
-        let padding = CGFloat(10)
-        
-        let height = self.bounds.height
-        let width = self.bounds.width
-        
-        if let titleLabel = self.titleLabel {
-            titleLabel.frame.origin.x = (self.bounds.size.width - titleLabel.frame.size.width) / 2.0
-            titleLabel.frame.origin.y = self.bounds.size.height - titleLabel.frame.size.height - padding
+    @IBInspectable
+    var image: UIImage? {
+        get {
+            imageView?.image
         }
-        
-        let imageViewHeight = height - (titleLabel?.bounds.height ?? 0) - padding - 20
-        let imageViewWidth = width
-        
-        if let imageView = self.imageView {
-            imageView.contentMode = .scaleAspectFit
-            imageView.frame.origin.x = 0
-            imageView.frame.origin.y = padding
-            imageView.frame.size = CGSize(width: imageViewWidth, height: imageViewHeight)
+        set {
+            imageView?.image = newValue
         }
-        
     }
+    
+    @IBInspectable
+    var title: String? {
+        get {
+            return label?.text
+        }
+        set {
+            label?.text = newValue
+        }
+    }
+
     
     @IBInspectable
     var borderColor: UIColor {
@@ -62,4 +62,41 @@ class TopIconButton: UIButton {
         }
     }
     
+    @IBAction func tapped(_ sender: Any) {
+        onTap?()
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 90, height: 90)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        loadNib(targetView: self)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        loadNib(targetView: self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = true
+        self.sendActions(for: .touchDown)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isHighlighted = false
+        
+        guard let location = touches.first?.location(in: self) else {
+            return
+        }
+        
+        if bounds.contains(location) {
+            self.sendActions(for: .touchUpInside)
+        }
+        else {
+            self.sendActions(for: .touchUpOutside)
+        }
+    }
 }
