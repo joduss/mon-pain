@@ -56,8 +56,9 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         levainHydratationCell.showInfoButton = true
         
         desiredFlourCell = NumberInputCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
-        desiredFlourCell.maxAllowedValue = 200
+        desiredFlourCell.maxAllowedValue = 9999
         desiredFlourCell.value = 100
+        desiredFlourCell.showInfoButton = false
         
         desiredLevainRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%")
         desiredLevainRatioCell.maxAllowedValue = 90
