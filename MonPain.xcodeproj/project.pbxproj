@@ -40,7 +40,6 @@
 		6B628AB0248D60A2006ABACA /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AAF248D60A2006ABACA /* InfoVC.swift */; };
 		6B76144524D59D7500000BA4 /* FormulateNumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D27C824D20E86002F1CA9 /* FormulateNumberInputCell.swift */; };
 		6B76144624D59D7500000BA4 /* FormulaNumberDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D27CA24D20FF3002F1CA9 /* FormulaNumberDisplayCell.swift */; };
-		6B76145024D5A1C100000BA4 /* InfoPlist-MonPainPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BC03B7924D077AB006E3053 /* InfoPlist-MonPainPlus.plist */; };
 		6B7D27C524D20742002F1CA9 /* IngredientRatioFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D27C424D20742002F1CA9 /* IngredientRatioFormula.swift */; };
 		6B7D27C724D208B5002F1CA9 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D27C624D208B5002F1CA9 /* Calculator.swift */; };
 		6B7D27C924D20E86002F1CA9 /* FormulateNumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D27C824D20E86002F1CA9 /* FormulateNumberInputCell.swift */; };
@@ -572,7 +571,6 @@
 				6BC03B6F24D077AB006E3053 /* PersonalizedAdConsent.bundle in Resources */,
 				6BC03B7024D077AB006E3053 /* Localizable.strings in Resources */,
 				6BC03B7124D077AB006E3053 /* NumberInputCell.xib in Resources */,
-				6B76145024D5A1C100000BA4 /* InfoPlist-MonPainPlus.plist in Resources */,
 				6BC03B7224D077AB006E3053 /* Main.storyboard in Resources */,
 				6BF603B124D6DD9700DA3D40 /* TopIconButton.xib in Resources */,
 				6BCE10D624D6F336000E0037 /* InfoPlist.strings in Resources */,
