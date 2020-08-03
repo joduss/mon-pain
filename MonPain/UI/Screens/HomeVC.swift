@@ -11,6 +11,8 @@ import GoogleMobileAds
 
 class HomeVC: UIViewController {
     
+    private let V_1_1_Key = "V_1_1_Key"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var flourAndWaterButton: TopIconButton!
     @IBOutlet weak var flourAndWaterSubtitle: UILabel!
@@ -25,6 +27,35 @@ class HomeVC: UIViewController {
         flourAndWaterSubtitle.text = "home.flourWaterButton.subtitle".localized
         levainAndWaterButton.label.text = "home.levainWaterButton.title".localized
         levainAndWaterSubtitle.text = "home.levainWaterButton.subtitle".localized
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let defaults = UserDefaults.standard
+        
+        #if DEBUG
+        defaults.removeObject(forKey: V_1_1_Key)
+        #endif
+        
+        #if LITE
+        if !defaults.bool(forKey: V_1_1_Key) {
+             defaults.set(true, forKey: V_1_1_Key)
+             
+             let alert = UIAlertController(title: "home.new_version.title".localized,
+                                           message: "home.new_version.message".localized,
+                                           preferredStyle: .alert)
+             
+            alert.addAction(UIAlertAction(title: "home.new_version.action_continue".localized, style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "home.new_version.action_buy".localized, style: .default, handler: { _ in
+                let store = SKStoreProductViewController()
+                store.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier : NSNumber(value: 1525436219)], completionBlock: nil)
+                self.present(store, animated: true, completion: nil)
+             }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        #endif
     }
     
     private var selectedCalculator: CalculatorType = .FlourAndWater

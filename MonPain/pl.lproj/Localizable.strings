@@ -16,6 +16,11 @@
 "home.levainWaterButton.title" = "Zakwas i woda";
 "home.levainWaterButton.subtitle" = "Wiesz ile mąki chcesz użyć, ale nie wiesz ile zakwasu i wody musisz dodać.";
 
+"home.new_version.title" = "Mój Chleb +";
+"home.new_version.message" = "Cześć!
+'Mój chleb +' jest już dostępny dla wszystkich, którzy nie cierpią reklam!";
+"home.new_version.action_continue" = "Nie jestem zainteresowany(a)";
+"home.new_version.action_buy" = "Kup";
 
 // Calculator screens
 // ==================

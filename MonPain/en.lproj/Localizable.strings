@@ -16,6 +16,12 @@
 "home.levainWaterButton.title" = "Levain & Water";
 "home.levainWaterButton.subtitle" = "You know how much flour you want to add, but you don't know how much levain and water you need to add.";
 
+"home.new_version.title" = "My Own Bread +";
+"home.new_version.message" = "Hi folks!
+'My Own Bread +' is now available for those who hate ads!";
+"home.new_version.action_continue" = "I'm not interested";
+"home.new_version.action_buy" = "Purchase";
+
 
 // Calculator screens
 // ==================

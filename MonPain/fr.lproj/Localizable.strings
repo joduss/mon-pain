@@ -15,6 +15,11 @@
 "home.levainWaterButton.title" = "Levain & Eau";
 "home.levainWaterButton.subtitle" = "Vous voulez utiliser une quantité définie de farine, mais vous ne savez pas quelle quantité de levain et d'eau ajouter.";
 
+"home.new_version.title" = "Mon Pain +";
+"home.new_version.message" = "Bonjour à tous!
+'Mon Pain +' est désormais disponible pour tous celles et ceux qui ne veulent pas de pub!";
+"home.new_version.action_continue" = "Je ne suis pas intéressé(e)";
+"home.new_version.action_buy" = "J'achète";
 
 // Calculator screens
 // ==================
