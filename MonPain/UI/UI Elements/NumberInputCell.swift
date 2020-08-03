@@ -58,6 +58,7 @@ class NumberInputCell: UIView {
         }
     }
     
+    /// Default 1.0. Supported: 0.0 or 1.0
     @IBInspectable
     public var minAllowedValue = 1.0
     
