@@ -35,9 +35,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-vl-lti">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-vl-lti">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EyI-Bt-aZP">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="43.5"/>
@@ -57,7 +57,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PHX-vl-lti" firstAttribute="leading" secondItem="Dws-Rq-Hn2" secondAttribute="leading" id="1nr-KQ-CK7"/>
                             <constraint firstItem="Dws-Rq-Hn2" firstAttribute="trailing" secondItem="PHX-vl-lti" secondAttribute="trailing" id="7pp-NJ-2Ex"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1d-bS-XHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540.579710144928" y="420.53571428571428"/>
+            <point key="canvasLocation" x="3885" y="398"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="ZyN-uy-6A1">
@@ -170,19 +170,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1" verticalCompressionResistancePriority="1" image="AppIconTransparent512" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-kC-alj">
-                                <rect key="frame" x="87" y="15" width="146" height="13.5"/>
+                                <rect key="frame" x="87" y="15" width="146" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="600" constant="50" id="Urv-q6-chg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[loc] What do you need me to compute for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56z-6v-MSG">
-                                <rect key="frame" x="20" y="28.5" width="280" height="64.5"/>
+                                <rect key="frame" x="20" y="85" width="280" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[loc] You have some levain and you want to know how much water and flour you need to add." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-4j-lB3">
-                                <rect key="frame" x="20" y="253.5" width="280" height="61.5"/>
+                                <rect key="frame" x="20" y="274.5" width="280" height="61.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -193,8 +193,8 @@
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="73" y="335" width="174" height="110.5"/>
+                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
+                                <rect key="frame" x="73" y="370.5" width="174" height="75"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -213,8 +213,8 @@
                                     <action selector="clickedLevainAndWater:" destination="qbD-3e-Pr2" eventType="touchUpInside" id="uoJ-ft-1Px"/>
                                 </connections>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="78" y="123" width="164" height="110.5"/>
+                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
+                                <rect key="frame" x="78" y="179.5" width="164" height="75"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -290,7 +290,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2lQ-Lr-ndl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="bsB-F4-CDv">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="43.5"/>
@@ -310,7 +310,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2lQ-Lr-ndl" firstAttribute="leading" secondItem="Ypa-y7-yVW" secondAttribute="leading" id="CLR-vh-9Sq"/>
                             <constraint firstAttribute="trailing" secondItem="KXt-52-hYW" secondAttribute="trailing" id="EpT-yH-8Wi"/>
