@@ -96,7 +96,7 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         // Section 4
         totalFlourCell = NumberDisplayCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
         totalWaterCell = NumberDisplayCell(ingredientTitleKey: "ingredient.water", unitTitleKey: "g")
-        totalDoughCell = NumberDisplayCell(ingredientTitleKey: "ingredient.levain", unitTitleKey: "g")
+        totalDoughCell = NumberDisplayCell(ingredientTitleKey: "ingredient.dough", unitTitleKey: "g")
         
         let myCells = [
             [
