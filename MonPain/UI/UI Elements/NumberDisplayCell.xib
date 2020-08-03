@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-CG-tH2">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-CG-tH2">
                     <rect key="frame" x="20" y="10" width="42" height="81"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -35,17 +35,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="250" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBN-lL-Glh">
-                    <rect key="frame" x="324" y="40" width="40" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="9999999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBN-lL-Glh">
+                    <rect key="frame" x="284" y="40" width="80" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="juu-1x-Mbl"/>
+                        <constraint firstAttribute="width" constant="80" id="juu-1x-Mbl"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
             <constraints>
                 <constraint firstItem="8PO-CG-tH2" firstAttribute="top" secondItem="Rdj-Cv-DC3" secondAttribute="top" constant="10" id="9OX-4K-Yjg"/>
                 <constraint firstItem="sBN-lL-Glh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8PO-CG-tH2" secondAttribute="trailing" constant="20" id="M0O-ZD-twA"/>
