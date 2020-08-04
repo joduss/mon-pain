@@ -50,7 +50,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
                                              calculator: self.calculator)
         saltFormula.decimals = 1
         
-        // Note: Default min allowed value is 0.
+        // Note: Default min allowed value is 1.
         
         levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%")
         levainHydratationCell.maxAllowedValue = 200
@@ -59,7 +59,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         
         desiredFlourCell = NumberInputCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
         desiredFlourCell.maxAllowedValue = 99999
-        desiredFlourCell.value = 100
+        desiredFlourCell.value = 200
         desiredFlourCell.showInfoButton = false
         
         desiredLevainRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%")
