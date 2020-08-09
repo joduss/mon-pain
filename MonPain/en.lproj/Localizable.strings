@@ -12,7 +12,7 @@
 
 "home.title" = "What do you need me to compute for you?";
 "home.flourWaterButton.title" = "Flour & Water";
-"home.flourWaterButton.subtitle" = "You know how much levain you want to use, but you don't how much water and flour you need to add.";
+"home.flourWaterButton.subtitle" = "You know how much levain you want to use, but you don't know how much water and flour you need to add.";
 "home.levainWaterButton.title" = "Levain & Water";
 "home.levainWaterButton.subtitle" = "You know how much flour you want to add, but you don't know how much levain and water you need to add.";
 
