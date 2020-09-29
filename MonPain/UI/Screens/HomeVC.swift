@@ -7,7 +7,9 @@
 //
 
 import UIKit
+#if LITE
 import GoogleMobileAds
+#endif
 
 class HomeVC: UIViewController {
     
@@ -35,7 +37,7 @@ class HomeVC: UIViewController {
         let defaults = UserDefaults.standard
         
         #if DEBUG
-        defaults.removeObject(forKey: V_1_1_Key)
+        //defaults.removeObject(forKey: V_1_1_Key)
         #endif
         
         #if LITE

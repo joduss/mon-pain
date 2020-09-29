@@ -10,5 +10,5 @@ import Foundation
 
 struct AdsConfiguration {
     static let bannerViewUnitId = "ca-app-pub-4180653915602895/4727291574"
-    static let publisherId = "pub-4180653915602895"
+//    static let publisherId = "pub-4180653915602895"
 }

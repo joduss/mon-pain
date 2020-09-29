@@ -10,7 +10,7 @@
 import UIKit
 import GoogleMobileAds
 
-class TableViewAdManager: NSObject, GADBannerViewDelegate {
+class TableViewAdManager: NSObject, AdsManager, GADBannerViewDelegate {
     
     private let controller: UIViewController
     private let tableView: UITableView
@@ -21,9 +21,6 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
     
     private var adSize = CGSize.zero
     private var loadedAd = false
-    
-    public var personalized = false
-    
     
     init(controller: UIViewController, tableView: UITableView, adContainerView: UIView) {
         self.controller = controller
@@ -46,14 +43,6 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
         adview.rootViewController = controller
     }
     
-    public func didDisappear() {
-        adview.removeFromSuperview()
-    }
-    
-    public func didAppear() {
-        addAdView()
-    }
-    
     private func addAdView() {
         adview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(adview)
@@ -64,22 +53,29 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
             adview.topAnchor.constraint(equalTo: view.topAnchor),
             adview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-
         
-        if self.personalized {
-            adview.load(GADRequest())
-        }
-        else {
-            let request = GADRequest()
-            let extras = GADExtras()
-            extras.additionalParameters = ["npa": "1"]
-            request.register(extras)
-            adview.load(request)
-        }
+        adview.load(GADRequest())
     }
+    
+    
+    // MARK: - AdsManager
+
+    public func stopDisplayingAds() {
+        adview.removeFromSuperview()
+    }
+    
+    public func canDisplayAds() {
+        addAdView()
+    }
+    
+    
+    // MARK: - GADBannerViewDelegate
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("adViewDidReceiveAd")
+        
+        // Already loaded. No need to reupdate the content insets/offsets.
+        if loadedAd { return }
         
         loadedAd = true
         
@@ -95,6 +91,9 @@ class TableViewAdManager: NSObject, GADBannerViewDelegate {
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("adView failed to receive ad with error: \(error)")
             
+        // Already "not loaded", no need to restore the insets/offsets.
+        if !loadedAd { return }
+        
         loadedAd = false
         
         tableView.contentInset = originalInsets

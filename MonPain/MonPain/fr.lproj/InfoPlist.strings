@@ -8,3 +8,5 @@
 
 "CFBundleDisplayName" = "Mon Pain";
 "CFBundleName" = "Mon Pain";
+"NSUserTrackingUsageDescription" = "Cet identifiant sert à vous proposer des pubs personnalisées.";
+
