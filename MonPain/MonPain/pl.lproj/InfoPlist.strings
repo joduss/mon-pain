@@ -8,3 +8,5 @@
 
 "CFBundleDisplayName" = "Mój Chleb";
 "CFBundleName" = "Mój Chleb";
+"NSUserTrackingUsageDescription" = "Dzięki temu identyfikatorowi będziesz otrzymywał spersonalizowane reklamy.";
+
