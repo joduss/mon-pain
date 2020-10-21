@@ -67,14 +67,12 @@
 		6BC03B4D24D077AB006E3053 /* NumberDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62201D248589F90087D511 /* NumberDisplayCell.swift */; };
 		6BC03B4E24D077AB006E3053 /* LevainAndWaterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AA0248C1626006ABACA /* LevainAndWaterCalculator.swift */; };
 		6BC03B4F24D077AB006E3053 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */; };
-		6BC03B5024D077AB006E3053 /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA481E2496777100202798 /* LocalizedButton.swift */; };
 		6BC03B5124D077AB006E3053 /* TableViewAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E59F1249635E00098960F /* TableViewAdManager.swift */; };
 		6BC03B5224D077AB006E3053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */; };
 		6BC03B5324D077AB006E3053 /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */; };
 		6BC03B5424D077AB006E3053 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B62201F24858D740087D511 /* StringExtension.swift */; };
 		6BC03B5524D077AB006E3053 /* CalculatorBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */; };
 		6BC03B5624D077AB006E3053 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */; };
-		6BC03B5824D077AB006E3053 /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA481C249675E700202798 /* LocalizedLabel.swift */; };
 		6BC03B5924D077AB006E3053 /* CalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */; };
 		6BC03B5A24D077AB006E3053 /* LevainAndWaterCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628A9E248C139F006ABACA /* LevainAndWaterCalculatorVC.swift */; };
 		6BC03B5B24D077AB006E3053 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B628AAF248D60A2006ABACA /* InfoVC.swift */; };
@@ -292,6 +290,8 @@
 		6B8001BE2540DA3A00359D21 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				6BFA481C249675E700202798 /* LocalizedLabel.swift */,
+				6BFA481E2496777100202798 /* LocalizedButton.swift */,
 				6B8001B62540D1DB00359D21 /* LocalizedSegmentedButton.swift */,
 			);
 			path = CustomViews;
@@ -636,7 +636,6 @@
 				6BC03B4D24D077AB006E3053 /* NumberDisplayCell.swift in Sources */,
 				6BC03B4E24D077AB006E3053 /* LevainAndWaterCalculator.swift in Sources */,
 				6BC03B4F24D077AB006E3053 /* HomeVC.swift in Sources */,
-				6BC03B5024D077AB006E3053 /* LocalizedButton.swift in Sources */,
 				6BC03B5124D077AB006E3053 /* TableViewAdManager.swift in Sources */,
 				6BC03B5224D077AB006E3053 /* AppDelegate.swift in Sources */,
 				6BC03B5324D077AB006E3053 /* NumberFormatterExtension.swift in Sources */,
@@ -644,7 +643,6 @@
 				6BC03B5524D077AB006E3053 /* CalculatorBaseVC.swift in Sources */,
 				6BC03B5624D077AB006E3053 /* UIViewExtension.swift in Sources */,
 				6B76144524D59D7500000BA4 /* FormulateNumberInputCell.swift in Sources */,
-				6BC03B5824D077AB006E3053 /* LocalizedLabel.swift in Sources */,
 				6B76144624D59D7500000BA4 /* FormulaNumberDisplayCell.swift in Sources */,
 				6BC03B5924D077AB006E3053 /* CalculatorType.swift in Sources */,
 				6BC03B5A24D077AB006E3053 /* LevainAndWaterCalculatorVC.swift in Sources */,
