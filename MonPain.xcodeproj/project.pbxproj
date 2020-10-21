@@ -307,13 +307,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		6BB0AA2F251BE95000D3EC82 /* ZaJo */ = {
+		6BB0AA2F251BE95000D3EC82 /* ZaJo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6B8001BB2540D9F900359D21 /* UI */,
 				6BB0AA2A251BE93000D3EC82 /* AdvertisedViewController.swift */,
 				6BB0AA33251BE9E900D3EC82 /* AdsManager.swift */,
 			);
-			path = ZaJo;
+			path = "ZaJo-iOS";
 			sourceTree = "<group>";
 		};
 		6BB2D9382483EEB40006DAE2 = {
@@ -405,7 +406,7 @@
 		6BB98634251B75A800802416 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6BB0AA2F251BE95000D3EC82 /* ZaJo */,
+				6BB0AA2F251BE95000D3EC82 /* ZaJo-iOS */,
 				6BB98635251B75B200802416 /* Firebase */,
 			);
 			path = Libraries;

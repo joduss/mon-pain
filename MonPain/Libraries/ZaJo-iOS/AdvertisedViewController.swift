@@ -18,7 +18,7 @@ public class AdvertisedViewController: UIViewController {
     
     @IBOutlet public var adContainerView: UIView?
     
-    public var adsManager: AdsManager?
+    private var adsManager: AdsManager?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -45,11 +45,14 @@ public class AdvertisedViewController: UIViewController {
     
     
     /// To override to configure the ads manager
-    open func configureAdsManager() { }
+    open func configureAdsManager() -> AdsManager? { return nil }
     
     private func requestConfigureAdsManager() {
         if adsManager == nil {
-            configureAdsManager()
+            adsManager = configureAdsManager()
+            if adsManager == nil {
+                print("AdsManager is not configured.")
+            }
         }
         else {
             adsManager?.canDisplayAds()
@@ -71,7 +74,10 @@ public class AdvertisedViewController: UIViewController {
                     // instance has been updated.
                     let status = UMPConsentInformation.sharedInstance.formStatus
                     
-                    if (status == .available) {
+                    if (status == .unavailable) {
+                        self.adsManager?.canDisplayAds()
+                    }
+                    else {
                         self.loadContentForm()
                     }
                 }
