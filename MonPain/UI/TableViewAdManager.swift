@@ -18,7 +18,8 @@ class TableViewAdManager: NSObject, AdsManager, GADBannerViewDelegate {
     private let view: UIView
     private var heightConstraints: NSLayoutConstraint!
     private var originalInsets: UIEdgeInsets
-    
+    private var originalScrollIndicatorInsets: UIEdgeInsets
+
     private var adSize = CGSize.zero
     private var loadedAd = false
     
@@ -27,6 +28,7 @@ class TableViewAdManager: NSObject, AdsManager, GADBannerViewDelegate {
         self.tableView = tableView
         view = adContainerView
         originalInsets = tableView.contentInset
+        originalScrollIndicatorInsets = tableView.scrollIndicatorInsets
         super.init()
         prepareView()
     }
@@ -86,6 +88,10 @@ class TableViewAdManager: NSObject, AdsManager, GADBannerViewDelegate {
         var offset = tableView.contentOffset
         offset.y -= adSize.height
         tableView.setContentOffset(offset, animated: true)
+        
+        var indicatorInsets = originalScrollIndicatorInsets
+        indicatorInsets.top += adSize.height
+        tableView.scrollIndicatorInsets = indicatorInsets
     }
         
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
@@ -100,6 +106,8 @@ class TableViewAdManager: NSObject, AdsManager, GADBannerViewDelegate {
         var offset = tableView.contentOffset
         offset.y += adSize.height
         tableView.setContentOffset(offset, animated: true)
+        
+        tableView.scrollIndicatorInsets = originalScrollIndicatorInsets
     }
 }
 #endif
