@@ -37,14 +37,12 @@ public class CalculatorBaseVC: AdvertisedViewController, UITableViewDataSource, 
         self.tableView.dataSource = self
              
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topOutsideTextfield(sender:))))
-        
-
     }
     
     #if LITE
     
-    public override func configureAdsManager() {
-        adManager = TableViewAdManager(controller: self, tableView: self.tableView, adContainerView: self.adContainerView!)
+    public override func configureAdsManager() -> AdsManager? {
+        return TableViewAdManager(controller: self, tableView: self.tableView, adContainerView: self.adContainerView!)
     }
     
     #endif
