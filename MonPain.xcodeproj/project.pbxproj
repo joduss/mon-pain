@@ -35,6 +35,7 @@
 		6B7D92EA248D6D7B00F35D75 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */; };
 		6B7D92EC248D6EF300F35D75 /* CalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */; };
 		6B7D92EE248D731A00F35D75 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92ED248D731A00F35D75 /* TopIconButton.swift */; };
+		6B8001B72540D1DB00359D21 /* LocalizedSegmentedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8001B62540D1DB00359D21 /* LocalizedSegmentedButton.swift */; };
 		6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */; };
 		6BB0AA2B251BE93000D3EC82 /* AdvertisedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0AA2A251BE93000D3EC82 /* AdvertisedViewController.swift */; };
 		6BB0AA34251BE9E900D3EC82 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0AA33251BE9E900D3EC82 /* AdsManager.swift */; };
@@ -133,6 +134,7 @@
 		6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorType.swift; sourceTree = "<group>"; };
 		6B7D92ED248D731A00F35D75 /* TopIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
+		6B8001B62540D1DB00359D21 /* LocalizedSegmentedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedSegmentedButton.swift; sourceTree = "<group>"; };
 		6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
 		6BB0AA2A251BE93000D3EC82 /* AdvertisedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisedViewController.swift; sourceTree = "<group>"; };
 		6BB0AA33251BE9E900D3EC82 /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
@@ -269,6 +271,30 @@
 				6B76144B24D59E8300000BA4 /* InfoPlist.strings */,
 			);
 			path = "MonPain+";
+			sourceTree = "<group>";
+		};
+		6B8001BB2540D9F900359D21 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6B8001BE2540DA3A00359D21 /* CustomViews */,
+				6B8001BD2540DA2A00359D21 /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6B8001BD2540DA2A00359D21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B8001BE2540DA3A00359D21 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6B8001B62540D1DB00359D21 /* LocalizedSegmentedButton.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		6BA02DA124856F20005B2CB2 /* Extensions */ = {
@@ -576,6 +602,7 @@
 				6BB2D9472483EEB40006DAE2 /* SceneDelegate.swift in Sources */,
 				6B7D27C724D208B5002F1CA9 /* Calculator.swift in Sources */,
 				6B7D27C924D20E86002F1CA9 /* FormulateNumberInputCell.swift in Sources */,
+				6B8001B72540D1DB00359D21 /* LocalizedSegmentedButton.swift in Sources */,
 				6BFA481D249675E700202798 /* LocalizedLabel.swift in Sources */,
 				6B7D27CB24D20FF3002F1CA9 /* FormulaNumberDisplayCell.swift in Sources */,
 				6B7D92EC248D6EF300F35D75 /* CalculatorType.swift in Sources */,
