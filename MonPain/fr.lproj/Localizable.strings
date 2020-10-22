@@ -41,8 +41,8 @@
 
 "bread.hydratation.info" = "Le taux d'hydratation de la pâte à pain est la proportion d'eau dans la pâte par rapport à la farine.\n\nPar exemple, si l'on ajoute 100g de levain, composé de 50g d'eau et 50g de farine, ainsi que 300g de farine et 200g d'eau, on a au total 250g d'eau et 350g de farine. On a alors un taux d'hydratation de 71.4% (250/350 * 100%).";
 "levain.hydratation.info" = "Le taux d'hydratation du levain est la proportion de son eau par rapport à sa farine.\n\nPar exemple, un levain composé de 60g d'eau pour 100g de farine a un taux d'hydratation de 60%.";
-"salt.ratio.info" = "La proportion de sel se calcule en fonction de la quantité d'eau ajoutée. Si vous devez ajouter 100g d'eau et que vous désirez 2% de sel, vous aller devoir ajouter 2g de sel.";
-
+"salt.ratio-to-water.info" = "La proportion de sel se calcule en fonction de la quantité d'eau ajoutée.\n\nSi vous devez ajouter 100g d'eau et que vous désirez 2% de sel, vous aller devoir ajouter 2g de sel.";
+"salt.ratio-to-flour.info" = "La proportion de sel se calcule en fonction de la quantité de farine ajoutée.\n\nSi vous devez ajouter 100g de farine et que vous désirez 2% de sel, vous aller devoir ajouter 2g de sel.";
 
 "header.my_dear_levain" = "Mon cher levain";
 "header.i_want" = "Dans mon pain, je veux";
@@ -52,9 +52,18 @@
 
 // Info screen
 // ===========
-"contact.error.title" = "Erreur";
-"contact.error.message" = "Vous n'avez pas configuré Apple Mail. Vous pouvez utiliser votre application mail préférée et envoyer un email à l'adresse 'zajoapp@bluewin.ch'.";
 
-"info.screentitle" = "A propos";
-"info.content" = "Contactez-moi par email si vous recontrez un bug. N'hésitez pas non plus à vous plaindre, proposer des idées d'amélioration ou quoi que ce soit!";
-"info.contact-button.title" = "Contact par email";
+"settings.screen-title" = "Préférences";
+
+"settings.ingredients-parameters.header" = "Ingrédients";
+"settings.ingredient.salt" = "Salt en fonction de";
+"settings.ingredients-parameters.footer" = "Vous pouvez choisir comment calculer la quantité de sel. Par rapport à la quantité d'eau ou de farine ajoutée.";
+
+"settings.contact.header" = "Contact";
+"settings.contact.footer" = "Contactez-moi par email si vous recontrez un bug. N'hésitez pas non plus à vous plaindre, proposer des idées d'amélioration ou quoi que ce soit!";
+"settings.contact-button.title" = "Envoyer un email";
+
+"settings.contact.error.title" = "Erreur";
+"settings.contact.error.message" = "Vous n'avez pas configuré Apple Mail. Vous pouvez utiliser votre application mail préférée et envoyer un email à l'adresse 'zajoapp@bluewin.ch'.";
+
+

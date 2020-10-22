@@ -17,8 +17,8 @@ class FormulaNumberDisplayCell: NumberDisplayCell {
         self.formula = formula
         super.init(ingredientTitleKey: formula.ingredientName, unitTitleKey: "g")
         
-        formula.onUpdate = { [unowned self] in
-            self.update()
+        formula.onUpdate = { [weak self] in
+            self?.update()
         }
     }
     

@@ -76,5 +76,4 @@ class FlourAndWaterCalculator: Calculator {
     public func addFormula(_ formula: IngredientRatioFormula) {
         formulas.append(formula)
     }
-
 }

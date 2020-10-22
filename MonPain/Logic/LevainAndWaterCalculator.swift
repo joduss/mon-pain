@@ -68,4 +68,10 @@ class LevainAndWaterCalculator: Calculator {
     public func addFormula(_ formula: IngredientRatioFormula) {
         formulas.append(formula)
     }
+    
+    // MARK: Calculator implementation
+    
+    var flourToAdd: Double {
+        return flour
+    }
 }

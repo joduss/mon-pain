@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qbD-3e-Pr2">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qbD-3e-Pr2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="FlourAndWater" id="yKe-lT-dej"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqn-c8-EKl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -32,32 +33,32 @@
             <objects>
                 <viewController id="Na8-cV-M9E" customClass="FlourAndWaterCalculatorVC" customModule="MonPainPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mAn-yb-zgG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-vl-lti">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-vl-lti">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EyI-Bt-aZP">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="16" y="55.5" width="343" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EyI-Bt-aZP" id="KjN-FE-D9k">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="so7-q5-LZs">
-                                <rect key="frame" x="0.0" y="44" width="320" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="1" id="TZm-E6-TmG"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Dws-Rq-Hn2"/>
+                        <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PHX-vl-lti" firstAttribute="leading" secondItem="Dws-Rq-Hn2" secondAttribute="leading" id="1nr-KQ-CK7"/>
                             <constraint firstItem="Dws-Rq-Hn2" firstAttribute="trailing" secondItem="PHX-vl-lti" secondAttribute="trailing" id="7pp-NJ-2Ex"/>
@@ -67,12 +68,11 @@
                             <constraint firstItem="so7-q5-LZs" firstAttribute="top" secondItem="Dws-Rq-Hn2" secondAttribute="top" id="bOE-UV-0eE"/>
                             <constraint firstItem="so7-q5-LZs" firstAttribute="leading" secondItem="Dws-Rq-Hn2" secondAttribute="leading" id="deb-m3-BOE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Dws-Rq-Hn2"/>
                     </view>
                     <navigationItem key="navigationItem" title="title" id="fD1-yu-AK7">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Info" id="Be0-vV-Is2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings-icon" id="Be0-vV-Is2">
                             <connections>
-                                <segue destination="Y2j-dj-wgd" kind="show" id="vz8-An-ASH"/>
+                                <segue destination="2bS-xj-rXa" kind="show" id="o3E-aT-H9U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -111,7 +111,7 @@
                     <tabBarItem key="tabBarItem" image="LevainAndWater" id="k4U-5R-bN7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWE-Qg-jYp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -123,78 +123,124 @@
             </objects>
             <point key="canvasLocation" x="1048" y="798"/>
         </scene>
-        <!--info.screen-title-->
-        <scene sceneID="Xqv-Rd-o7s">
+        <!--settings.screen-title-->
+        <scene sceneID="Nqg-Lx-joB">
             <objects>
-                <viewController title="info.screen-title" id="Y2j-dj-wgd" customClass="InfoVC" customModule="MonPainPlus" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dVi-1H-Wvn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController id="2bS-xj-rXa" customClass="SettingsVC" customModule="MonPainPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="NCv-io-jiV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info.content" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjF-yy-3mv" customClass="LocalizedLabel" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="20" y="61" width="280" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-3V-bb7" customClass="LocalizedButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="78.5" y="105" width="163" height="30"/>
-                                <state key="normal" title="info.contact-button.title"/>
-                                <connections>
-                                    <action selector="clickContactPerEmail:" destination="Y2j-dj-wgd" eventType="touchUpInside" id="1Zk-Gz-7lX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="dtN-3V-bb7" firstAttribute="top" secondItem="NjF-yy-3mv" secondAttribute="bottom" constant="20" id="47v-oF-6hH"/>
-                            <constraint firstItem="8yO-TN-Dpd" firstAttribute="trailing" secondItem="NjF-yy-3mv" secondAttribute="trailing" constant="20" id="R8x-EI-BP2"/>
-                            <constraint firstItem="NjF-yy-3mv" firstAttribute="top" secondItem="8yO-TN-Dpd" secondAttribute="top" constant="17" id="ZDc-0e-34q"/>
-                            <constraint firstItem="NjF-yy-3mv" firstAttribute="leading" secondItem="8yO-TN-Dpd" secondAttribute="leading" constant="20" id="hip-rO-Cm8"/>
-                            <constraint firstItem="dtN-3V-bb7" firstAttribute="centerX" secondItem="8yO-TN-Dpd" secondAttribute="centerX" id="vwT-px-Vzw"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8yO-TN-Dpd"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="info.screen-title" id="cc8-to-dZx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z1d-bS-XHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection headerTitle="settings.ingredients-parameters.header" footerTitle="settings.ingredients-parameters.footer" id="fYO-Va-ajh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tRK-MB-Um0">
+                                        <rect key="frame" x="16" y="55.5" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tRK-MB-Um0" id="Xq7-6D-2VW">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings.ingredient.salt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7K-Bg-Ceb" customClass="LocalizedLabel" customModule="MonPainPlus" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11.5" width="174" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TEG-bE-uL6" customClass="LocalizedSegmentedControl" customModule="Mon_Pain">
+                                                    <rect key="frame" x="84" y="6.5" width="239" height="32"/>
+                                                    <segments>
+                                                        <segment title="ingredient.water"/>
+                                                        <segment title="ingredient.flour"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="saltRelationChanged:" destination="2bS-xj-rXa" eventType="valueChanged" id="dRJ-P1-IOc"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F7K-Bg-Ceb" firstAttribute="centerY" secondItem="Xq7-6D-2VW" secondAttribute="centerY" id="A5a-Aa-v3K"/>
+                                                <constraint firstAttribute="trailing" secondItem="TEG-bE-uL6" secondAttribute="trailing" constant="20" symbolic="YES" id="HOr-PF-PCa"/>
+                                                <constraint firstItem="TEG-bE-uL6" firstAttribute="centerY" secondItem="Xq7-6D-2VW" secondAttribute="centerY" id="Vi0-A4-ziS"/>
+                                                <constraint firstItem="F7K-Bg-Ceb" firstAttribute="leading" secondItem="Xq7-6D-2VW" secondAttribute="leading" constant="16" id="vC0-PQ-wTa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="settings.contact.header" footerTitle="settings.contact.footer" id="xFV-oy-UyB">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="n9v-9M-12g">
+                                        <rect key="frame" x="16" y="174.5" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9v-9M-12g" id="Bt8-ah-UgW">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings.contact-button.title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbg-Mh-W4i" customClass="LocalizedLabel" customModule="MonPainPlus" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11.5" width="311" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wbg-Mh-W4i" firstAttribute="leading" secondItem="Bt8-ah-UgW" secondAttribute="leading" constant="16" id="aYh-9v-Icc"/>
+                                                <constraint firstItem="wbg-Mh-W4i" firstAttribute="centerY" secondItem="Bt8-ah-UgW" secondAttribute="centerY" id="csq-46-X1b"/>
+                                                <constraint firstItem="wbg-Mh-W4i" firstAttribute="centerX" secondItem="Bt8-ah-UgW" secondAttribute="centerX" id="qZ8-8b-ta8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="2bS-xj-rXa" id="fQx-V9-5jS"/>
+                            <outlet property="delegate" destination="2bS-xj-rXa" id="9EF-DG-LhD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="settings.screen-title" id="awc-sk-VM7"/>
+                    <connections>
+                        <outlet property="saltRelationControl" destination="TEG-bE-uL6" id="8cO-Dk-eXP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldI-TU-Gqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3885" y="398"/>
+            <point key="canvasLocation" x="4294" y="396"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="ZyN-uy-6A1">
             <objects>
                 <viewController id="qbD-3e-Pr2" customClass="HomeVC" customModule="MonPainPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pbg-bj-71d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1" verticalCompressionResistancePriority="1" image="AppIconTransparent512" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-kC-alj">
-                                <rect key="frame" x="87" y="15" width="146" height="50"/>
+                                <rect key="frame" x="87" y="30" width="201" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="600" constant="50" id="Urv-q6-chg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[loc] What do you need me to compute for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56z-6v-MSG">
-                                <rect key="frame" x="20" y="85" width="280" height="64.5"/>
+                                <rect key="frame" x="20" y="100" width="335" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[loc] You have some levain and you want to know how much water and flour you need to add." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-4j-lB3">
-                                <rect key="frame" x="20" y="274.5" width="280" height="61.5"/>
+                                <rect key="frame" x="20" y="324.5" width="335" height="61.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[loc] You know how much flour you want to add, but you don't know how much levain and water you need to add." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-YY-QZt">
-                                <rect key="frame" x="20" y="465.5" width="280" height="82.5"/>
+                                <rect key="frame" x="20" y="556" width="335" height="61.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="73" y="370.5" width="174" height="75"/>
+                                <rect key="frame" x="73" y="426" width="174" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -214,7 +260,7 @@
                                 </connections>
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="78" y="179.5" width="164" height="75"/>
+                                <rect key="frame" x="78" y="194.5" width="164" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -239,6 +285,7 @@
                                 </connections>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5kM-sr-yUs"/>
                         <color key="backgroundColor" red="0.63563972710000005" green="0.85822182889999998" blue="0.93397182229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dwa-4j-lB3" firstAttribute="top" secondItem="htD-lu-vMy" secondAttribute="bottom" constant="20" id="30D-P0-7Sq"/>
@@ -265,7 +312,6 @@
                             <constraint firstItem="htD-lu-vMy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="56z-6v-MSG" secondAttribute="bottom" constant="10" id="wYi-yE-YAV"/>
                             <constraint firstItem="jgL-jO-FVu" firstAttribute="centerX" secondItem="htD-lu-vMy" secondAttribute="centerX" id="zaT-fp-sBZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5kM-sr-yUs"/>
                     </view>
                     <connections>
                         <outlet property="flourAndWaterButton" destination="htD-lu-vMy" id="hSw-X5-DoX"/>
@@ -285,32 +331,33 @@
             <objects>
                 <viewController id="pD3-Os-aGs" customClass="LevainAndWaterCalculatorVC" customModule="MonPainPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uu7-5o-coU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2lQ-Lr-ndl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="bsB-F4-CDv">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bsB-F4-CDv" id="pfl-XK-97W">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-52-hYW">
-                                <rect key="frame" x="0.0" y="44" width="320" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="1" id="X6w-IS-Vey"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ypa-y7-yVW"/>
+                        <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2lQ-Lr-ndl" firstAttribute="leading" secondItem="Ypa-y7-yVW" secondAttribute="leading" id="CLR-vh-9Sq"/>
                             <constraint firstAttribute="trailing" secondItem="KXt-52-hYW" secondAttribute="trailing" id="EpT-yH-8Wi"/>
@@ -320,12 +367,11 @@
                             <constraint firstItem="KXt-52-hYW" firstAttribute="leading" secondItem="Ypa-y7-yVW" secondAttribute="leading" id="cja-rs-shP"/>
                             <constraint firstItem="Ypa-y7-yVW" firstAttribute="bottom" secondItem="2lQ-Lr-ndl" secondAttribute="bottom" id="kAD-Hw-Gmo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ypa-y7-yVW"/>
                     </view>
                     <navigationItem key="navigationItem" title="title" id="Iao-ZM-jBO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Info" id="JBJ-Bh-eRE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings-icon" id="JBJ-Bh-eRE">
                             <connections>
-                                <segue destination="Y2j-dj-wgd" kind="show" id="ij4-uh-Q9o"/>
+                                <segue destination="2bS-xj-rXa" kind="show" id="ID8-tF-U6a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -340,14 +386,26 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vz8-An-ASH"/>
+        <segue reference="ID8-tF-U6a"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AppIconTransparent512" width="512" height="204.5"/>
         <image name="FlourAndWater" width="25" height="25"/>
         <image name="FlourAndWaterHome" width="60" height="60"/>
-        <image name="Info" width="25" height="25"/>
         <image name="LevainAndWater" width="25" height="25"/>
         <image name="LevainAndWaterHome" width="60" height="60"/>
+        <image name="settings-icon" width="30" height="30"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -32,6 +32,8 @@ class NumberInputCell: UIView {
         }
     }
     
+    public var infoKey: String?
+    
     @IBInspectable
     public var unitTitleKey: String = "" {
         didSet {
@@ -86,7 +88,7 @@ class NumberInputCell: UIView {
     }
     
     
-    init(ingredientTitleKey: String, unitTitleKey: String) {
+    init(ingredientTitleKey: String, unitTitleKey: String, infoKey: String? = nil) {
         super.init(frame: CGRect.zero)
         loadNib(targetView: self)
 
@@ -95,6 +97,7 @@ class NumberInputCell: UIView {
         defer {
             self.ingredientTitleKey = ingredientTitleKey
             self.unitTitleKey = unitTitleKey
+            self.infoKey = infoKey ?? "\(ingredientTitleKey).info"
         }
         
         configure()
@@ -149,7 +152,7 @@ class NumberInputCell: UIView {
     
     @IBAction func infoButtonClicked(_ sender: Any) {
         let popup = UIAlertController(title: leftLabel.text,
-                                      message: "\(ingredientTitleKey).info".localized,
+                                      message: infoKey!.localized,
                                       preferredStyle: .alert)
         popup.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
         delegate?.displayInfo(controller: popup)

@@ -40,7 +40,8 @@
 "levain.ratio.info" = "Ilość zakwasu w stosunku do ilości mąki.\n\nNp. dodając 100g zakwasu do 400g mąki, procentowy udział zakwasu wynosi 25%.";
 "bread.hydratation.info" = "Hydracja chleba to masa składników mokrych w stosunku do masy mąki.\n\nNp. ciasto, do którego dodaliśmy 100g zakwasu złożonego z 50g wody i 50g mąki, 300g mąki i 200g wody ma hydrację 71.4% (250g wody / 350g mąki * 100%).";
 "levain.hydratation.info" = "Hydracja zakwasu to masa wody w stosunku do masy mąki.\n\nNp. zakwas złożony z 60g wody na 100g mąki ma hydrację 60%.";
-"salt.ratio.info" = "Procentowy udział soli to stosunek masy soli do masy wody dodanej do ciasta.";
+"salt.ratio-to-water.info" = "Procentowy udział soli to stosunek masy soli do masy wody dodanej do ciasta.";
+"salt.ratio-to-flour.info" = "Procentowy udział soli to stosunek masy soli do masy mą dodanej do ciasta."; // TODO
 
 
 "header.my_dear_levain" = "Mój drogi Zakwas";
@@ -51,9 +52,16 @@
 
 // Info screen
 // ===========
-"contact.error.title" = "Błąd";
-"contact.error.message" = "Nie posiadasz skonfigurowanej domyślnej aplikacji e-mailowej iOS. Przejdź do Twojej ulubionej aplikacji e-mailowej i wyślij e-mail na adres 'zajoapp@bluewin.ch'.";
 
-"info.screen-title" = "Kontakt";
-"info.content" = "W razie wystąpienia jakiegokolwiek błędu lub jeżeli masz uwagi/ sugestie/ prośby/ opinie - proszę o kontakt drogą mailową.";
-"info.contact-button.title" = "Skontaktuj się ze mną";
+"settings.screen-title" = "Settings"; // TODO
+
+"settings.ingredients-parameters.header" = "Ingredients"; // TODO
+"settings.ingredient.salt" = "Salt in relation to"; // TODO
+"settings.ingredients-parameters.footer" = "You can choose how the quantity of salt is computed. In relation to the quantity of added water or added flour."; // TODO
+
+"settings.contact.header" = "Kontakt";
+"settings.contact.footer" = "W razie wystąpienia jakiegokolwiek błędu lub jeżeli masz uwagi/ sugestie/ prośby/ opinie - proszę o kontakt drogą mailową.";
+"settings.contact-button.title" = "Skontaktuj się ze mną";
+
+"settings.contact.error.title" = "Błąd";
+"settings.contact.error.message" = "Nie posiadasz skonfigurowanej domyślnej aplikacji e-mailowej iOS. Przejdź do Twojej ulubionej aplikacji e-mailowej i wyślij e-mail na adres 'zajoapp@bluewin.ch'.";

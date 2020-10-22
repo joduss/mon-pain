@@ -13,6 +13,7 @@ public protocol Calculator {
     var waterToAdd: Double { get }
     var totalWater: Double { get }
     var totalFlour: Double { get }
+    var flourToAdd: Double { get }
     
     func addFormula(_ formula: IngredientRatioFormula)
 }

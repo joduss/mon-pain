@@ -16,7 +16,7 @@ class FormulateNumberInputCell: NumberInputCell {
     init(formula: IngredientRatioFormula) {
         self.formula = formula
         
-        super.init(ingredientTitleKey: formula.ingredientRatioTitleKey, unitTitleKey: "%")
+        super.init(ingredientTitleKey: formula.ingredientRatioTitleKey, unitTitleKey: "%", infoKey: formula.infoKey)
     }
     
     required init?(coder: NSCoder) {

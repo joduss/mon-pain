@@ -38,18 +38,31 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
     }
         
         
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     
         createCells()
         textDidChange()
+        tableView.reloadData()
     }
     
     private func createCells() {
-        saltFormula = IngredientRatioFormula(ingredientName: "ingredient.salt",
-                                             ingredientRatioTitleKey: "salt.ratio",
-                                             ingredient: .addedWater,
-                                             calculator: self.calculator)
+        
+        if (UserPreferences.shared.saltRelation == .water) {
+            saltFormula = IngredientRatioFormula(ingredientNameKey: "ingredient.salt",
+                                                 ingredientRatioTitleKey: "salt.ratio",
+                                                 infoKey: "salt.ratio-to-water.info",
+                                                 ingredient: .addedWater,
+                                                 calculator: self.calculator)
+        }
+        else {
+            saltFormula = IngredientRatioFormula(ingredientNameKey: "ingredient.salt",
+                                                 ingredientRatioTitleKey: "salt.ratio",
+                                                 infoKey: "salt.ratio-to-flour.info",
+                                                 ingredient: .addedFlour,
+                                                 calculator: self.calculator)
+        }
+
         saltFormula.decimals = 1
         
         levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%")

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTB-gz-c3e">
-                    <rect key="frame" x="398" y="40.5" width="20" height="21"/>
+                    <rect key="frame" x="408" y="40.5" width="20" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="Jjf-wL-WYo"/>
                     </constraints>
@@ -37,11 +38,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" placeholder="Levain in grams" textAlignment="right" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="91N-nu-fL3">
-                    <rect key="frame" x="343" y="39" width="55" height="24"/>
+                    <rect key="frame" x="353" y="39" width="55" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="Ryd-am-P73"/>
                     </constraints>
-                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" systemColor="systemBlueColor"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     <connections>
@@ -56,7 +57,8 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="xpH-2S-hP0"/>
+            <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
             <constraints>
                 <constraint firstItem="8PO-CG-tH2" firstAttribute="top" secondItem="Rdj-Cv-DC3" secondAttribute="top" constant="10" id="9OX-4K-Yjg"/>
                 <constraint firstItem="91N-nu-fL3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8PO-CG-tH2" secondAttribute="trailing" constant="15" id="HCa-lt-miZ"/>
@@ -68,15 +70,20 @@
                 <constraint firstItem="xpH-2S-hP0" firstAttribute="top" secondItem="91N-nu-fL3" secondAttribute="top" constant="5" id="fg6-IK-DLC"/>
                 <constraint firstItem="QTB-gz-c3e" firstAttribute="leading" secondItem="91N-nu-fL3" secondAttribute="trailing" id="kmr-3q-eup"/>
                 <constraint firstItem="8PO-CG-tH2" firstAttribute="leading" secondItem="xpH-2S-hP0" secondAttribute="leading" constant="20" id="t3D-Sr-b5b"/>
-                <constraint firstItem="xpH-2S-hP0" firstAttribute="trailing" secondItem="QTB-gz-c3e" secondAttribute="trailing" constant="30" id="vQt-Fg-tDf"/>
+                <constraint firstItem="xpH-2S-hP0" firstAttribute="trailing" secondItem="QTB-gz-c3e" secondAttribute="trailing" constant="20" id="vQt-Fg-tDf"/>
                 <constraint firstItem="QA3-aH-87m" firstAttribute="centerY" secondItem="8PO-CG-tH2" secondAttribute="centerY" id="wDW-eN-XeF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="xpH-2S-hP0"/>
             <point key="canvasLocation" x="-30" y="-23"/>
         </view>
     </objects>
     <resources>
         <image name="Info" width="25" height="25"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

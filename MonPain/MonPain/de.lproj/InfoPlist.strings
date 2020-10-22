@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  MonPain
+
+  Created by Jonathan Duss on 21.06.20.
+  Copyright © 2020 ZaJo. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Mein Brot";
+"CFBundleName" = "Mein Brot";
+"NSUserTrackingUsageDescription" = "Diese Identifikator wird benutzt, um Ihnen personalisierte Anzeigen zu liefern.";

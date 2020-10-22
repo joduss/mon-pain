@@ -19,6 +19,7 @@ public class IngredientRatioFormula {
     public private(set)var ingredient: Ingredient
     public var ingredientName: String
     public var ingredientRatioTitleKey: String = ""
+    public var infoKey: String?
     public var decimals = 0
     
     /// Desired ratio of the ingredient.
@@ -49,6 +50,17 @@ public class IngredientRatioFormula {
         update()
     }
     
+    init(ingredientNameKey: String, ingredientRatioTitleKey: String, infoKey: String, ingredient: Ingredient, calculator: Calculator) {
+        self.ingredient = ingredient
+        self.ingredientName = ingredientNameKey
+        self.ingredientRatioTitleKey = ingredientRatioTitleKey
+        self.infoKey = infoKey
+        self.calculator = calculator
+        calculator.addFormula(self)
+        
+        update()
+    }
+    
     public func update() {
         
         let formatter = NumberFormatter()
@@ -57,6 +69,8 @@ public class IngredientRatioFormula {
         switch ingredient {
         case .addedWater:
             value = calculator.waterToAdd * ratio / 100.0
+        case .addedFlour:
+            value = calculator.flourToAdd * ratio / 100.0
         default:
             fatalError("Not implemented")
         }
