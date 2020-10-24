@@ -39,6 +39,16 @@ public class CalculatorBaseVC: AdvertisedViewController, UITableViewDataSource, 
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topOutsideTextfield(sender:))))
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        #if LITE
+        if (AppConfiguration.shared.shouldDisplayAd()) {
+            self.displayInterstitial(adUnitID: AdsConfiguration.interstitialUnitId)
+        }
+        #endif
+    }
+    
     #if LITE
     
     public override func configureAdsManager() -> AdsManager? {
