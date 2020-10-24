@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B086B9425445746005CEDE1 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B086B9325445746005CEDE1 /* AppConfiguration.swift */; };
 		6B086BA425445A2A005CEDE1 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B086BA325445A2A005CEDE1 /* OSLog.swift */; };
 		6B0F6AFF2490148500553E84 /* CalculatorBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */; };
 		6B2E59CD24956B7A0098960F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B2E59CC24956B7A0098960F /* GoogleService-Info.plist */; };
@@ -106,6 +107,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B086B9325445746005CEDE1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		6B086BA325445A2A005CEDE1 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBaseVC.swift; sourceTree = "<group>"; };
 		6B2E59CC24956B7A0098960F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2E59EF2496351A0098960F /* AdsConfiguration.swift */,
+				6B086B9325445746005CEDE1 /* AppConfiguration.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				6B2E59F2249635E00098960F /* TableViewAdManager.swift in Sources */,
 				6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */,
 				6BB0AA2B251BE93000D3EC82 /* AdvertisedViewController.swift in Sources */,
+				6B086B9425445746005CEDE1 /* AppConfiguration.swift in Sources */,
 				6BA02DA024856F1C005B2CB2 /* NumberFormatterExtension.swift in Sources */,
 				6B62202024858D740087D511 /* StringExtension.swift in Sources */,
 				6B0F6AFF2490148500553E84 /* CalculatorBaseVC.swift in Sources */,

@@ -13,12 +13,14 @@ import UIKit
 import UserMessagingPlatform
 import AppTrackingTransparency
 import AdSupport
+import GoogleMobileAds
 
 public class AdvertisedViewController: UIViewController {
     
     @IBOutlet public var adContainerView: UIView?
     
     private var adsManager: AdsManager?
+    private var interstitial: GADInterstitial?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -43,9 +45,38 @@ public class AdvertisedViewController: UIViewController {
         #endif
     }
     
-    
+    // MARK: - Admob management
+
     /// To override to configure the ads manager
     open func configureAdsManager() -> AdsManager? { return nil }
+    
+    public func displayInterstitial(adUnitID: String) {
+        interstitial = GADInterstitial(adUnitID: adUnitID)
+        let request = GADRequest()
+        interstitial!.load(request)
+        
+        tryDisplayInterstitial()
+    }
+    
+    public func tryDisplayInterstitial(attempts: Int = 0) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(1000)) { [weak self] in
+            
+            guard let strongSelf = self else { return }
+            
+            if attempts > 10 {
+                return
+            }
+            
+            if strongSelf.interstitial!.isReady {
+                strongSelf.interstitial?.present(fromRootViewController: strongSelf)
+            }
+            else {
+                self?.tryDisplayInterstitial(attempts: attempts + 1)
+            }
+        }
+    }
+    
+    // MARK: - Admob
     
     private func requestConfigureAdsManager() {
         if adsManager == nil {
