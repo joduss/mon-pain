@@ -11,6 +11,7 @@ import UIKit
 #if LITE
 import Firebase
 import GoogleMobileAds
+import UserMessagingPlatform
 #endif
 
 @UIApplicationMain
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FirebaseApp.configure()
             GADMobileAds.sharedInstance().start(completionHandler: nil)
             #if DEBUG
-                GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2"]
+                GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [kGADSimulatorID as! String, "1d2fa156ca8b7ebdad77f923ee6eb4e2", "55291B81-34D0-493E-8F3A-B43E3360FB55"]
             #endif
         #endif
         
