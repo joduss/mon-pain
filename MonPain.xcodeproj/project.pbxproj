@@ -318,6 +318,15 @@
 			path = "MonPain+";
 			sourceTree = "<group>";
 		};
+		6B7AAC2D254479DF00A328ED /* FoundationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */,
+				6B62201F24858D740087D511 /* StringExtension.swift */,
+			);
+			path = FoundationExtension;
+			sourceTree = "<group>";
+		};
 		6B8001BB2540D9F900359D21 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +339,7 @@
 		6B8001BD2540DA2A00359D21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,9 +357,6 @@
 		6BA02DA124856F20005B2CB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6BA02D9F24856F1C005B2CB2 /* NumberFormatterExtension.swift */,
-				6B40F5B22485725C00FA4A40 /* UIViewExtension.swift */,
-				6B62201F24858D740087D511 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +364,7 @@
 		6BB0AA2F251BE95000D3EC82 /* ZaJo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6B7AAC2D254479DF00A328ED /* FoundationExtension */,
 				6B2E59F1249635E00098960F /* TableViewAdManager.swift */,
 				6BB0AA2A251BE93000D3EC82 /* AdvertisedViewController.swift */,
 				6BB0AA33251BE9E900D3EC82 /* AdsManager.swift */,
