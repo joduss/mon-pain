@@ -1,13 +1,12 @@
 //
 //  AdvertisedTableViewController.swift
-//  MonPain
+//  RandomChooser
 //
 //  Created by Jonathan Duss on 24.10.20.
-//  Copyright © 2020 ZaJo. All rights reserved.
+//  Copyright © 2020 Jonathan Duss. All rights reserved.
 //
 
 import UIKit
-
 
 #if LITE
 import UserMessagingPlatform
@@ -15,6 +14,7 @@ import AppTrackingTransparency
 import AdSupport
 import GoogleMobileAds
 
+@objcMembers
 public class AdvertisedTableViewController: UIViewController {
     
     @IBOutlet public var adContainerView: UIView?
@@ -130,28 +130,12 @@ public class AdvertisedTableViewController: UIViewController {
                         if (UMPConsentInformation.sharedInstance.consentStatus ==
                                 .obtained) {
                             // App can start requesting ads.
-                            if #available(iOS 14, *) {
-                                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                                    // Tracking authorization completed. Start loading ads here.
-                                    // loadAd()
-                                    self.adsManager?.canDisplayAds()
-                                })
-                            } else {
-                                self.adsManager?.canDisplayAds()
-                            }
+                            self.adsManager?.canDisplayAds()
                         }
                     })
                 }
                 else if consentStatus == .obtained || consentStatus == .notRequired {
-                    if #available(iOS 14, *) {
-                        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                            // Tracking authorization completed. Start loading ads here.
-                            // loadAd()
-                            self.adsManager?.canDisplayAds()
-                        })
-                    } else {
-                        self.adsManager?.canDisplayAds()
-                    }
+                    self.adsManager?.canDisplayAds()
                 }
             }
         }
@@ -161,5 +145,6 @@ public class AdvertisedTableViewController: UIViewController {
 }
 
 #else
+@objcMembers
 public class AdvertisedTableViewController: UIViewController { }
 #endif

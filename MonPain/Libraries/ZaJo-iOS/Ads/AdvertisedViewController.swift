@@ -26,7 +26,6 @@ public class AdvertisedViewController: UIViewController {
         super.init(coder: coder)
         #if DEBUG
 //        UMPConsentInformation.sharedInstance.reset()
-//        PACConsentInformation.sharedInstance.debugGeography = .EEA;
         #endif
     }
     
@@ -40,9 +39,7 @@ public class AdvertisedViewController: UIViewController {
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        #if LITE
         self.adsManager?.stopDisplayingAds()
-        #endif
     }
     
     // MARK: - Admob management
@@ -95,6 +92,13 @@ public class AdvertisedViewController: UIViewController {
         let parameters = UMPRequestParameters()
         parameters.tagForUnderAgeOfConsent = false
         
+        #if DEBUG
+//            let debugSettings = UMPDebugSettings()
+//            debugSettings.geography = .EEA
+//            parameters.debugSettings = debugSettings
+//            debugSettings.testDeviceIdentifiers = ["402098E9-BD47-48F4-A948-A35B3F76D644" ];
+        #endif
+        
         UMPConsentInformation.sharedInstance
             .requestConsentInfoUpdate(with: parameters) {
                 (_ error: Error?) -> Void in
@@ -130,28 +134,12 @@ public class AdvertisedViewController: UIViewController {
                         if (UMPConsentInformation.sharedInstance.consentStatus ==
                                 .obtained) {
                             // App can start requesting ads.
-                            if #available(iOS 14, *) {
-                                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                                    // Tracking authorization completed. Start loading ads here.
-                                    // loadAd()
-                                    self.adsManager?.canDisplayAds()
-                                })
-                            } else {
-                                self.adsManager?.canDisplayAds()
-                            }
+                            self.adsManager?.canDisplayAds()
                         }
                     })
                 }
                 else if consentStatus == .obtained || consentStatus == .notRequired {
-                    if #available(iOS 14, *) {
-                        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                            // Tracking authorization completed. Start loading ads here.
-                            // loadAd()
-                            self.adsManager?.canDisplayAds()
-                        })
-                    } else {
-                        self.adsManager?.canDisplayAds()
-                    }
+                    self.adsManager?.canDisplayAds()
                 }
             }
         }
@@ -161,5 +149,6 @@ public class AdvertisedViewController: UIViewController {
 }
 
 #else
+@objcMembers
 public class AdvertisedViewController: UIViewController { }
 #endif
