@@ -38,4 +38,29 @@ public class OSLog {
         os_log("%@", type: .debug, "[\(header)] \(message)")
     }
     
+    
+    public static func error(message: String, file: String = #file, function: String = #function) {
+        
+        
+        let filename = (file as NSString).lastPathComponent.replacingOccurrences(of: ".swift", with: "")
+        var header = "\(filename).\(function)"
+
+        
+        if (header.count > HEADER_LENGTH) {
+            let headerSubstring = header[header.startIndex..<header.index(header.startIndex, offsetBy: 25)]
+            header = String(headerSubstring)
+        }
+        else {
+            let missing = HEADER_LENGTH - header.count
+            
+            var added = 0
+            while (added != missing) {
+                added += 1
+                header += " "
+            }
+        }
+        
+        os_log("%@", type: .error, "[\(header)] \(message)")
+    }
+    
 }
