@@ -146,5 +146,7 @@ public class AdvertisedTableViewController: UIViewController {
 
 #else
 @objcMembers
-public class AdvertisedTableViewController: UIViewController { }
+public class AdvertisedTableViewController: UIViewController {
+    @IBOutlet public var adContainerView: UIView?
+}
 #endif

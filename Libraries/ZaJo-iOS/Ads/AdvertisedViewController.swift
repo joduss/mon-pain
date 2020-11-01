@@ -25,7 +25,7 @@ public class AdvertisedViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         #if DEBUG
-//        UMPConsentInformation.sharedInstance.reset()
+        UMPConsentInformation.sharedInstance.reset()
         #endif
     }
     
@@ -150,5 +150,7 @@ public class AdvertisedViewController: UIViewController {
 
 #else
 @objcMembers
-public class AdvertisedViewController: UIViewController { }
+public class AdvertisedViewController: UIViewController {
+    @IBOutlet public var adContainerView: UIView?
+}
 #endif
