@@ -146,7 +146,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TEG-bE-uL6" customClass="LocalizedSegmentedControl" customModule="Mon_Pain">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TEG-bE-uL6" customClass="LocalizedSegmentedControl" customModule="MonPainPlus" customModuleProvider="target">
                                                     <rect key="frame" x="84" y="6.5" width="239" height="32"/>
                                                     <segments>
                                                         <segment title="ingredient.water"/>
@@ -239,8 +239,8 @@
                                 <color key="textColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="73" y="426" width="174" height="110"/>
+                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-jO-FVu" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="426" width="90" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -259,8 +259,8 @@
                                     <action selector="clickedLevainAndWater:" destination="qbD-3e-Pr2" eventType="touchUpInside" id="uoJ-ft-1Px"/>
                                 </connections>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
-                                <rect key="frame" x="78" y="194.5" width="164" height="110"/>
+                            <view opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="htD-lu-vMy" customClass="TopIconButton" customModule="MonPainPlus" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="194.5" width="90" height="110"/>
                                 <color key="backgroundColor" red="0.84608811139999995" green="0.67320133540000004" blue="0.55556305070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.25638106469999999" green="0.18792817000000001" blue="0.18726354840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -384,6 +384,14 @@
             <point key="canvasLocation" x="2255" y="810"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="htD-lu-vMy">
+            <size key="intrinsicContentSize" width="90" height="90"/>
+        </designable>
+        <designable name="jgL-jO-FVu">
+            <size key="intrinsicContentSize" width="90" height="90"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="ID8-tF-U6a"/>
     </inferredMetricsTieBreakers>
@@ -395,6 +403,9 @@
         <image name="LevainAndWaterHome" width="60" height="60"/>
         <image name="settings-icon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tableCellGroupedBackgroundColor">
