@@ -28,7 +28,17 @@ public class CalculatorBaseVC: AdvertisedViewController, UITableViewDataSource, 
     
     public internal(set) var calculatorType: CalculatorType = .FlourAndWater
     
+    private var newVersionController: NewVersionInformationCalculatorController!
+    
     @IBOutlet var tableView: UITableView!
+    
+    
+    
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        newVersionController = NewVersionInformationCalculatorController(viewController: self)
+    }
+    
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +51,8 @@ public class CalculatorBaseVC: AdvertisedViewController, UITableViewDataSource, 
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        newVersionController.displayInfoIfNeeded()
         
         #if LITE
         if (AppConfiguration.shared.shouldDisplayAd()) {

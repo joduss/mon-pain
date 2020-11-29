@@ -53,11 +53,11 @@
 // Info screen
 // ===========
 
-"settings.screen-title" = "Settings"; // TODO
+"settings.screen-title" = "Ustawienia";
 
-"settings.ingredients-parameters.header" = "Ingredients"; // TODO
-"settings.ingredient.salt" = "Salt in relation to"; // TODO
-"settings.ingredients-parameters.footer" = "You can choose how the quantity of salt is computed. In relation to the quantity of added water or added flour."; // TODO
+"settings.ingredients-parameters.header" = "Składniki";
+"settings.ingredient.salt" = "Sól w stosunku do";
+"settings.ingredients-parameters.footer" = "Możesz wybrać jak obliczana jest ilość soli: W stosunku do ilości dodanej wody lub mąki.";
 
 "settings.contact.header" = "Kontakt";
 "settings.contact.footer" = "W razie wystąpienia jakiegokolwiek błędu lub jeżeli masz uwagi/ sugestie/ prośby/ opinie - proszę o kontakt drogą mailową.";
@@ -65,3 +65,20 @@
 
 "settings.contact.error.title" = "Błąd";
 "settings.contact.error.message" = "Nie posiadasz skonfigurowanej domyślnej aplikacji e-mailowej iOS. Przejdź do Twojej ulubionej aplikacji e-mailowej i wyślij e-mail na adres 'zajoapp@bluewin.ch'.";
+
+
+// New version - secondary
+// ===========
+
+"info-new-version.1.2.title" = "Co nowego?";
+"info-new-version.1.2.message" = "Dwie nowe funkcje!
+
+1. W prawym górnym rogu znajdziesz przycisk \"Ustawienia\". Możesz wybrać jak obliczana jest ilość soli.
+
+2. Tylko dla \"Mój Chleb +\"! Twój ostani przepis jest zapamiętany i odtworzony przy kolejnym otwarciu aplikacji.";
+
+
+// General
+// ===========
+
+"general.ok" = "Ok";

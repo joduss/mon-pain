@@ -67,3 +67,19 @@
 "settings.contact.error.title" = "Error";
 "settings.contact.error.message" = "You didn't configure the default iOS Mail app. You can instead open your favorite email app and send an email to 'zajoapp@bluewin.ch'.";
 
+
+// New version - secondary
+// ===========
+
+"info-new-version.1.2.title" = "What's new?";
+"info-new-version.1.2.message" = "There are 2 new features!
+
+1. Look up right. That's a settings button. You can now choose if the salt should be computed in relation to water or flour!
+
+2. For \"My Own Bread +\" only! What you type is saved for the next time you open the app!";
+
+
+// General
+// ===========
+
+"general.ok" = "Ok";

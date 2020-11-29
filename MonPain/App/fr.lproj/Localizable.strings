@@ -67,3 +67,18 @@
 "settings.contact.error.message" = "Vous n'avez pas configuré Apple Mail. Vous pouvez utiliser votre application mail préférée et envoyer un email à l'adresse 'zajoapp@bluewin.ch'.";
 
 
+// New version - secondary
+// ===========
+
+"info-new-version.1.2.title" = "Quoi de neuf?";
+"info-new-version.1.2.message" = "Il y a 2 nouvelles fonctionalités!
+
+1. En haut à droite, il y a maintenant un bouton pour les préférences. Vous pouvez choisir si le sel se calcule en fonction la quantité d'eau ou de farine.
+
+2. Pour \"Mon Pain +\" seulement! Les valeurs que vous entrez sont sauvegardées! Plus de frustration de devoir entrer à chaque fois le taux d'hydratation de votre levain!";
+
+
+// General
+// ===========
+
+"general.ok" = "Ok";
