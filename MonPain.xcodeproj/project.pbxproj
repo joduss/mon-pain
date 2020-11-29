@@ -55,8 +55,6 @@
 		6B7D92EA248D6D7B00F35D75 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92E9248D6D7B00F35D75 /* HomeVC.swift */; };
 		6B7D92EC248D6EF300F35D75 /* CalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92EB248D6EF300F35D75 /* CalculatorType.swift */; };
 		6B7D92EE248D731A00F35D75 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92ED248D731A00F35D75 /* TopIconButton.swift */; };
-		6B98C405254EEFBD00EBDAF2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B98C404254EEFBD00EBDAF2 /* FirebaseAnalytics */; };
-		6B98C407254EEFBD00EBDAF2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B98C406254EEFBD00EBDAF2 /* FirebaseCrashlytics */; };
 		6B98C423254F007800EBDAF2 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB259792541FCB900E0B6C2 /* UserPreferences.swift */; };
 		6B98C427254F00D800EBDAF2 /* SaltRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2597E2541FD2800E0B6C2 /* SaltRelation.swift */; };
 		6B98C431254F023200EBDAF2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3C3209254624FC00C9B4F7 /* StringExtension.swift */; };
@@ -73,7 +71,9 @@
 		6BB98618251A94BE00802416 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB98616251A94BE00802416 /* AppTrackingTransparency.framework */; };
 		6BB9864F251B75E000802416 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB98649251B75DF00802416 /* GoogleAppMeasurement.framework */; };
 		6BB98658251B75EC00802416 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB98656251B75EB00802416 /* GoogleMobileAds.framework */; };
-		6BB98659251B75EC00802416 /* UserMessagingPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB98657251B75EC00802416 /* UserMessagingPlatform.framework */; };
+		6BBA4D3D254F3266007DE2E2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6BBA4D3C254F3266007DE2E2 /* FirebaseAnalytics */; };
+		6BBA4D3F254F3266007DE2E2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6BBA4D3E254F3266007DE2E2 /* FirebaseCrashlytics */; };
+		6BBA4D43254F3366007DE2E2 /* UserMessagingPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBA4D42254F3366007DE2E2 /* UserMessagingPlatform.framework */; };
 		6BC03B4924D077AB006E3053 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92ED248D731A00F35D75 /* TopIconButton.swift */; };
 		6BC03B4A24D077AB006E3053 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD525D248ED2B100A03B0D /* TabBarController.swift */; };
 		6BC03B4B24D077AB006E3053 /* NumberInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9A2248569720006DAE2 /* NumberInputCell.swift */; };
