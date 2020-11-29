@@ -110,6 +110,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6BD88632254F2E360056815A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6B086B9325445746005CEDE1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVersionInformationCalculatorController.swift; sourceTree = "<group>"; };
@@ -168,7 +181,7 @@
 		6BB98617251A94BE00802416 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		6BB98649251B75DF00802416 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		6BB98656251B75EB00802416 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		6BB98657251B75EC00802416 /* UserMessagingPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserMessagingPlatform.framework; sourceTree = "<group>"; };
+		6BBA4D42254F3366007DE2E2 /* UserMessagingPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserMessagingPlatform.framework; sourceTree = "<group>"; };
 		6BC03B7824D077AB006E3053 /* MonPainPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPainPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC03B7924D077AB006E3053 /* InfoPlist-MonPainPlus.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "InfoPlist-MonPainPlus.plist"; path = "/Users/jonathanduss/jo_dev/MonPain/MonPain/InfoPlist-MonPainPlus.plist"; sourceTree = "<absolute>"; };
 		6BCD525D248ED2B100A03B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -182,12 +195,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B98C405254EEFBD00EBDAF2 /* FirebaseAnalytics in Frameworks */,
-				6BB98659251B75EC00802416 /* UserMessagingPlatform.framework in Frameworks */,
 				6BB98618251A94BE00802416 /* AppTrackingTransparency.framework in Frameworks */,
+				6BBA4D43254F3366007DE2E2 /* UserMessagingPlatform.framework in Frameworks */,
 				6BB98658251B75EC00802416 /* GoogleMobileAds.framework in Frameworks */,
+				6BBA4D3F254F3266007DE2E2 /* FirebaseCrashlytics in Frameworks */,
+				6BBA4D3D254F3266007DE2E2 /* FirebaseAnalytics in Frameworks */,
 				6BB9864F251B75E000802416 /* GoogleAppMeasurement.framework in Frameworks */,
-				6B98C407254EEFBD00EBDAF2 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,8 +478,8 @@
 		6BB98635251B75B200802416 /* Admob */ = {
 			isa = PBXGroup;
 			children = (
+				6BBA4D42254F3366007DE2E2 /* UserMessagingPlatform.framework */,
 				6BB98656251B75EB00802416 /* GoogleMobileAds.framework */,
-				6BB98657251B75EC00802416 /* UserMessagingPlatform.framework */,
 				6BB98649251B75DF00802416 /* GoogleAppMeasurement.framework */,
 			);
 			path = Admob;
@@ -482,6 +495,7 @@
 				6BB2D93D2483EEB40006DAE2 /* Sources */,
 				6BB2D93E2483EEB40006DAE2 /* Frameworks */,
 				6BB2D93F2483EEB40006DAE2 /* Resources */,
+				6BD88632254F2E360056815A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,8 +503,8 @@
 			);
 			name = MonPain;
 			packageProductDependencies = (
-				6B98C404254EEFBD00EBDAF2 /* FirebaseAnalytics */,
-				6B98C406254EEFBD00EBDAF2 /* FirebaseCrashlytics */,
+				6BBA4D3C254F3266007DE2E2 /* FirebaseAnalytics */,
+				6BBA4D3E254F3266007DE2E2 /* FirebaseCrashlytics */,
 			);
 			productName = MonPain;
 			productReference = 6BB2D9412483EEB40006DAE2 /* Mon Pain.app */;
@@ -897,6 +911,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MonPain/Libraries/**",
+					"$(PROJECT_DIR)/Libraries/Admob",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MonPain/MonPain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -923,6 +938,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MonPain/Libraries/**",
+					"$(PROJECT_DIR)/Libraries/Admob",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MonPain/MonPain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1092,12 +1108,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6B98C404254EEFBD00EBDAF2 /* FirebaseAnalytics */ = {
+		6BBA4D3C254F3266007DE2E2 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6B98C403254EEFBD00EBDAF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		6B98C406254EEFBD00EBDAF2 /* FirebaseCrashlytics */ = {
+		6BBA4D3E254F3266007DE2E2 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6B98C403254EEFBD00EBDAF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
