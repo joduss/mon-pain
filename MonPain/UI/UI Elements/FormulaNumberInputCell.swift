@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class FormulateNumberInputCell: NumberInputCell {
+class FormulaNumberInputCell: NumberInputCell {
     
     public private(set) var formula: IngredientRatioFormula
     
-    init(formula: IngredientRatioFormula) {
+    init(formula: IngredientRatioFormula, storageKey: String? = nil) {
         self.formula = formula
         
-        super.init(ingredientTitleKey: formula.ingredientRatioTitleKey, unitTitleKey: "%", infoKey: formula.infoKey)
+        super.init(ingredientTitleKey: formula.ingredientRatioTitleKey, unitTitleKey: "%", infoKey: formula.infoKey, storageKey: storageKey)
     }
     
     required init?(coder: NSCoder) {
@@ -27,6 +27,4 @@ class FormulateNumberInputCell: NumberInputCell {
         super.valueChanged()
         formula.ratio = value
     }
-    
-    
 }

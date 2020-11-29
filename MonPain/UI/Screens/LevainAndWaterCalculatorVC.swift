@@ -14,7 +14,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
     private var desiredFlourCell: NumberInputCell!
     private var desiredLevainRatioCell: NumberInputCell!
     private var desiredBreadHydratationCell: NumberInputCell!
-    private var desiredSaltCell: FormulateNumberInputCell!
+    private var desiredSaltCell: FormulaNumberInputCell!
     
     private var ingredientWaterToAddCell: NumberDisplayCell!
     private var ingredientFlourToAddCell: NumberDisplayCell!
@@ -52,27 +52,27 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         
         // Note: Default min allowed value is 1.
         
-        levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%")
+        levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%", storageKey: "lw-lev-hydr")
         levainHydratationCell.maxAllowedValue = 200
         levainHydratationCell.value = 100
         levainHydratationCell.showInfoButton = true
         
-        desiredFlourCell = NumberInputCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
+        desiredFlourCell = NumberInputCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g", storageKey: "lw-flour-qty")
         desiredFlourCell.maxAllowedValue = 99999
         desiredFlourCell.value = 200
         desiredFlourCell.showInfoButton = false
         
-        desiredLevainRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%")
+        desiredLevainRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%", storageKey: "lw-lev-ratio")
         desiredLevainRatioCell.maxAllowedValue = 200
         desiredLevainRatioCell.value = 35
         desiredLevainRatioCell.showInfoButton = true
         
-        desiredBreadHydratationCell = NumberInputCell(ingredientTitleKey: "bread.hydratation", unitTitleKey: "%")
+        desiredBreadHydratationCell = NumberInputCell(ingredientTitleKey: "bread.hydratation", unitTitleKey: "%", storageKey: "lw-bread-hydr")
         desiredBreadHydratationCell.maxAllowedValue = 200
         desiredBreadHydratationCell.value = 60
         desiredBreadHydratationCell.showInfoButton = true
         
-        desiredSaltCell = FormulateNumberInputCell(formula: saltFormula)
+        desiredSaltCell = FormulaNumberInputCell(formula: saltFormula, storageKey : "lw-salt-ratio")
         desiredSaltCell.decimal = true
         desiredSaltCell.minAllowedValue = 0
         desiredSaltCell.maxAllowedValue = 100
@@ -81,16 +81,16 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         
         // Section 3
         ingredientFlourToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
-        ingredientFlourToAddCell.isComputed = true
+        ingredientFlourToAddCell.isImportant = true
         
         ingredientWaterToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.water", unitTitleKey: "g")
-        ingredientWaterToAddCell.isComputed = true
+        ingredientWaterToAddCell.isImportant = true
 
         ingredientLevainToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.levain", unitTitleKey: "g")
-        ingredientLevainToAddCell.isComputed = true
+        ingredientLevainToAddCell.isImportant = true
         
         ingredientSaltToAddCell = FormulaNumberDisplayCell(formula: saltFormula)
-        ingredientSaltToAddCell.isComputed = true
+        ingredientSaltToAddCell.isImportant = true
         ingredientSaltToAddCell.decimals = true
 
         // Section 4
@@ -126,6 +126,7 @@ class LevainAndWaterCalculatorVC: CalculatorBaseVC {
         for view in cells.reduce([UIView](), { (a, b) in return a + b}) {
             if let cell = view as? NumberInputCell {
                 cell.delegate = self
+                cell.restoreValue()
             }
         }
     }

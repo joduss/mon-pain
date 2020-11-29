@@ -442,7 +442,7 @@
 				6BB2D9A6248569970006DAE2 /* NumberInputCell.xib */,
 				6B7D92ED248D731A00F35D75 /* TopIconButton.swift */,
 				6BF603AF24D6DAD700DA3D40 /* TopIconButton.xib */,
-				6B7D27C824D20E86002F1CA9 /* FormulateNumberInputCell.swift */,
+				6B7D27C824D20E86002F1CA9 /* FormulaNumberInputCell.swift */,
 				6B7D27CA24D20FF3002F1CA9 /* FormulaNumberDisplayCell.swift */,
 			);
 			path = "UI Elements";

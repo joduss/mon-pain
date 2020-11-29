@@ -65,27 +65,27 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
 
         saltFormula.decimals = 1
         
-        levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%")
+        levainHydratationCell = NumberInputCell(ingredientTitleKey: "levain.hydratation", unitTitleKey: "%", storageKey: "fw-lev-hydr")
         levainHydratationCell.maxAllowedValue = 200
         levainHydratationCell.value = 100
         levainHydratationCell.showInfoButton = true
         
-        desiredLevainCell = NumberInputCell(ingredientTitleKey: "ingredient.levain", unitTitleKey: "g")
+        desiredLevainCell = NumberInputCell(ingredientTitleKey: "ingredient.levain", unitTitleKey: "g", storageKey: "fw-lev-qty")
         desiredLevainCell.maxAllowedValue = 99999
         desiredLevainCell.value = 100
         desiredLevainCell.showInfoButton = false
 
-        levainDesiredRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%")
+        levainDesiredRatioCell = NumberInputCell(ingredientTitleKey: "levain.ratio", unitTitleKey: "%", storageKey: "fw-lev-ratio")
         levainDesiredRatioCell.maxAllowedValue = 200
         levainDesiredRatioCell.value = 35
         levainDesiredRatioCell.showInfoButton = true
         
-        desiredBreadHydratationCell = NumberInputCell(ingredientTitleKey: "bread.hydratation", unitTitleKey: "%")
+        desiredBreadHydratationCell = NumberInputCell(ingredientTitleKey: "bread.hydratation", unitTitleKey: "%", storageKey: "fw-bread-hydr")
         desiredBreadHydratationCell.maxAllowedValue = 200
         desiredBreadHydratationCell.value = 60
         desiredBreadHydratationCell.showInfoButton = true
         
-        desiredSaltCell = FormulateNumberInputCell(formula: saltFormula)
+        desiredSaltCell = FormulaNumberInputCell(formula: saltFormula, storageKey : "fw-salt-ratio")
         desiredSaltCell.decimal = true
         desiredSaltCell.minAllowedValue = 0
         desiredSaltCell.maxAllowedValue = 100
@@ -94,16 +94,16 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         
         // Section 3
         flourToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.flour", unitTitleKey: "g")
-        flourToAddCell.isComputed = true
+        flourToAddCell.isImportant = true
         
         waterToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.water", unitTitleKey: "g")
-        waterToAddCell.isComputed = true
+        waterToAddCell.isImportant = true
 
         levainToAddCell = NumberDisplayCell(ingredientTitleKey: "ingredient.levain", unitTitleKey: "g")
-        levainToAddCell.isComputed = true
+        levainToAddCell.isImportant = true
         
         saltToAddCell = FormulaNumberDisplayCell(formula: saltFormula)
-        saltToAddCell.isComputed = true
+        saltToAddCell.isImportant = true
         saltToAddCell.decimals = true
 
         // Section 4
@@ -139,6 +139,7 @@ class FlourAndWaterCalculatorVC: CalculatorBaseVC {
         for view in cells.reduce([UIView](), { (a, b) in return a + b}) {
             if let cell = view as? NumberInputCell {
                 cell.delegate = self
+                cell.restoreValue()
             }
         }
     }

@@ -18,7 +18,7 @@ class NumberDisplayCell: UIView {
     
     private let formatter = NumberFormatter()
     
-    @IBInspectable
+    /// The ingredient localization key.
     public var ingredientTitleKey: String {
         get {
             return ingredientLabel?.text ?? ""
@@ -28,10 +28,10 @@ class NumberDisplayCell: UIView {
         }
     }
     
-    @IBInspectable
-    public var isComputed: Bool = false {
+    /// Indicates if the cell contains an important information.
+    public var isImportant: Bool = false {
         didSet {
-            if isComputed {
+            if isImportant {
                 ingredientLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
                 quantityLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
                 quantityLabel.textColor = UIColor.systemOrange
@@ -43,7 +43,7 @@ class NumberDisplayCell: UIView {
         }
     }
 
-    @IBInspectable
+    /// The quantity of the ingredient.
     public var value: Double {
         get {
             return formatter.number(from: quantityLabel.text ?? "0")?.doubleValue ?? 0
@@ -53,6 +53,7 @@ class NumberDisplayCell: UIView {
         }
     }
     
+    /// Numbers of decimal the value should be formatted with.
     public var decimals: Bool = false {
         didSet {
             formatter.maximumFractionDigits = decimals ? 1 : 0
@@ -60,7 +61,7 @@ class NumberDisplayCell: UIView {
         }
     }
 
-    @IBInspectable
+    /// The quantity unit's localization key
     public var unitTitleKey: String {
         get {
             return unitLabel?.text ?? ""
@@ -70,6 +71,9 @@ class NumberDisplayCell: UIView {
         }
     }
     
+    
+    // MARK: - Constructors
+    // ===============================
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

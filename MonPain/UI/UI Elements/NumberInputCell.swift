@@ -8,10 +8,16 @@
 
 import UIKit
 
+
 protocol NumberInputCellDelegate: class {
+    
+    /// Called when the text changed.
     func textDidChange()
+    
+    /// Asked the delegate to present the given info view controller.
     func displayInfo(controller: UIViewController)
 }
+
 
 @IBDesignable
 class NumberInputCell: UIView {
@@ -25,23 +31,28 @@ class NumberInputCell: UIView {
     
     public weak var delegate: NumberInputCellDelegate?
     
-    @IBInspectable
+    /// The localization key for an information that can be displayed via a (i) button.
+    /// If nil, the (i) button is not visible.
+    public var infoKey: String?
+    
+    /// The key used to store a value
+    private var storageKey: String?
+    
+    /// The ingredient localization key.
     public var ingredientTitleKey: String = "" {
         didSet {
             leftLabel?.text = ingredientTitleKey.localized
         }
     }
     
-    public var infoKey: String?
-    
-    @IBInspectable
+    /// The quantity unit's localization key
     public var unitTitleKey: String = "" {
         didSet {
             rightLabel?.text = unitTitleKey
         }
     }
     
-    @IBInspectable
+    /// The quantity of the ingredient.
     public var value: Double = 0 {
         didSet {
             valueChanged()
@@ -50,7 +61,7 @@ class NumberInputCell: UIView {
         }
     }
     
-    @IBInspectable
+    /// Numbers of decimal the value should be formatted with.
     public var decimal: Bool = false {
         didSet {
             formatter.maximumFractionDigits = decimal ? 1 : 0
@@ -61,13 +72,10 @@ class NumberInputCell: UIView {
     }
     
     /// Default 1.0. Supported: 0.0 or 1.0
-    @IBInspectable
     public var minAllowedValue = 1.0
     
-    @IBInspectable
     public var maxAllowedValue = Double.greatestFiniteMagnitude
     
-    @IBInspectable
     public var showInfoButton: Bool {
         get {
             return infoButton.isHidden
@@ -76,6 +84,9 @@ class NumberInputCell: UIView {
             infoButton.isHidden = !newValue
         }
     }
+    
+    // MARK: - Initialization
+    // ------------------------------------
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -87,13 +98,13 @@ class NumberInputCell: UIView {
         loadNib(targetView: self)
     }
     
-    
-    init(ingredientTitleKey: String, unitTitleKey: String, infoKey: String? = nil) {
+    init(ingredientTitleKey: String, unitTitleKey: String, infoKey: String? = nil, storageKey: String? = nil) {
         super.init(frame: CGRect.zero)
         loadNib(targetView: self)
 
         translatesAutoresizingMaskIntoConstraints = false
         
+        self.storageKey = storageKey
         defer {
             self.ingredientTitleKey = ingredientTitleKey
             self.unitTitleKey = unitTitleKey
@@ -103,8 +114,11 @@ class NumberInputCell: UIView {
         configure()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    convenience init(ingredientTitleKey: String, unitTitleKey: String, storageKey: String? = nil) {
+        self.init(ingredientTitleKey: ingredientTitleKey,
+                  unitTitleKey: unitTitleKey,
+                  infoKey: nil,
+                  storageKey: storageKey)
     }
     
     override func awakeFromNib() {
@@ -124,31 +138,43 @@ class NumberInputCell: UIView {
                                    action: #selector(closeKeyboard(button:)))
         let group = UIBarButtonItemGroup(barButtonItems: [], representativeItem: done)
         textfield.inputAssistantItem.leadingBarButtonGroups = [group]
+        
+        #if !LITE
+            restoreValue()
+        #endif
     }
     
-    @objc
-    private func textfieldValueChanged(_ textfield: UITextField) {
-        value = doubleValueOf(s: textfield.text ?? "1") ?? 1
-        delegate?.textDidChange()
+    
+    
+    // MARK: - Storage
+    
+    #if LITE
+    
+    public func restoreValue() { }
+    
+    private func storeValue() { }
+    
+    #else
+    
+    public func restoreValue() {
+        guard let storageKey = self.storageKey else { return }
+        
+        guard UserDefaults.standard.dictionaryRepresentation().keys.contains(storageKey) else { return }
+        
+        value = UserDefaults.standard.double(forKey: storageKey)
     }
     
-    @objc
-    private func textfieldEditingBegin(_ textfield: UITextField) {
-        DispatchQueue.main.async {
-            textfield.selectAll(nil)
-        }
+    private func storeValue() {
+        guard let storageKey = self.storageKey else { return }
+        
+        UserDefaults.standard.set(value, forKey: storageKey)
     }
     
-    @objc private func closeKeyboard(button: UIBarButtonItem) {
-        textfield.resignFirstResponder()
-    }
+    #endif
+
     
-    @objc
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if (textField.text == "") {
-            value = 0
-        }
-    }
+    // MARK: - Info
+    // ------------------------------------
     
     @IBAction func infoButtonClicked(_ sender: Any) {
         let popup = UIAlertController(title: leftLabel.text,
@@ -158,9 +184,15 @@ class NumberInputCell: UIView {
         delegate?.displayInfo(controller: popup)
     }
     
+    // MARK: - For subclassing.
+    // ------------------------------------
+    
     /// Called when the value changed. Useful when subclassing.
     func valueChanged() { }
     
+    
+    // MARK: - Utilities
+    // ------------------------------------
     
     fileprivate func doubleValueOf(s: String) -> Double? {
         
@@ -195,5 +227,33 @@ extension NumberInputCell: UITextFieldDelegate {
         
         return number >= minAllowedValue
             && number <= maxAllowedValue
+    }
+    
+    // MARK: - Text input
+    // ------------------------------------
+    
+    @objc
+    private func textfieldValueChanged(_ textfield: UITextField) {
+        value = doubleValueOf(s: textfield.text ?? "1") ?? 1
+        storeValue()
+        delegate?.textDidChange()
+    }
+    
+    @objc
+    private func textfieldEditingBegin(_ textfield: UITextField) {
+        DispatchQueue.main.async {
+            textfield.selectAll(nil)
+        }
+    }
+    
+    @objc private func closeKeyboard(button: UIBarButtonItem) {
+        textfield.resignFirstResponder()
+    }
+    
+    @objc
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (textField.text == "") {
+            value = 0
+        }
     }
 }
