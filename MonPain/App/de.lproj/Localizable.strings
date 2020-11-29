@@ -12,7 +12,7 @@
 
 "home.title" = "Was muss ich für dich berechnen?";
 "home.flourWaterButton.title" = "Mehl & Wasser";
-"home.flourWaterButton.subtitle" = "You know how much levain you want to use, but you don't know how much water and flour you need to add.";
+"home.flourWaterButton.subtitle" = "Du kennst die Menge Sauerteigs du willst benutzen, aber du muss berechnen die Menge von Wasser und Mehl, die du hinzufugen musst.";
 "home.levainWaterButton.title" = "Sauerteig & Wasser";
 "home.levainWaterButton.subtitle" = "You know how much flour you want to add, but you don't know how much levain and water you need to add.";
 
@@ -28,10 +28,10 @@
 "screen.flour-and-water.title" = "Mehl and Wasser";
 "screen.levain-and-water.title" = "Sauerteig and Wasser";
 
-"levain.hydratation" = "Levain hydration";
+"levain.hydratation" = "Hydratation des Sauerteigs";
 "levain.ratio" = "Percentage of levain";
-"bread.hydratation" = "Bread hydration level";
-"salt.ratio" = "Percentage of salt";
+"bread.hydratation" = "Hydratations des Brotes";
+"salt.ratio" = "Salzgehalt pro 100g";
 "ingredient.flour" = "Mehl";
 "ingredient.water" = "Wasser";
 "ingredient.dough" = "Brotteig";
@@ -60,8 +60,21 @@
 "settings.ingredients-parameters.footer" = "You can choose how the quantity of salt is computed. In relation to the quantity of added water or added flour."; // TODO
 
 "settings.contact.header" = "Kontakt";
-"settings.contact.footer" = "If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!";
+"settings.contact.footer" = "Bitte kontaktier mich wenn du eine Fehler Findest oder wenn due If you encounter any kind of bug, have any complaint, compliment, suggestion or request, don't hesitate to contact me per email!";
 "settings.contact-button.title" = "Email schicken";
 
 "settings.contact.error.title" = "Fehler";
 "settings.contact.error.message" = "You didn't configure the default iOS Mail app. You can instead open your favorite email app and send an email to 'zajoapp@bluewin.ch'.";
+
+
+// New version - secondary
+// ===========
+
+"info-new-version.1.2.title" = "";
+"info-new-version.1.2.message" = "";
+
+
+// General
+// ===========
+
+"general.ok" = "Ok";

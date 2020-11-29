@@ -140,10 +140,6 @@
 		6B628AA2248D1D9F006ABACA /* LevainAndwaterCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevainAndwaterCalculatorTests.swift; sourceTree = "<group>"; };
 		6B628AAE248D469D006ABACA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B628AAF248D60A2006ABACA /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		6B69C20C2528F1DA00F3BFB2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6B69C20D2528F1DA00F3BFB2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6B69C20E2528F1DB00F3BFB2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6B69C20F2528F1DB00F3BFB2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B76144A24D59E8300000BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B76144C24D59E8600000BA4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B76144D24D59E8600000BA4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -563,7 +559,6 @@
 				Base,
 				fr,
 				pl,
-				de,
 			);
 			mainGroup = 6BB2D9382483EEB40006DAE2;
 			packageReferences = (
@@ -729,7 +724,6 @@
 				6B38D178249F7B6000882119 /* fr */,
 				6B38D179249F7B6500882119 /* pl */,
 				6B38D17A249F7B8000882119 /* en */,
-				6B69C20E2528F1DB00F3BFB2 /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -740,7 +734,6 @@
 				6B628A9C248ACC0D006ABACA /* en */,
 				6B628AAE248D469D006ABACA /* fr */,
 				6BFA481B2496750600202798 /* pl */,
-				6B69C20D2528F1DA00F3BFB2 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -751,7 +744,6 @@
 				6B76144A24D59E8300000BA4 /* en */,
 				6B76144C24D59E8600000BA4 /* fr */,
 				6B76144D24D59E8600000BA4 /* pl */,
-				6B69C20F2528F1DB00F3BFB2 /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -768,7 +760,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6BB2D9502483EEB50006DAE2 /* Base */,
-				6B69C20C2528F1DA00F3BFB2 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
