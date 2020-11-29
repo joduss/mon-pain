@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6B086B9425445746005CEDE1 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B086B9325445746005CEDE1 /* AppConfiguration.swift */; };
+		6B0C45DE2546977200E880F9 /* NewVersionInformationCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */; };
 		6B0F6AFF2490148500553E84 /* CalculatorBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */; };
 		6B2E59CD24956B7A0098960F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B2E59CC24956B7A0098960F /* GoogleService-Info.plist */; };
 		6B2E59F02496351B0098960F /* AdsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E59EF2496351A0098960F /* AdsConfiguration.swift */; };
@@ -92,6 +93,9 @@
 		6BC03B7224D077AB006E3053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB2D94A2483EEB40006DAE2 /* Main.storyboard */; };
 		6BCD525E248ED2B100A03B0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD525D248ED2B100A03B0D /* TabBarController.swift */; };
 		6BCE10D624D6F336000E0037 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B76144B24D59E8300000BA4 /* InfoPlist.strings */; };
+		6BD88616254F23C80056815A /* NewVersionInformationCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */; };
+		6BD8861F254F242B0056815A /* NewVersionInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8861E254F242B0056815A /* NewVersionInformationController.swift */; };
+		6BD88620254F242B0056815A /* NewVersionInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8861E254F242B0056815A /* NewVersionInformationController.swift */; };
 		6BF603B024D6DAD700DA3D40 /* TopIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF603AF24D6DAD700DA3D40 /* TopIconButton.xib */; };
 		6BF603B124D6DD9700DA3D40 /* TopIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF603AF24D6DAD700DA3D40 /* TopIconButton.xib */; };
 /* End PBXBuildFile section */
@@ -108,6 +112,7 @@
 
 /* Begin PBXFileReference section */
 		6B086B9325445746005CEDE1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVersionInformationCalculatorController.swift; sourceTree = "<group>"; };
 		6B0F6AFE2490148500553E84 /* CalculatorBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBaseVC.swift; sourceTree = "<group>"; };
 		6B2E59CC24956B7A0098960F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B2E59EF2496351A0098960F /* AdsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsConfiguration.swift; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 		6BC03B7824D077AB006E3053 /* MonPainPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPainPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC03B7924D077AB006E3053 /* InfoPlist-MonPainPlus.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "InfoPlist-MonPainPlus.plist"; path = "/Users/jonathanduss/jo_dev/MonPain/MonPain/InfoPlist-MonPainPlus.plist"; sourceTree = "<absolute>"; };
 		6BCD525D248ED2B100A03B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6BD8861E254F242B0056815A /* NewVersionInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVersionInformationController.swift; sourceTree = "<group>"; };
 		6BF603AF24D6DAD700DA3D40 /* TopIconButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopIconButton.xib; sourceTree = "<group>"; };
 		6BFA481B2496750600202798 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +228,15 @@
 				6BB2D94D2483EEB50006DAE2 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B0C45DC2546975900E880F9 /* NewVersionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BD8861E254F242B0056815A /* NewVersionInformationController.swift */,
+				6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */,
+			);
+			path = NewVersionControllers;
 			sourceTree = "<group>";
 		};
 		6B0F6AFD249013D900553E84 /* Screens */ = {
@@ -411,6 +426,7 @@
 		6BB2D9A4248569790006DAE2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6B0C45DC2546975900E880F9 /* NewVersionControllers */,
 				6B0F6AFD249013D900553E84 /* Screens */,
 				6BB2D9A5248569850006DAE2 /* UI Elements */,
 			);
@@ -539,7 +555,7 @@
 				};
 			};
 			buildConfigurationList = 6BB2D93C2483EEB40006DAE2 /* Build configuration list for PBXProject "MonPain" */;
-			compatibilityVersion = "Xcode 11.4";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -614,10 +630,12 @@
 				6BB2597F2541FD2800E0B6C2 /* SaltRelation.swift in Sources */,
 				6B3C3213254624FC00C9B4F7 /* AdvertisedTableViewController.swift in Sources */,
 				6B3C3211254624FC00C9B4F7 /* AdsManager.swift in Sources */,
+				6B0C45DE2546977200E880F9 /* NewVersionInformationCalculatorController.swift in Sources */,
 				6B7D27C524D20742002F1CA9 /* IngredientRatioFormula.swift in Sources */,
 				6B3C3223254624FC00C9B4F7 /* OSLog.swift in Sources */,
 				6BCD525E248ED2B100A03B0D /* TabBarController.swift in Sources */,
 				6B98C431254F023200EBDAF2 /* StringExtension.swift in Sources */,
+				6BD8861F254F242B0056815A /* NewVersionInformationController.swift in Sources */,
 				6B3C3215254624FC00C9B4F7 /* AdvertisedViewController.swift in Sources */,
 				6BB2D9A3248569720006DAE2 /* NumberInputCell.swift in Sources */,
 				6B39A8872486C1CB00E9A6C5 /* FlourAndWaterCalculator.swift in Sources */,
@@ -659,6 +677,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD88616254F23C80056815A /* NewVersionInformationCalculatorController.swift in Sources */,
 				6BC03B4924D077AB006E3053 /* TopIconButton.swift in Sources */,
 				6B5EA6E924D32224002B9260 /* IngredientRatioFormula.swift in Sources */,
 				6B3C3216254624FC00C9B4F7 /* AdvertisedViewController.swift in Sources */,
@@ -666,6 +685,7 @@
 				6B5EA6E824D32222002B9260 /* Calculator.swift in Sources */,
 				6BC03B4B24D077AB006E3053 /* NumberInputCell.swift in Sources */,
 				6B3C321E254624FC00C9B4F7 /* LocalizedButton.swift in Sources */,
+				6BD88620254F242B0056815A /* NewVersionInformationController.swift in Sources */,
 				6B3C3212254624FC00C9B4F7 /* AdsManager.swift in Sources */,
 				6B3C3222254624FC00C9B4F7 /* NumberFormatterExtension.swift in Sources */,
 				6BC03B4C24D077AB006E3053 /* FlourAndWaterCalculator.swift in Sources */,
