@@ -57,6 +57,9 @@
 		6B7D92EE248D731A00F35D75 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D92ED248D731A00F35D75 /* TopIconButton.swift */; };
 		6B98C405254EEFBD00EBDAF2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B98C404254EEFBD00EBDAF2 /* FirebaseAnalytics */; };
 		6B98C407254EEFBD00EBDAF2 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B98C406254EEFBD00EBDAF2 /* FirebaseCrashlytics */; };
+		6B98C423254F007800EBDAF2 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB259792541FCB900E0B6C2 /* UserPreferences.swift */; };
+		6B98C427254F00D800EBDAF2 /* SaltRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2597E2541FD2800E0B6C2 /* SaltRelation.swift */; };
+		6B98C431254F023200EBDAF2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3C3209254624FC00C9B4F7 /* StringExtension.swift */; };
 		6BB2597A2541FCB900E0B6C2 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB259792541FCB900E0B6C2 /* UserPreferences.swift */; };
 		6BB2597F2541FD2800E0B6C2 /* SaltRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2597E2541FD2800E0B6C2 /* SaltRelation.swift */; };
 		6BB2D9452483EEB40006DAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2D9442483EEB40006DAE2 /* AppDelegate.swift */; };
@@ -94,6 +97,7 @@
 		6BCD525E248ED2B100A03B0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD525D248ED2B100A03B0D /* TabBarController.swift */; };
 		6BCE10D624D6F336000E0037 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B76144B24D59E8300000BA4 /* InfoPlist.strings */; };
 		6BD88616254F23C80056815A /* NewVersionInformationCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C45DD2546977200E880F9 /* NewVersionInformationCalculatorController.swift */; };
+		6BD8861A254F240B0056815A /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B086B9325445746005CEDE1 /* AppConfiguration.swift */; };
 		6BD8861F254F242B0056815A /* NewVersionInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8861E254F242B0056815A /* NewVersionInformationController.swift */; };
 		6BD88620254F242B0056815A /* NewVersionInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD8861E254F242B0056815A /* NewVersionInformationController.swift */; };
 		6BF603B024D6DAD700DA3D40 /* TopIconButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF603AF24D6DAD700DA3D40 /* TopIconButton.xib */; };
@@ -687,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD88616254F23C80056815A /* NewVersionInformationCalculatorController.swift in Sources */,
+				6B98C423254F007800EBDAF2 /* UserPreferences.swift in Sources */,
 				6BC03B4924D077AB006E3053 /* TopIconButton.swift in Sources */,
 				6B5EA6E924D32224002B9260 /* IngredientRatioFormula.swift in Sources */,
 				6B3C3216254624FC00C9B4F7 /* AdvertisedViewController.swift in Sources */,
@@ -706,6 +711,7 @@
 				6BC03B4F24D077AB006E3053 /* HomeVC.swift in Sources */,
 				6B3C320E254624FC00C9B4F7 /* TableViewAdManager.swift in Sources */,
 				6B3C321C254624FC00C9B4F7 /* LocalizedLabel.swift in Sources */,
+				6BD8861A254F240B0056815A /* AppConfiguration.swift in Sources */,
 				6BC03B5224D077AB006E3053 /* AppDelegate.swift in Sources */,
 				6B3C3224254624FC00C9B4F7 /* OSLog.swift in Sources */,
 				6BC03B5524D077AB006E3053 /* CalculatorBaseVC.swift in Sources */,
@@ -718,6 +724,7 @@
 				6BC03B5B24D077AB006E3053 /* SettingsVC.swift in Sources */,
 				6BC03B5C24D077AB006E3053 /* FlourAndWaterCalculatorVC.swift in Sources */,
 				6BC03B5D24D077AB006E3053 /* AdsConfiguration.swift in Sources */,
+				6B98C427254F00D800EBDAF2 /* SaltRelation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
