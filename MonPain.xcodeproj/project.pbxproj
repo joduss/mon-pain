@@ -610,7 +610,6 @@
 			);
 			mainGroup = 6BB2D9382483EEB40006DAE2;
 			packageReferences = (
-				6B98C403254EEFBD00EBDAF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6BB2D9422483EEB40006DAE2 /* Products */;
 			projectDirPath = "";
@@ -945,7 +944,7 @@
 				DEVELOPMENT_TEAM = SB56D8K42E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MonPain/Libraries/**",
+					"$(PROJECT_DIR)/Libraries/Admob/**",
 					"$(PROJECT_DIR)/Libraries/Admob",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MonPain/MonPain/Info.plist";
