@@ -41,7 +41,7 @@
 "bread.hydratation.info" = "Hydracja chleba to masa składników mokrych w stosunku do masy mąki.\n\nNp. ciasto, do którego dodaliśmy 100g zakwasu złożonego z 50g wody i 50g mąki, 300g mąki i 200g wody ma hydrację 71.4% (250g wody / 350g mąki * 100%).";
 "levain.hydratation.info" = "Hydracja zakwasu to masa wody w stosunku do masy mąki.\n\nNp. zakwas złożony z 60g wody na 100g mąki ma hydrację 60%.";
 "salt.ratio-to-water.info" = "Procentowy udział soli to stosunek masy soli do masy wody dodanej do ciasta.";
-"salt.ratio-to-flour.info" = "Procentowy udział soli to stosunek masy soli do masy mą dodanej do ciasta."; // TODO
+"salt.ratio-to-flour.info" = "Procentowy udział soli to stosunek masy soli do masy mąki dodanej do ciasta.";
 
 
 "header.my_dear_levain" = "Mój drogi Zakwas";
