@@ -26,7 +26,6 @@ public class AdvertisedTableViewController: UIViewController {
         super.init(coder: coder)
         #if DEBUG
 //        UMPConsentInformation.sharedInstance.reset()
-//        PACConsentInformation.sharedInstance.debugGeography = .EEA;
         #endif
     }
     
@@ -94,6 +93,13 @@ public class AdvertisedTableViewController: UIViewController {
         
         let parameters = UMPRequestParameters()
         parameters.tagForUnderAgeOfConsent = false
+        
+        #if DEBUG
+//            let debugSettings = UMPDebugSettings()
+//            debugSettings.geography = .EEA
+//            parameters.debugSettings = debugSettings
+//            debugSettings.testDeviceIdentifiers = ["402098E9-BD47-48F4-A948-A35B3F76D644" ];
+        #endif
         
         UMPConsentInformation.sharedInstance
             .requestConsentInfoUpdate(with: parameters) {
